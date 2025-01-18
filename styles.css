@@ -4,46 +4,13 @@
   font-family: "Space Grotesk", sans-serif;
 }
 
-/* Ensure content is visible in narrow state */
+/* Smooth transitions for width changes */
+.md\:w-\[70\%\],
+.md\:w-\[10\%\] {
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure content doesn't overflow during transition */
 .overflow-hidden {
-  min-width: 3rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* Vertical text for desktop */
-@media (min-width: 768px) {
-  .vertical-text {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(0deg);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .vertical-text p {
-    transform: rotate(0deg);
-    margin-bottom: 1rem;
-  }
-
-  .vertical-text .accent-line {
-    width: 0.125rem;
-    height: 3rem;
-    margin-top: 1rem;
-  }
-
-  .inactive .accent-line {
-    display: none;
-  }
-}
-
-/* Horizontal text for mobile */
-@media (max-width: 767px) {
-  .accent-line {
-    width: 3rem;
-    height: 0.125rem;
-    margin-top: 1rem;
-  }
-}
-
