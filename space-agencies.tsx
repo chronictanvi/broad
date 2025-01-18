@@ -31,14 +31,14 @@ const agencies: Agency[] = [
     id: "esa",
     name: "24.02",
     title: ["Engineering Better Gene-Editing Tools"],
-    bgColor: "bg-gray-300",
-    textColor: "text-black",
+    bgColor: "bg-[#DFBDFF]",
+    textColor: "text-[#0035BB]",
   },
   {
     id: "nasa",
     name: "24.03",
     title: [" DepMap and Patient Impact"],
-    bgColor: "bg-gray-100",
+    bgColor: "bg-[#87A8E0]",
     textColor: "text-black",
   },
 ];
