@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import ScrollIndicator from "./ScrollIndicator";
 
 interface Agency {
   id: string;
@@ -53,21 +52,56 @@ const scrollToContent = () => {
 
 export default function SpaceAgencies() {
   const [activeAgency, setActiveAgency] = useState<string>("jaxa");
+  const [isLandingVisible, setIsLandingVisible] = useState(true);
+  const landingRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.target.id === "landing") {
+          setIsLandingVisible(entry.isIntersecting);
+        }
+      });
+    }, options);
+
+    if (landingRef.current) {
+      observer.observe(landingRef.current);
+    }
+
+    return () => {
+      if (landingRef.current) {
+        observer.unobserve(landingRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isLandingVisible && contentRef.current) {
+      contentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [isLandingVisible]);
 
   return (
     <div className="h-screen flex flex-col md:flex-row overflow-hidden">
-      <div className="flex flex-col md:flex-row sticky top-0 z-10">
+      <div className="flex flex-col md:flex-row sticky top-0 z-10 w-full">
         {agencies.map((agency) => (
           <div
             key={agency.id}
             className={`${agency.bgColor} ${
               activeAgency === agency.id
-                ? "md:w-[90%] h-auto"
-                : "md:w-[5%] h-[70px] md:h-screen"
+                ? "md:w-full h-auto"
+                : "md:w-[60px] h-[70px] md:h-screen"
             } transition-all duration-500 ease-in-out cursor-pointer overflow-hidden`}
             onClick={() => setActiveAgency(agency.id)}
           >
-            <div className="h-full overflow-y-auto">
+            <div className="h-full overflow-y-auto snap-y snap-mandatory">
               <div className="px-4 pt-6 pb-8 h-full flex flex-col">
                 <div className="space-y-2 flex-grow">
                   <div className="flex items-center justify-between">
@@ -98,7 +132,8 @@ export default function SpaceAgencies() {
                       {activeAgency === agency.id && agency.id === "jaxa" && (
                         <div
                           id="landing"
-                          className="mb-4 h-screen text-sm font-medium text-gray-600 relative"
+                          ref={landingRef}
+                          className="mb-4 h-screen text-sm font-medium text-gray-600 relative snap-start"
                         >
                           Broad Institute Year in Review 2024
                           <br />
@@ -111,7 +146,6 @@ export default function SpaceAgencies() {
                           >
                             Scroll to read
                           </span>
-                          <ScrollIndicator onClick={scrollToContent} />
                         </div>
                       )}
                       {agency.title.map((line, index) => (
@@ -120,12 +154,12 @@ export default function SpaceAgencies() {
                           className={`text-3xl font-light ${
                             agency.textColor
                           } transition-all duration-500 mt-4
-                        ${
-                          activeAgency === agency.id
-                            ? "md:text-left"
-                            : "text-right md:text-left"
-                        }
-                      `}
+                            ${
+                              activeAgency === agency.id
+                                ? "md:text-left"
+                                : "text-right md:text-left"
+                            }
+                          `}
                           style={
                             activeAgency === agency.id
                               ? {}
@@ -146,11 +180,12 @@ export default function SpaceAgencies() {
                       {activeAgency === agency.id && agency.id === "jaxa" && (
                         <motion.div
                           id="content"
+                          ref={contentRef}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.5 }}
-                          className="mt-6 text-sm leading-relaxed"
+                          className="mt-6 text-sm leading-relaxed snap-start"
                         >
                           Scale. In science, it's a word that often connotes
                           size, and usually a massive size. And it's often
