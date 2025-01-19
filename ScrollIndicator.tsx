@@ -132,10 +132,9 @@ export default function SpaceAgencies() {
                           className="mb-4 h-screen text-sm font-medium text-gray-600 relative snap-start"
                         >
                           <Image
-                            src="/differently.svg"
-                            width={500}
-                            height={500}
-                            alt="Picture of the author"
+                            fill
+                            src="/example.png"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                           Broad Institute Year in Review 2024
                           <br />
@@ -192,7 +191,7 @@ export default function SpaceAgencies() {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.5 }}
-                          className="mt-6 text-sm leading-relaxed snap-start"
+                          className="mt-6  text-sm leading-relaxed snap-start"
                         >
                           Scale. In science, it's a word that often connotes
                           size, and usually a massive size. And it's often

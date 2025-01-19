@@ -104,20 +104,6 @@ export default function SpaceAgencies() {
             <div className="h-full overflow-y-auto snap-y snap-mandatory">
               <div className="px-4 pt-6 pb-8 h-full flex flex-col">
                 <div className="space-y-2 flex-grow">
-                  <div className="flex items-center justify-between">
-                    <p
-                      className={`text-sm tracking-wider ${agency.textColor} whitespace-nowrap`}
-                    >
-                      {agency.name}
-                    </p>
-                    <motion.div
-                      animate={{ rotate: activeAgency === agency.id ? 180 : 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {/* <ChevronDown className={`w-4 h-4 ${agency.textColor}`} /> */}
-                    </motion.div>
-                  </div>
-
                   <AnimatePresence>
                     <motion.div
                       key={
@@ -148,32 +134,49 @@ export default function SpaceAgencies() {
                           </span>
                         </div>
                       )}
-                      {agency.title.map((line, index) => (
-                        <p
-                          key={index}
-                          className={`text-3xl font-light ${
-                            agency.textColor
-                          } transition-all duration-500 mt-4
+                      <div className="flex flex-row gap-2">
+                        <div className="flex items-center justify-between">
+                          <p
+                            className={`text-sm font-bold  ${agency.textColor} whitespace-nowrap`}
+                          >
+                            {agency.name}
+                          </p>
+                          <motion.div
+                            animate={{
+                              rotate: activeAgency === agency.id ? 180 : 0,
+                            }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            {/* <ChevronDown className={`w-4 h-4 ${agency.textColor}`} /> */}
+                          </motion.div>
+                        </div>
+                        {agency.title.map((line, index) => (
+                          <p
+                            key={index}
+                            className={`text-3xl font-bold ${
+                              agency.textColor
+                            } transition-all duration-500 mt-4
                             ${
                               activeAgency === agency.id
                                 ? "md:text-left"
                                 : "text-right md:text-left"
                             }
                           `}
-                          style={
-                            activeAgency === agency.id
-                              ? {}
-                              : {
-                                  writingMode: "vertical-lr",
-                                  textOrientation: "mixed",
-                                }
-                          }
-                        >
-                          {line}
-                        </p>
-                      ))}
+                            style={
+                              activeAgency === agency.id
+                                ? {}
+                                : {
+                                    writingMode: "vertical-lr",
+                                    textOrientation: "mixed",
+                                  }
+                            }
+                          >
+                            {line}
+                          </p>
+                        ))}
+                      </div>
                       <div
-                        className={`w-12 h-0.5 bg-sky-400 mt-4 ${
+                        className={`w-12 h-0.5  mt-4 ${
                           activeAgency === agency.id ? "" : "hidden"
                         }`}
                       />
@@ -185,7 +188,7 @@ export default function SpaceAgencies() {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.5 }}
-                          className="mt-6 text-sm leading-relaxed snap-start"
+                          className="mt-6 mx-40 text-sm leading-relaxed snap-start"
                         >
                           Scale. In science, it's a word that often connotes
                           size, and usually a massive size. And it's often
