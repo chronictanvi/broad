@@ -2941,6 +2941,10 @@ body {
     width: 70%;
   }
 
+  .md\:w-\[70px\] {
+    width: 70px;
+  }
+
   .md\:max-w-\[420px\] {
     max-width: 420px;
   }
