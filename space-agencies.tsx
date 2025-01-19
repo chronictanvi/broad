@@ -48,6 +48,10 @@ const scrollToContent = () => {
   const contentElement = document.getElementById("content");
   if (contentElement) {
     contentElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    setTimeout(() => {
+      window.scrollTo(0, window.scrollY + 1);
+      window.scrollTo(0, window.scrollY - 1);
+    }, 100);
   }
 };
 
@@ -91,7 +95,7 @@ export default function SpaceAgencies() {
 
   return (
     <div className="h-screen flex flex-col md:flex-row overflow-hidden">
-      <div className="flex flex-col-reverse md:flex-row sticky top-0 z-10 w-full">
+      <div className="flex flex-col-reverse md:flex-row sticky top-0 z-10 w-full snap-container">
         {agencies.map((agency) => (
           <div
             key={agency.id}
@@ -127,7 +131,7 @@ export default function SpaceAgencies() {
                       className="space-y-1 overflow-hidden flex-grow"
                     >
                       <div className="snap-y snap-mandatory ">
-                        <section className="snap-start snap-normal">
+                        <section className="snap-section snap-start">
                           {activeAgency === agency.id &&
                             agency.id === "jaxa" && (
                               <div
@@ -161,7 +165,11 @@ export default function SpaceAgencies() {
                             )}
                         </section>
 
-                        <section className="snap-start snap-normal">
+                        <section
+                          id="content"
+                          ref={contentRef}
+                          className="snap-section snap-start"
+                        >
                           <p
                             className={`text-sm  ${agency.textColor} whitespace-nowrap`}
                           >
@@ -185,8 +193,6 @@ export default function SpaceAgencies() {
                           {activeAgency === agency.id &&
                             agency.id === "jaxa" && (
                               <motion.div
-                                id="content"
-                                ref={contentRef}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
