@@ -1,16 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&display=swap");
 
-.text-4xl {
+.text-3xl {
   font-family: "Space Grotesk", sans-serif;
 }
 
-/* Smooth transitions for width changes */
+/* Smooth transitions for width and height changes */
 .md\:w-\[70\%\],
-.md\:w-\[10\%\] {
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+.md\:w-\[10\%\],
+.h-auto,
+.h-\[70px\] {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Ensure content doesn't overflow during transition */
 .overflow-hidden {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
 }
