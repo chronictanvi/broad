@@ -138,7 +138,7 @@ export default function SpaceAgencies() {
                                 ref={landingRef}
                                 className="flex flex-col justify-between min-h-screen text-sm font-medium text-gray-600 relative"
                               >
-                                <div className="flex-1">
+                                <div className="flex-1 justify-between ">
                                   <div className="relative w-full h-auto mb-4">
                                     <Image
                                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/differently-k6ixLwbbp6wKKpRCNDXHPDElbh5HDD.svg"
@@ -150,35 +150,41 @@ export default function SpaceAgencies() {
                                       priority
                                     />
                                   </div>
-                                  Broad Institute Year in Review 2024
-                                  <br />
-                                  <span
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      scrollToContent();
-                                    }}
-                                  >
-                                    Scroll to read
-                                  </span>
+                                  <div>
+                                    <p className="text-base font-bold">
+                                      Broad Institute
+                                    </p>
+                                    <p className="text-base font-bold">
+                                      Year in Review 2024
+                                    </p>
+                                    <br />
+                                    <span
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        scrollToContent();
+                                      }}
+                                    >
+                                      Scroll to read
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                             )}
                         </section>
-
                         <section
                           id="content"
                           ref={contentRef}
-                          className="snap-section snap-start"
+                          className="snap-start h-screen"
                         >
                           <p
-                            className={`text-sm  ${agency.textColor} whitespace-nowrap`}
+                            className={`hidden md:block text-sm ${agency.textColor} whitespace-nowrap`}
                           >
                             {agency.name}
                           </p>
                           {agency.title.map((line, index) => (
                             <p
                               key={index}
-                              className={`md:text-3xl text-base md:font-light font-bold ${
+                              className={`md:text-3xl text-lg md:font-light font-medium ${
                                 agency.textColor
                               } transition-all duration-500 md:mt-4 ${
                                 activeAgency === agency.id
