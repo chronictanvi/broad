@@ -40,7 +40,7 @@ const agencies: Agency[] = [
     name: "24.03",
     title: [" DepMap and Patient Impact"],
     bgColor: "bg-[#87A8E0]",
-    textColor: "text-black",
+    textColor: "text-white",
   },
 ];
 
@@ -204,9 +204,9 @@ export default function SpaceAgencies() {
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.5 }}
-                                className="min-h-screen text-sm leading-relaxed pt-6 flex flex-col"
+                                className="min-h-screen text-base leading-relaxed pt-6 flex flex-col"
                               >
-                                <p className="mx-20">
+                                <p className="mx-44 mr-96">
                                   Scale. In science, it's a word that often
                                   connotes size, and usually a massive size. And
                                   it's often bandied about as genomic and other
