@@ -94,7 +94,7 @@ export default function SpaceAgencies() {
   }, [isLandingVisible]);
 
   return (
-    <div className="h-screen flex flex-col md:flex-row overflow-hidden">
+    <div className="h-screen flex flex-col md:flex-row overflow-hidden font-sans">
       <div className="flex flex-col-reverse md:flex-row sticky top-0 z-10 w-full snap-container">
         {agencies.map((agency) => (
           <div
@@ -150,15 +150,16 @@ export default function SpaceAgencies() {
                                       priority
                                     />
                                   </div>
-                                  <div>
-                                    <p className="text-base font-bold">
+                                  <div className=" tracking-tight leading-[3em] text-[#0033BB]">
+                                    <p className="text-lg leading-[1em] font-bold">
                                       Broad Institute
                                     </p>
-                                    <p className="text-base font-bold">
+                                    <p className="text-lg leading-[1em] font-bold">
                                       Year in Review 2024
                                     </p>
-                                    <br />
+
                                     <span
+                                      className="font-bold"
                                       onClick={(e) => {
                                         e.stopPropagation();
                                         scrollToContent();
