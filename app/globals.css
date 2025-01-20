@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -24,6 +18,13 @@ body {
 }
 
 @layer base {
+  html {
+    font-family: "Neue Haas Grotesk Display";
+    font-style: normal;
+    font-weight: 600;
+    src: url(https://use.typekit.net/uql5ydf.css) format("woff2");
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
