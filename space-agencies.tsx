@@ -9,7 +9,7 @@ import BroadImage from "./components/ui/header-image";
 interface Agency {
   id: string;
   name: string;
-  title: string[];
+  title: string;
   bgColor: string;
   textColor: string;
 }
@@ -18,35 +18,35 @@ const agencies: Agency[] = [
   {
     id: "jaxa",
     name: "000",
-    title: [""],
+    title: "",
     bgColor: "bg-white",
     textColor: "text-black",
   },
   {
     id: "intro",
     name: "001 ",
-    title: ["Introduction: Scale"],
+    title: "Introduction: Scale",
     bgColor: "bg-[#292D74]",
     textColor: "text-white",
   },
   {
     id: "roscosmos",
     name: "002",
-    title: ["A New Perspective on a Decades-old Mystery"],
+    title: "A New Perspective on a Decades-old Mystery",
     bgColor: "bg-[#6381BE]",
     textColor: "text-white",
   },
   {
     id: "esa",
     name: "003",
-    title: ["Eye of the Needle"],
+    title: "Eye of the Needle",
     bgColor: "bg-[#DE6079]",
     textColor: "text-white",
   },
   {
     id: "nasa",
     name: "004",
-    title: ["DepMap and Patient Impact"],
+    title: "DepMap and Patient Impact",
     bgColor: "bg-[#CFD7E9]",
     textColor: "text-[#42518C]",
   },
@@ -114,8 +114,8 @@ export default function SpaceAgencies() {
             } transition-all duration-500 ease-in-out cursor-pointer `}
             onClick={() => setActiveAgency(agency.id)}
           >
-            <div className="overflow-y-auto flex flex-col">
-              <div className="px-4 flex flex-col">
+            <div className="h-full overflow-y-auto flex flex-col">
+              <div className="px-4 h-full flex flex-col">
                 <div className="space-y-5 flex-grow">
                   <div className="flex items-center justify-between">
                     <motion.div
@@ -139,30 +139,24 @@ export default function SpaceAgencies() {
                       className="space-y-1 flex-grow"
                     >
                       <div className="snap-y snap-mandatory ">
-                        <section
-                          id="content"
-                          ref={contentRef}
-                          className="snap-start h-screen"
-                        >
+                        <section id="content" ref={contentRef} className="">
                           <p
                             className={`hidden md:block text-sm ${agency.textColor} whitespace-nowrap`}
                           >
                             {agency.name}
                           </p>
-                          {agency.title.map((line, index) => (
-                            <p
-                              key={index}
-                              className={`flex items-center md:text-3xl text-xl md:font-light font-medium ${
-                                agency.textColor
-                              } transition-all duration-500 md:mt-4 ${
-                                activeAgency === agency.id
-                                  ? "md:text-left "
-                                  : "text-right md:text-vertical md:text-left text-horizontal  "
-                              }`}
-                            >
-                              {line}
-                            </p>
-                          ))}
+
+                          <p
+                            className={`flex items-center md:text-3xl text-xl md:font-light font-medium ${
+                              agency.textColor
+                            } transition-all duration-500 md:mt-4 ${
+                              activeAgency === agency.id
+                                ? "md:text-left "
+                                : "text-right md:text-vertical md:text-left text-horizontal "
+                            }`}
+                          >
+                            {agency.title}
+                          </p>
 
                           {activeAgency === agency.id &&
                             agency.id === "jaxa" && (
