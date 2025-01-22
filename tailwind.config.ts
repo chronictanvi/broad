@@ -10,7 +10,7 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Neue Haas Grotesk Display", "Arial", "sans-serif"],
+      sans: ["Neue Haas Grotesk Display", "sans-serif"],
     },
     extend: {
       colors: {
