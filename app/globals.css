@@ -13,6 +13,20 @@
   }
 }
 
+.accordion {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  width: 80%;
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+  padding-left: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(24, 25, 26, 0.2);
+  cursor: pointer;
+}
+
+
+
 @layer base {
   html {
     font-family: "Neue Haas Grotesk Display";
