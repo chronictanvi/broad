@@ -12,17 +12,26 @@ interface PaneProps {
 
 // isActive is there for keeping track of scroll
 
-export function Pane({ children, className = "", ...props }: PaneProps) {
+export function Pane({ isActive, children, className, ...props }: PaneProps) {
   return (
-    <section
-      className={`relative flex-1 min-w-full md:min-w-0 p-8 transition-all duration-500 hover:flex-[1.5] ${className}`}
+    <div
+      className={`${
+        isActive
+          ? "md:w-full h-screen overflow-auto"
+          : "overflow-hidden h-screen"
+      } relative flex-1 min-w-full md:min-w-0 p-8 transition-all duration-500 hover:flex-[1.5] ${
+        className ?? ""
+      }
+      `}
+      onClick={() => {
+        console.log("clicked!");
+        //return setActiveAgencyIndex(index);
+      }}
       {...props}
     >
       {children}
-    </section>
+    </div>
   );
 }
-
-
 
 // ifActive  = true be then enable scroll

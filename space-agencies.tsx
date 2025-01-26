@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Pane } from "./components/ui/pane";
 
 import Image from "next/image";
-import BroadImage from "./components/ui/header-image";
 
 interface Agency {
   id: string;
@@ -59,20 +58,28 @@ const agencies: Agency[] = [
 ];
 
 export default function SpaceAgencies() {
-  const [activeAgency, setActiveAgency] = useState<string>("jaxa");
+  const [activeAgencyIndex, setActiveAgencyIndex] = useState(0);
 
   const landingRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="font-['neue-haas-grotesk-display']  flex flex-col md:flex-row  ">
+    <div className="font-['neue-haas-grotesk-display'] flex flex-col md:flex-row">
+      <button
+        onClick={function () {
+          console.log("clicked");
+        }}
+      >
+        Click me
+      </button>
       <div className=" w-full h-screen absolute">
-        {agencies.map((agency) => (
+        {/* {agencies.map((agency, index) => (
           <Pane
             key={agency.id}
-            className={`${agency.bgColor} ${agency.accordionClass}  cursor-pointer accordion `}
+            className={`${agency.bgColor} ${agency.accordionClass}
+             accordion `}
             ref={contentRef}
-            isActive={activeAgency === agency.id}
+            isActive={activeAgencyIndex === index}
           >
             <p
               className={`hidden md:block text-sm ${agency.textColor} whitespace-nowrap`}
@@ -395,7 +402,7 @@ export default function SpaceAgencies() {
               </div>
             )}
           </Pane>
-        ))}
+        ))} */}
       </div>
     </div>
   );
