@@ -11,6 +11,40 @@
   .text-horizontal {
     writing-mode: horizontal-tb;
   }
+
+  .accordion {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    width: 80%;
+    box-shadow: 0 0 1rem 0 rgba(24, 25, 26, 0.2);
+    cursor: pointer;
+  }
+
+  .accordion-00 {
+    left: 0%;
+    z-index: 0;
+  }
+
+  .accordion-01 {
+    left: 10%;
+    z-index: 1;
+  }
+
+  .accordion-02 {
+    left: 20%;
+    z-index: 2;
+  }
+
+  .accordion-03 {
+    left: 30%;
+    z-index: 3;
+  }
+
+  .accordion-04 {
+    left: 40%;
+    z-index: 4;
+  }
 }
 
 @layer base {
