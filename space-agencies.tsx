@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { Pane } from "./components/ui/pane";
+
 import Image from "next/image";
 import BroadImage from "./components/ui/header-image";
 
@@ -65,13 +65,14 @@ export default function SpaceAgencies() {
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="font-['neue-haas-grotesk-display'] h-screen flex flex-col md:flex-row  ">
-      <div className="  w-full h-screen absolute">
+    <div className="font-['neue-haas-grotesk-display']  flex flex-col md:flex-row  ">
+      <div className=" w-full h-screen absolute">
         {agencies.map((agency) => (
-          <div
+          <Pane
             key={agency.id}
             className={`${agency.bgColor} ${agency.accordionClass}  cursor-pointer accordion `}
             ref={contentRef}
+            isActive={activeAgency === agency.id}
           >
             <p
               className={`hidden md:block text-sm ${agency.textColor} whitespace-nowrap`}
@@ -393,7 +394,7 @@ export default function SpaceAgencies() {
                 </div>
               </div>
             )}
-          </div>
+          </Pane>
         ))}
       </div>
     </div>
