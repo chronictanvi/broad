@@ -12,21 +12,33 @@ interface PaneProps {
 
 // isActive is there for keeping track of scroll
 
-export function Pane({ isActive, children, className, ...props }: PaneProps) {
+function getStyle(isTransformed, index) {
+  const percent = `${index * 5}%`;
+  if (isTransformed) {
+    return { left: percent, transform: "translate(75vw)" };
+  } else {
+    return { left: percent };
+  }
+}
+
+export function Pane({
+  index,
+  isActive,
+  isTransformed,
+  children,
+  className,
+  ...props
+}: PaneProps) {
+  console.log(index, isTransformed);
   return (
     <div
-      className={`${
+      style={getStyle(isTransformed, index)}
+      className={`transition ease-in-out ${
         isActive
           ? "md:w-full h-screen overflow-auto"
           : "overflow-hidden h-screen"
-      } relative flex-1 min-w-full md:min-w-0 p-8 transition-all duration-500 hover:flex-[1.5] ${
-        className ?? ""
-      }
+      }  ${className ?? ""} relative flex-1 min-w-full md:min-w-0 p-8 
       `}
-      onClick={() => {
-        console.log("clicked!");
-        //return setActiveAgencyIndex(index);
-      }}
       {...props}
     >
       {children}

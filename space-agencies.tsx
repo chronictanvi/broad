@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Pane } from "./components/ui/pane";
 
 import Image from "next/image";
@@ -58,11 +58,7 @@ const agencies: Agency[] = [
 ];
 
 export default function SpaceAgencies() {
-  const [activeAgencyIndex, setActiveAgencyIndex] = useState(0);
-
-  const landingRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
+  const [activeAgencyIndex, setActiveAgencyIndex] = useState(4);
   return (
     <div className="font-['neue-haas-grotesk-display'] flex flex-col md:flex-row">
       <button
@@ -72,14 +68,19 @@ export default function SpaceAgencies() {
       >
         Click me
       </button>
-      <div className=" w-full h-screen absolute">
-        {/* {agencies.map((agency, index) => (
+      <div
+        className=" w-full h-screen absolute overflow-hidden
+"
+      >
+        {agencies.map((agency, index) => (
           <Pane
+            index={index}
             key={agency.id}
-            className={`${agency.bgColor} ${agency.accordionClass}
-             accordion `}
-            ref={contentRef}
+            accordionClass={agency.accordionClass}
+            className={`${agency.bgColor} accordion `}
+            isTransformed={index > activeAgencyIndex}
             isActive={activeAgencyIndex === index}
+            onClick={() => setActiveAgencyIndex(index)}
           >
             <p
               className={`hidden md:block text-sm ${agency.textColor} whitespace-nowrap`}
@@ -94,10 +95,7 @@ export default function SpaceAgencies() {
             </p>
 
             {agency.id === "jaxa" && (
-              <div
-                ref={landingRef}
-                className="flex flex-col justify-between min-h-screen text-sm font-medium  bg-white  text-gray-600 "
-              >
+              <div className="flex flex-col justify-between min-h-screen text-sm font-medium  bg-white  text-gray-600 ">
                 <div className="flex-1 justify-between ">
                   <div className=" w-full h-auto my-12">
                     <Image
@@ -402,7 +400,7 @@ export default function SpaceAgencies() {
               </div>
             )}
           </Pane>
-        ))} */}
+        ))}
       </div>
     </div>
   );
