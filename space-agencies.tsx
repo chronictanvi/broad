@@ -132,7 +132,7 @@ export default function SpaceAgencies() {
   </p>
 </div>
                 </div>
-                <div className="lg:mr-96 font-martina text-white font-normal text-xl  leading-tight py-40
+                <div className="2xl:mr-80 font-martina text-white font-normal text-xl  leading-tight py-40
 text-lgtext-white  ">
                   <p className="p-3">
                     Scale. In science, it’s a word that often connotes size, and
@@ -196,8 +196,8 @@ text-lgtext-white  ">
 </div>
 
                 </div>
-                <div className="lg:mr-96 text-white  font-martina font-normal text-xl leading-tight py-40
-text-lg">
+                <div className="2xl:mr-80 text-white  font-martina font-normal text-xl  leading-tight py-40
+">
                   <p className="p-3">
                     Thirty years ago, the cause of Huntington’s disease was
                     traced to a mutation in the HTT gene. Yet, the precise
@@ -260,7 +260,7 @@ text-lg">
             )}
 
             {agency.id === "esa" && (
-              <div className="min-h-screen  md:mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#DE6079]">
+              <div className="min-h-screen  lg:mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#DE6079]">
                 <div className="  h-auto my-12">
 
                 <div className="flex flex-col justify-items-start
@@ -288,8 +288,8 @@ text-lg">
                   /> */}
                 </div>
                 
-                <div className="lg:mr-96 text-white  font-martina font-normal text-xl leading-tight font-normal leading-tight py-40
-text-lg">
+                <div className="2xl:mr-80  text-white  font-martina font-normal text-xl  leading-tight font-normal leading-tight py-40
+">
 
                   <p className="p-3">
                     Scientists are developing novel gene- and cell-based
@@ -379,8 +379,8 @@ text-lg">
 
 
 
-                <div className=" lg:mr-96 text-[#42518C] font-martina font-normal text-xl  leading-tight py-40
-text-lg">
+                <div className=" 2xl:mr-80 text-[#42518C] font-martina font-normal text-xl  leading-tight py-40
+">
                   <p className="p-3">
                     It’s often said that scientists have cured cancer many times
                     … in mice. Beneath the quip lay the belief that laboratory
