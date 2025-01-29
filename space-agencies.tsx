@@ -82,7 +82,7 @@ export default function SpaceAgencies() {
           >
          
             {agency.id === "jaxa" && (
-              <div className="flex flex-col justify-between min-h-screen text-sm font-medium  bg-white  text-gray-600 ">
+              <div className="flex flex-col justify-between min-h-screen bg-white ">
                 <div className="flex-1 justify-between ">
                   <div className="   my-12">
                     <Image
@@ -108,9 +108,9 @@ export default function SpaceAgencies() {
             )}
 
             {agency.id === "intro" && (
-              <div className="min-h-screen  md:mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#292D74] ">
-                <div className=" w-full h-auto my-12">
-                  <Image
+              <div className="min-h-screen md:mx-40  pt-6 flex flex-col bg-[#292D74] ">
+                <div className=" w-full  my-12">
+                  {/* <Image
                     src="/key-art.png"
                     alt="Differently"
                     width={1920}
@@ -118,9 +118,22 @@ export default function SpaceAgencies() {
                     className="w-full h-auto object-contain"
                     sizes="100vw"
                     priority
-                  />
+                  /> */}
+                  <div className="flex flex-col justify-items-start
+">
+  <p className={`text-sm ${agency.textColor}`}>
+    {agency.name}
+  </p>
+
+  <p
+    className={`text-5xl ${agency.textColor} `}
+  >
+    {agency.title}
+  </p>
+</div>
                 </div>
-                <div className="lg:mr-96 prose  text-white font-medium font-sans ">
+                <div className="lg:mr-96 font-martina text-white font-normal text-xl  leading-tight py-40
+text-lgtext-white  ">
                   <p className="p-3">
                     Scale. In science, it’s a word that often connotes size, and
                     usually a massive size. And it’s often bandied about as
@@ -159,7 +172,7 @@ export default function SpaceAgencies() {
             {agency.id === "roscosmos" && (
               <div className="min-h-screen  md:mx-40 bg-[#6381BE] bg-text-lg leading-tight pt-6 flex flex-col ">
                 <div className=" w-full h-auto my-12">
-                  <Image
+                  {/* <Image
                     src="/key-art.png"
                     alt="Differently"
                     width={1920}
@@ -167,9 +180,24 @@ export default function SpaceAgencies() {
                     className="w-full h-auto object-contain"
                     sizes="100vw"
                     priority
-                  />
+                  /> */}
+
+                <div className="flex flex-col justify-items-start
+">
+  <p className={`text-sm ${agency.textColor}`}>
+    {agency.name}
+  </p>
+
+  <p
+    className={`text-5xl ${agency.textColor} `}
+  >
+    {agency.title}
+  </p>
+</div>
+
                 </div>
-                <div className="lg:mr-96 text-white font-medium font-sans ">
+                <div className="lg:mr-96 text-white  font-martina font-normal text-xl leading-tight py-40
+text-lg">
                   <p className="p-3">
                     Thirty years ago, the cause of Huntington’s disease was
                     traced to a mutation in the HTT gene. Yet, the precise
@@ -234,7 +262,22 @@ export default function SpaceAgencies() {
             {agency.id === "esa" && (
               <div className="min-h-screen  md:mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#DE6079]">
                 <div className="  h-auto my-12">
-                  <Image
+
+                <div className="flex flex-col justify-items-start
+">
+  <p className={`text-sm ${agency.textColor}`}>
+    {agency.name}
+  </p>
+
+  <p
+    className={`text-5xl ${agency.textColor} `}
+  >
+    {agency.title}
+  </p>
+</div>
+
+
+                  {/* <Image
                     src="/key-art.png"
                     alt="Differently"
                     width={1920}
@@ -242,9 +285,12 @@ export default function SpaceAgencies() {
                     className="w-full h-auto object-contain"
                     sizes="80vw"
                     priority
-                  />
+                  /> */}
                 </div>
-                <div className="lg:mr-96 text-white font-medium font-sans ">
+                
+                <div className="lg:mr-96 text-white  font-martina font-normal text-xl leading-tight font-normal leading-tight py-40
+text-lg">
+
                   <p className="p-3">
                     Scientists are developing novel gene- and cell-based
                     therapies for rare diseases, metabolic disorders,
@@ -304,7 +350,7 @@ export default function SpaceAgencies() {
             {agency.id === "nasa" && (
               <div className="min-h-screen  md:mx-40 text-lg leading-tight pt-6 bg-[#CFD7E9]">
                 <div className="  h-auto my-12">
-                  <Image
+                  {/* <Image
                     src="/key-art.png"
                     alt="Differently"
                     width={1920}
@@ -312,9 +358,29 @@ export default function SpaceAgencies() {
                     className=" h-auto object-contain"
                     sizes="80vw"
                     priority
-                  />
+                  /> */}
                 </div>
-                <div className=" lg:mr-96 text-blue-700 font-medium font-sans ">
+
+
+
+
+                <div className="flex flex-col justify-items-start
+">
+  <p className={`text-sm ${agency.textColor}`}>
+    {agency.name}
+  </p>
+
+  <p
+    className={`text-5xl ${agency.textColor} `}
+  >
+    {agency.title}
+  </p>
+</div>
+
+
+
+                <div className=" lg:mr-96 text-[#42518C] font-martina font-normal text-xl  leading-tight py-40
+text-lg">
                   <p className="p-3">
                     It’s often said that scientists have cured cancer many times
                     … in mice. Beneath the quip lay the belief that laboratory

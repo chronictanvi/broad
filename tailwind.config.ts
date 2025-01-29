@@ -11,6 +11,8 @@ const config: Config = {
   theme: {
     fontFamily: {
       sans: ["Neue Haas Grotesk Display", "sans-serif"],
+      martina: ['MartinaPlantijn', 'serif'], // 'serif' is a fallback in case the font isn't loaded
+
     },
     extend: {
       colors: {

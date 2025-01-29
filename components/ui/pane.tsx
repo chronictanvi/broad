@@ -53,6 +53,7 @@ export function Pane({
       }  ${className ?? ""} justify-items-end flex flex-row min-w-96 md:min-w-0 p-6`}
       {...props}
     >
+      
       {children}
     </div>
   );

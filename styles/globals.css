@@ -6,6 +6,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Regular font */
+@font-face {
+  font-family: 'MartinaPlantijn';
+  src: url('/fonts/MartinaPlantijn-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Italic font */
+@font-face {
+  font-family: 'MartinaPlantijn';
+  src: url('/fonts/MartinaPlantijn-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
