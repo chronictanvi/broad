@@ -15,29 +15,17 @@ interface Agency {
 }
 
 const agencies: Agency[] = [
+
+
+ 
+
   {
-    id: "jaxa",
-    name: "000",
-    title: "",
-    bgColor: "bg-white",
-    textColor: "text-black",
-    accordionClass: "accordion-00",
-  },
-  {
-    id: "intro",
-    name: "001 ",
-    title: "Introduction: Scale",
-    bgColor: "bg-[#292D74]",
-    textColor: "text-white",
-    accordionClass: "accordion-01",
-  },
-  {
-    id: "roscosmos",
-    name: "002",
-    title: "A New Perspective on a Decades-old Mystery",
-    bgColor: "bg-[#6381BE]",
-    textColor: "text-white",
-    accordionClass: "accordion-02",
+    id: "nasa",
+    name: "004",
+    title: "DepMap and Patient Impact",
+    bgColor: "bg-[#CFD7E9]",
+    textColor: "text-[#42518C]",
+    accordionClass: "accordion-04",
   },
   {
     id: "esa",
@@ -48,12 +36,28 @@ const agencies: Agency[] = [
     accordionClass: "accordion-03",
   },
   {
-    id: "nasa",
-    name: "004",
-    title: "DepMap and Patient Impact",
-    bgColor: "bg-[#CFD7E9]",
-    textColor: "text-[#42518C]",
-    accordionClass: "accordion-04",
+    id: "roscosmos",
+    name: "002",
+    title: "A New Perspective on a Decades-old Mystery",
+    bgColor: "bg-[#6381BE]",
+    textColor: "text-white",
+    accordionClass: "accordion-02",
+  },
+  {
+    id: "intro",
+    name: "001 ",
+    title: "Introduction: Scale",
+    bgColor: "bg-[#292D74]",
+    textColor: "text-white",
+    accordionClass: "accordion-01",
+  },
+  {
+    id: "jaxa",
+    name: "000",
+    title: "Broad Institute Year in Review 2024",
+    bgColor: "bg-white",
+    textColor: "text-black",
+    accordionClass: "accordion-00",
   },
 ];
 
@@ -61,15 +65,9 @@ export default function SpaceAgencies() {
   const [activeAgencyIndex, setActiveAgencyIndex] = useState(4);
   return (
     <div className="font-['neue-haas-grotesk-display'] flex flex-col md:flex-row">
-      <button
-        onClick={function () {
-          console.log("clicked");
-        }}
-      >
-        Click me
-      </button>
+
       <div
-        className=" w-full h-screen absolute overflow-hidden
+        className=" w-full h-screen absolute overflow-hidden 
 "
       >
         {agencies.map((agency, index) => (
@@ -82,28 +80,17 @@ export default function SpaceAgencies() {
             isActive={activeAgencyIndex === index}
             onClick={() => setActiveAgencyIndex(index)}
           >
-            <p
-              className={`hidden md:block text-sm ${agency.textColor} whitespace-nowrap`}
-            >
-              {agency.name}
-            </p>
-
-            <p
-              className={`flex items-center md:text-3xl text-xl md:font-light font-medium ${agency.textColor}  md:mt-4 text-right md:text-vertical md:text-left text-horizontal`}
-            >
-              {agency.title}
-            </p>
-
+         
             {agency.id === "jaxa" && (
               <div className="flex flex-col justify-between min-h-screen text-sm font-medium  bg-white  text-gray-600 ">
                 <div className="flex-1 justify-between ">
-                  <div className=" w-full h-auto my-12">
+                  <div className="   my-12">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/differently-k6ixLwbbp6wKKpRCNDXHPDElbh5HDD.svg"
                       alt="Differently"
                       width={1920}
                       height={640}
-                      className="w-full h-auto object-contain"
+                      className="w-[90%] object-contain"
                       sizes="100vw"
                       priority
                     />
@@ -121,7 +108,7 @@ export default function SpaceAgencies() {
             )}
 
             {agency.id === "intro" && (
-              <div className="min-h-screen text-lg leading-tight pt-6 flex flex-col bg-[#292D74] ">
+              <div className="min-h-screen  mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#292D74] ">
                 <div className=" w-full h-auto my-12">
                   <Image
                     src="/key-art.png"
@@ -133,7 +120,7 @@ export default function SpaceAgencies() {
                     priority
                   />
                 </div>
-                <div className="lg:mr-96  font-medium font-sans ">
+                <div className="lg:mr-96 prose  text-white font-medium font-sans ">
                   <p className="p-3">
                     Scale. In science, it’s a word that often connotes size, and
                     usually a massive size. And it’s often bandied about as
@@ -170,7 +157,7 @@ export default function SpaceAgencies() {
             )}
 
             {agency.id === "roscosmos" && (
-              <div className="min-h-screen bg-[#6381BE] bg-text-lg leading-tight pt-6 flex flex-col ">
+              <div className="min-h-screen  mx-40 bg-[#6381BE] bg-text-lg leading-tight pt-6 flex flex-col ">
                 <div className=" w-full h-auto my-12">
                   <Image
                     src="/key-art.png"
@@ -245,15 +232,15 @@ export default function SpaceAgencies() {
             )}
 
             {agency.id === "esa" && (
-              <div className="min-h-screen text-lg leading-tight pt-6 flex flex-col bg-[#DE6079]">
-                <div className=" w-full h-auto my-12">
+              <div className="min-h-screen  mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#DE6079]">
+                <div className="  h-auto my-12">
                   <Image
                     src="/key-art.png"
                     alt="Differently"
                     width={1920}
                     height={640}
                     className="w-full h-auto object-contain"
-                    sizes="100vw"
+                    sizes="80vw"
                     priority
                   />
                 </div>
@@ -315,19 +302,19 @@ export default function SpaceAgencies() {
             )}
 
             {agency.id === "nasa" && (
-              <div className="min-h-screen text-lg leading-tight pt-6 bg-[#CFD7E9]">
-                <div className=" w-full h-auto my-12">
+              <div className="min-h-screen  mx-40 text-lg leading-tight pt-6 bg-[#CFD7E9]">
+                <div className="  h-auto my-12">
                   <Image
                     src="/key-art.png"
                     alt="Differently"
                     width={1920}
                     height={640}
-                    className="w-full h-auto object-contain"
-                    sizes="100vw"
+                    className=" h-auto object-contain"
+                    sizes="80vw"
                     priority
                   />
                 </div>
-                <div className="lg:mr-96 text-white font-medium font-sans ">
+                <div className=" lg:mr-96 text-blue-700 font-medium font-sans ">
                   <p className="p-3">
                     It’s often said that scientists have cured cancer many times
                     … in mice. Beneath the quip lay the belief that laboratory
@@ -399,6 +386,19 @@ export default function SpaceAgencies() {
                 </div>
               </div>
             )}
+              <div className="flex flex-col items-center justify-items-start
+ h-full">
+  <p className={`hidden md:block text-sm ${agency.textColor} whitespace-nowrap`}>
+    {agency.name}
+  </p>
+
+  <p
+    className={`flex items-center md:text-3xl text-xl md:font-light font-medium ${agency.textColor} md:mt-4 text-right md:text-vertical md:text-left text-horizontal`}
+  >
+    {agency.title}
+  </p>
+</div>
+
           </Pane>
         ))}
       </div>

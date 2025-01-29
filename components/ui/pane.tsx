@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { useEffect, useRef, ReactNode } from "react";
 
 interface PaneProps {
   className?: string;
@@ -8,16 +8,12 @@ interface PaneProps {
   children: ReactNode;
 }
 
-// isTransformed means pane is on the left and all content is 'revelealed in the stack' if its not transformed its still on the right and to be read.
-
-// isActive is there for keeping track of scroll
-
-function getStyle(isTransformed, index) {
+function getStyle(isTransformed: boolean, index: number) {
   const percent = `${index * 5}%`;
   if (isTransformed) {
-    return { left: percent, transform: "translate(75vw)" };
+    return { right: percent, transform: "translate(-75vw)" };
   } else {
-    return { left: percent };
+    return { right: percent };
   }
 }
 
@@ -29,21 +25,34 @@ export function Pane({
   className,
   ...props
 }: PaneProps) {
-  console.log(index, isTransformed);
+  const paneRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to top when the pane becomes active
+  useEffect(() => {
+    if (isActive && paneRef.current) {
+      paneRef.current.scrollTo(0, 0);
+    }
+  }, [isActive]);
+
+  // Reset scroll position when the pane becomes inactive
+  useEffect(() => {
+    if (!isActive && paneRef.current) {
+      paneRef.current.scrollTo(0, 0);
+    }
+  }, [isActive]);
+
   return (
     <div
+      ref={paneRef}
       style={getStyle(isTransformed, index)}
-      className={`transition ease-in-out ${
+      className={`transition ease-in-out justify-items-end ${
         isActive
-          ? "md:w-full h-screen overflow-auto"
+          ? " h-screen overflow-auto"
           : "overflow-hidden h-screen"
-      }  ${className ?? ""} relative flex-1 min-w-full md:min-w-0 p-8 
-      `}
+      }  ${className ?? ""} justify-items-end flex flex-row min-w-96 md:min-w-0 p-6`}
       {...props}
     >
       {children}
     </div>
   );
 }
-
-// ifActive  = true be then enable scroll
