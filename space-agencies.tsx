@@ -108,7 +108,7 @@ export default function SpaceAgencies() {
             )}
 
             {agency.id === "intro" && (
-              <div className="min-h-screen  mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#292D74] ">
+              <div className="min-h-screen  md:mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#292D74] ">
                 <div className=" w-full h-auto my-12">
                   <Image
                     src="/key-art.png"
@@ -157,7 +157,7 @@ export default function SpaceAgencies() {
             )}
 
             {agency.id === "roscosmos" && (
-              <div className="min-h-screen  mx-40 bg-[#6381BE] bg-text-lg leading-tight pt-6 flex flex-col ">
+              <div className="min-h-screen  md:mx-40 bg-[#6381BE] bg-text-lg leading-tight pt-6 flex flex-col ">
                 <div className=" w-full h-auto my-12">
                   <Image
                     src="/key-art.png"
@@ -232,7 +232,7 @@ export default function SpaceAgencies() {
             )}
 
             {agency.id === "esa" && (
-              <div className="min-h-screen  mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#DE6079]">
+              <div className="min-h-screen  md:mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#DE6079]">
                 <div className="  h-auto my-12">
                   <Image
                     src="/key-art.png"
@@ -302,7 +302,7 @@ export default function SpaceAgencies() {
             )}
 
             {agency.id === "nasa" && (
-              <div className="min-h-screen  mx-40 text-lg leading-tight pt-6 bg-[#CFD7E9]">
+              <div className="min-h-screen  md:mx-40 text-lg leading-tight pt-6 bg-[#CFD7E9]">
                 <div className="  h-auto my-12">
                   <Image
                     src="/key-art.png"
@@ -388,12 +388,12 @@ export default function SpaceAgencies() {
             )}
               <div className="flex flex-col items-center justify-items-start
  h-full">
-  <p className={`hidden md:block text-sm ${agency.textColor} whitespace-nowrap`}>
+  <p className={`text-sm ${agency.textColor} whitespace-nowrap`}>
     {agency.name}
   </p>
 
   <p
-    className={`flex items-center md:text-3xl text-xl md:font-light font-medium ${agency.textColor} md:mt-4 text-right md:text-vertical md:text-left text-horizontal`}
+    className={`flex hidden md:block items-center md:text-3xl text-xl md:font-light font-medium ${agency.textColor} md:mt-4 text-right md:text-vertical md:text-left text-horizontal`}
   >
     {agency.title}
   </p>

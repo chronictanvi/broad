@@ -9,6 +9,7 @@ interface PaneProps {
 }
 
 function getStyle(isTransformed: boolean, index: number) {
+
   const percent = `${index * 5}%`;
   if (isTransformed) {
     return { right: percent, transform: "translate(-75vw)" };
@@ -45,7 +46,7 @@ export function Pane({
     <div
       ref={paneRef}
       style={getStyle(isTransformed, index)}
-      className={`transition ease-in-out justify-items-end ${
+      className={`transition duration-700 ease-[cubic-bezier(0.42, 0, 0.58, 1)] justify-items-end ${
         isActive
           ? " h-screen overflow-auto"
           : "overflow-hidden h-screen"
