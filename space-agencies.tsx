@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Pane } from "./components/ui/pane";
-
+import Popup from "./components/ui/popup";
 import Image from "next/image";
 
 interface Agency {
@@ -59,6 +59,8 @@ const agencies: Agency[] = [
 
 export default function SpaceAgencies() {
   const [activeAgencyIndex, setActiveAgencyIndex] = useState(4);
+  const [showPopup, setShowPopup] = useState(true); // State for showing the popup
+
 
   const handleScrollToBottom = () => {
     if (activeAgencyIndex > 0) {
@@ -66,12 +68,22 @@ export default function SpaceAgencies() {
     }
   };
 
+
+  const closePopup = () => {
+    setShowPopup(false); // Close the popup when the button is clicked
+  };
+
+
   return (
     <div className="font-['neue-haas-grotesk-display'] flex flex-col md:flex-row">
       <div
         className=" w-full h-screen absolute overflow-hidden 
 "
       >
+
+
+<Popup showPopup={showPopup} closePopup={closePopup} />
+
         {agencies.map((agency, index) => (
           <Pane
             index={index}
@@ -83,6 +95,12 @@ export default function SpaceAgencies() {
             onClick={() => setActiveAgencyIndex(index)}
             onScrollToBottom={handleScrollToBottom}
           >
+
+
+
+
+
+
            {agency.id === "jaxa" && (
   <div className="max-h-screen  mx-10 grow pt-6 flex flex-col bg-white overflow-hidden ">
     <div className="flex-1 ">
