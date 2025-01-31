@@ -460,7 +460,7 @@ text-lgtext-white  "
               </p>
 
               <p
-                className={`flex hidden md:block items-center md:text-3xl text-xl md:font-light font-medium ${agency.textColor} md:mt-4 text-right md:text-vertical md:text-left text-horizontal`}
+                className={`flex hidden md:block items-center md:text-2xl text-xl md:font-light font-medium ${agency.textColor} md:mt-4 text-right md:text-vertical md:text-left text-horizontal`}
               >
                 {agency.title}
               </p>

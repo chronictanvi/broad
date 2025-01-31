@@ -11,9 +11,9 @@ interface PaneProps {
 }
 
 function getStyle(isTransformed: boolean, index: number) {
-  const percent = `${index * 5}%`;
+  const percent = `${index * 3}%`;
   if (isTransformed) {
-    return { right: percent, transform: "translate(-75vw)" };
+    return { right: percent, transform: "translate(-85vw)" };
   } else {
     return { right: percent };
   }
@@ -60,7 +60,7 @@ export function Pane({
       style={getStyle(isTransformed, index)}
       className={`transition duration-700 ease-[cubic-bezier(0.42, 0, 0.58, 1)] justify-items-end ${
         isActive ? " h-screen overflow-auto" : "overflow-hidden h-screen"
-      }  ${className ?? ""} min-w-96 md:min-w-0 p-6`}
+      }  ${className ?? ""}  md:min-w-[96em] p-4`}
       {...props}
     >
       <div className="flex flex-row">{children}</div>
