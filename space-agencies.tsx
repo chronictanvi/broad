@@ -15,10 +15,6 @@ interface Agency {
 }
 
 const agencies: Agency[] = [
-
-
- 
-
   {
     id: "nasa",
     name: "004",
@@ -63,9 +59,15 @@ const agencies: Agency[] = [
 
 export default function SpaceAgencies() {
   const [activeAgencyIndex, setActiveAgencyIndex] = useState(4);
+
+  const handleScrollToBottom = () => {
+    if (activeAgencyIndex > 0) {
+      setActiveAgencyIndex(activeAgencyIndex - 1);
+    }
+  };
+
   return (
     <div className="font-['neue-haas-grotesk-display'] flex flex-col md:flex-row">
-
       <div
         className=" w-full h-screen absolute overflow-hidden 
 "
@@ -79,8 +81,8 @@ export default function SpaceAgencies() {
             isTransformed={index > activeAgencyIndex}
             isActive={activeAgencyIndex === index}
             onClick={() => setActiveAgencyIndex(index)}
+            onScrollToBottom={handleScrollToBottom}
           >
-         
             {agency.id === "jaxa" && (
               <div className="flex flex-col justify-between min-h-screen bg-white ">
                 <div className="flex-1 justify-between ">
@@ -119,21 +121,23 @@ export default function SpaceAgencies() {
                     sizes="100vw"
                     priority
                   /> */}
-                  <div className="flex flex-col justify-items-start
-">
-  <p className={`text-sm ${agency.textColor}`}>
-    {agency.name}
-  </p>
+                  <div
+                    className="sticky top-0 flex flex-col justify-items-start
+"
+                  >
+                    <p className={`text-sm ${agency.textColor}`}>
+                      {agency.name}
+                    </p>
 
-  <p
-    className={`text-5xl ${agency.textColor} `}
-  >
-    {agency.title}
-  </p>
-</div>
+                    <p className={`text-5xl ${agency.textColor} `}>
+                      {agency.title}
+                    </p>
+                  </div>
                 </div>
-                <div className="2xl:mr-80 font-martina text-white font-normal text-xl  leading-tight py-40
-text-lgtext-white  ">
+                <div
+                  className="2xl:mr-80 font-martina text-white font-normal text-xl  leading-tight py-40
+text-lgtext-white  "
+                >
                   <p className="p-3">
                     Scale. In science, it’s a word that often connotes size, and
                     usually a massive size. And it’s often bandied about as
@@ -182,22 +186,23 @@ text-lgtext-white  ">
                     priority
                   /> */}
 
-                <div className="flex flex-col justify-items-start
-">
-  <p className={`text-sm ${agency.textColor}`}>
-    {agency.name}
-  </p>
+                  <div
+                    className="flex flex-col justify-items-start
+"
+                  >
+                    <p className={`text-sm ${agency.textColor}`}>
+                      {agency.name}
+                    </p>
 
-  <p
-    className={`text-5xl ${agency.textColor} `}
-  >
-    {agency.title}
-  </p>
-</div>
-
+                    <p className={`text-5xl ${agency.textColor} `}>
+                      {agency.title}
+                    </p>
+                  </div>
                 </div>
-                <div className="2xl:mr-80 text-white  font-martina font-normal text-xl  leading-tight py-40
-">
+                <div
+                  className="2xl:mr-80 text-white  font-martina font-normal text-xl  leading-tight py-40
+"
+                >
                   <p className="p-3">
                     Thirty years ago, the cause of Huntington’s disease was
                     traced to a mutation in the HTT gene. Yet, the precise
@@ -262,20 +267,18 @@ text-lgtext-white  ">
             {agency.id === "esa" && (
               <div className="min-h-screen  lg:mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#DE6079]">
                 <div className="  h-auto my-12">
+                  <div
+                    className="flex flex-col justify-items-start
+"
+                  >
+                    <p className={`text-sm ${agency.textColor}`}>
+                      {agency.name}
+                    </p>
 
-                <div className="flex flex-col justify-items-start
-">
-  <p className={`text-sm ${agency.textColor}`}>
-    {agency.name}
-  </p>
-
-  <p
-    className={`text-5xl ${agency.textColor} `}
-  >
-    {agency.title}
-  </p>
-</div>
-
+                    <p className={`text-5xl ${agency.textColor} `}>
+                      {agency.title}
+                    </p>
+                  </div>
 
                   {/* <Image
                     src="/key-art.png"
@@ -287,10 +290,11 @@ text-lgtext-white  ">
                     priority
                   /> */}
                 </div>
-                
-                <div className="2xl:mr-80  text-white  font-martina font-normal text-xl  leading-tight font-normal leading-tight py-40
-">
 
+                <div
+                  className="2xl:mr-80  text-white  font-martina font-normal text-xl  leading-tight font-normal leading-tight py-40
+"
+                >
                   <p className="p-3">
                     Scientists are developing novel gene- and cell-based
                     therapies for rare diseases, metabolic disorders,
@@ -361,26 +365,21 @@ text-lgtext-white  ">
                   /> */}
                 </div>
 
+                <div
+                  className="flex flex-col justify-items-start
+"
+                >
+                  <p className={`text-sm ${agency.textColor}`}>{agency.name}</p>
 
+                  <p className={`text-5xl ${agency.textColor} `}>
+                    {agency.title}
+                  </p>
+                </div>
 
-
-                <div className="flex flex-col justify-items-start
-">
-  <p className={`text-sm ${agency.textColor}`}>
-    {agency.name}
-  </p>
-
-  <p
-    className={`text-5xl ${agency.textColor} `}
-  >
-    {agency.title}
-  </p>
-</div>
-
-
-
-                <div className=" 2xl:mr-80 text-[#42518C] font-martina font-normal text-xl  leading-tight py-40
-">
+                <div
+                  className=" 2xl:mr-80 text-[#42518C] font-martina font-normal text-xl  leading-tight py-40
+"
+                >
                   <p className="p-3">
                     It’s often said that scientists have cured cancer many times
                     … in mice. Beneath the quip lay the belief that laboratory
@@ -452,19 +451,20 @@ text-lgtext-white  ">
                 </div>
               </div>
             )}
-              <div className="flex flex-col items-center justify-items-start
- h-full">
-  <p className={`text-sm ${agency.textColor} whitespace-nowrap`}>
-    {agency.name}
-  </p>
+            <div
+              className="sticky top-0 flex flex-col items-center justify-items-start
+ h-full"
+            >
+              <p className={`text-sm ${agency.textColor} whitespace-nowrap`}>
+                {agency.name}
+              </p>
 
-  <p
-    className={`flex hidden md:block items-center md:text-3xl text-xl md:font-light font-medium ${agency.textColor} md:mt-4 text-right md:text-vertical md:text-left text-horizontal`}
-  >
-    {agency.title}
-  </p>
-</div>
-
+              <p
+                className={`flex hidden md:block items-center md:text-3xl text-xl md:font-light font-medium ${agency.textColor} md:mt-4 text-right md:text-vertical md:text-left text-horizontal`}
+              >
+                {agency.title}
+              </p>
+            </div>
           </Pane>
         ))}
       </div>
