@@ -58,13 +58,13 @@ export function Pane({
     <div
       ref={paneRef}
       style={getStyle(isTransformed, index)}
-      className={`transition duration-700 ease-[cubic-bezier(0.42, 0, 0.58, 1)] justify-items-end ${
+      className={`transition duration-700 ease-[cubic-bezier(0.42, 0, 0.58, 1)]  ${
         isActive ? " h-screen overflow-auto" : "overflow-hidden h-screen"
       }  ${className ?? ""}  md:min-w-[96em] p-4`}
       {...props}
     >
-      <div className="flex flex-row">{children}</div>
-      <div className="h-[150px]" />
+      <div className="flex flex-row ">{children}</div>
+      <div className="h-[150px] " />
       <div ref={bottomRef} className="h-[10px]" />
     </div>
   );

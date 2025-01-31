@@ -17,7 +17,7 @@ interface Agency {
 const agencies: Agency[] = [
   {
     id: "nasa",
-    name: "004",
+    name: "003",
     title: "DepMap and Patient Impact",
     bgColor: "bg-[#CFD7E9]",
     textColor: "text-[#42518C]",
@@ -25,7 +25,7 @@ const agencies: Agency[] = [
   },
   {
     id: "esa",
-    name: "003",
+    name: "002",
     title: "Eye of the Needle",
     bgColor: "bg-[#DE6079]",
     textColor: "text-white",
@@ -33,7 +33,7 @@ const agencies: Agency[] = [
   },
   {
     id: "roscosmos",
-    name: "002",
+    name: "001",
     title: "A New Perspective on a Decades-old Mystery",
     bgColor: "bg-[#6381BE]",
     textColor: "text-white",
@@ -41,7 +41,7 @@ const agencies: Agency[] = [
   },
   {
     id: "intro",
-    name: "001 ",
+    name: " ",
     title: "Introduction: Scale",
     bgColor: "bg-[#292D74]",
     textColor: "text-white",
@@ -49,10 +49,10 @@ const agencies: Agency[] = [
   },
   {
     id: "jaxa",
-    name: "000",
+    name: "",
     title: "Broad Institute Year in Review 2024",
     bgColor: "bg-white",
-    textColor: "text-black",
+    textColor: "text-[#344899]",
     accordionClass: "accordion-00",
   },
 ];
@@ -83,31 +83,29 @@ export default function SpaceAgencies() {
             onClick={() => setActiveAgencyIndex(index)}
             onScrollToBottom={handleScrollToBottom}
           >
-            {agency.id === "jaxa" && (
-              <div className="flex flex-col justify-between min-h-screen bg-white ">
-                <div className="flex-1 justify-between ">
-                  <div className="   my-12">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/differently-k6ixLwbbp6wKKpRCNDXHPDElbh5HDD.svg"
-                      alt="Differently"
-                      width={1920}
-                      height={640}
-                      className="w-[90%] object-contain"
-                      sizes="100vw"
-                      priority
-                    />
-                  </div>
-                  <div className="  leading-[3em] text-[#0033BB]">
-                    <p className="text-xl leading-[1em] font-bold">
-                      Broad Institute
-                    </p>
-                    <p className="text-xl  font-bold">Year in Review 2024</p>
+           {agency.id === "jaxa" && (
+  <div className="max-h-screen   grow pt-6 flex flex-col bg-white overflow-hidden ">
+    <div className="flex-1 ">
+      <div className="  w-full mb-8">
+        <Image
+          src="/differently.svg"
+          alt="Differently"
+          width={1920}
+          height={640}
+          className="object-cover"
+          sizes="100vw"
+          priority
+        />
+      </div>
+      <div className="leading-[3em] ml-10 text-[#344899]">
+        <p className="text-xl leading-[1em] font-bold">Broad Institute</p>
+        <p className="text-xl font-bold">Year in Review 2024</p>
+        <span className="font-bold">Scroll to read</span>
+      </div>
+    </div>
+  </div>
+)}
 
-                    <span className="font-bold">Scroll to read</span>
-                  </div>
-                </div>
-              </div>
-            )}
 
             {agency.id === "intro" && (
               <div className="min-h-screen md:mx-40  pt-6 flex flex-col bg-[#292D74] ">
