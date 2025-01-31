@@ -1,4 +1,5 @@
 import { useEffect, useRef, ReactNode } from "react";
+import { useInView } from "react-intersection-observer";
 
 interface PaneProps {
   className?: string;
@@ -6,10 +7,10 @@ interface PaneProps {
   isActive: boolean;
   index: number;
   children: ReactNode;
+  onScrollToBottom: () => void;
 }
 
 function getStyle(isTransformed: boolean, index: number) {
-
   const percent = `${index * 5}%`;
   if (isTransformed) {
     return { right: percent, transform: "translate(-75vw)" };
@@ -24,9 +25,14 @@ export function Pane({
   isTransformed,
   children,
   className,
+  onScrollToBottom,
   ...props
 }: PaneProps) {
   const paneRef = useRef<HTMLDivElement>(null);
+
+  const { ref: bottomRef, inView } = useInView({
+    threshold: 0,
+  });
 
   // Scroll to top when the pane becomes active
   useEffect(() => {
@@ -36,25 +42,30 @@ export function Pane({
   }, [isActive]);
 
   // Reset scroll position when the pane becomes inactive
+  // useEffect(() => {
+  //   if (!isActive && paneRef.current) {
+  //     paneRef.current.scrollTo(0, 0);
+  //   }
+  // }, [isActive]);
+
   useEffect(() => {
-    if (!isActive && paneRef.current) {
-      paneRef.current.scrollTo(0, 0);
+    if (inView && onScrollToBottom) {
+      onScrollToBottom();
     }
-  }, [isActive]);
+  }, [inView]);
 
   return (
     <div
       ref={paneRef}
       style={getStyle(isTransformed, index)}
       className={`transition duration-700 ease-[cubic-bezier(0.42, 0, 0.58, 1)] justify-items-end ${
-        isActive
-          ? " h-screen overflow-auto"
-          : "overflow-hidden h-screen"
-      }  ${className ?? ""} justify-items-end flex flex-row min-w-96 md:min-w-0 p-6`}
+        isActive ? " h-screen overflow-auto" : "overflow-hidden h-screen"
+      }  ${className ?? ""} min-w-96 md:min-w-0 p-6`}
       {...props}
     >
-      
-      {children}
+      <div className="flex flex-row">{children}</div>
+      <div className="h-[150px]" />
+      <div ref={bottomRef} className="h-[10px]" />
     </div>
   );
 }
