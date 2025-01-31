@@ -86,7 +86,7 @@ export default function SpaceAgencies() {
             {agency.id === "jaxa" && (
               <div className="flex flex-col justify-between min-h-screen bg-white ">
                 <div className="flex-1 justify-between ">
-                  <div className="   my-12">
+                  <div className="   ">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/differently-k6ixLwbbp6wKKpRCNDXHPDElbh5HDD.svg"
                       alt="Differently"
@@ -110,8 +110,8 @@ export default function SpaceAgencies() {
             )}
 
             {agency.id === "intro" && (
-              <div className="min-h-screen md:mx-40  pt-6 flex flex-col bg-[#292D74] ">
-                <div className=" w-full  my-12">
+              <div className="min-h-screen md:mx-40   flex flex-col bg-[#292D74] ">
+                <div className=" w-full  ">
                   {/* <Image
                     src="/key-art.png"
                     alt="Differently"
@@ -174,8 +174,8 @@ text-lgtext-white  "
             )}
 
             {agency.id === "roscosmos" && (
-              <div className="min-h-screen  md:mx-40 bg-[#6381BE] bg-text-lg leading-tight pt-6 flex flex-col ">
-                <div className=" w-full h-auto my-12">
+              <div className="min-h-screen  md:mx-40 bg-[#6381BE] bg-text-lg leading-tight  flex flex-col ">
+                <div className=" w-full h-auto">
                   {/* <Image
                     src="/key-art.png"
                     alt="Differently"
@@ -265,8 +265,8 @@ text-lgtext-white  "
             )}
 
             {agency.id === "esa" && (
-              <div className="min-h-screen  lg:mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#DE6079]">
-                <div className="  h-auto my-12">
+              <div className="min-h-screen  lg:mx-40 text-lg leading-tight  flex flex-col bg-[#DE6079]">
+                <div className="  h-auto ">
                   <div
                     className="flex flex-col justify-items-start
 "
@@ -352,8 +352,8 @@ text-lgtext-white  "
             )}
 
             {agency.id === "nasa" && (
-              <div className="min-h-screen  md:mx-40 text-lg leading-tight pt-6 bg-[#CFD7E9]">
-                <div className="  h-auto my-12">
+              <div className="min-h-screen  md:mx-40 text-lg leading-tight bg-[#CFD7E9]">
+                <div className="  h-auto ">
                   {/* <Image
                     src="/key-art.png"
                     alt="Differently"
