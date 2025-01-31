@@ -84,9 +84,9 @@ export default function SpaceAgencies() {
             onScrollToBottom={handleScrollToBottom}
           >
            {agency.id === "jaxa" && (
-  <div className="max-h-screen   grow pt-6 flex flex-col bg-white overflow-hidden ">
+  <div className="max-h-screen  mx-10 grow pt-6 flex flex-col bg-white overflow-hidden ">
     <div className="flex-1 ">
-      <div className="  w-full mb-8">
+      <div className="  mb-8">
         <Image
           src="/differently.svg"
           alt="Differently"
@@ -97,7 +97,7 @@ export default function SpaceAgencies() {
           priority
         />
       </div>
-      <div className="leading-[3em] ml-10 text-[#344899]">
+      <div className="leading-[3em]  text-[#344899]">
         <p className="text-xl leading-[1em] font-bold">Broad Institute</p>
         <p className="text-xl font-bold">Year in Review 2024</p>
         <span className="font-bold">Scroll to read</span>

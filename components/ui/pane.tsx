@@ -60,7 +60,7 @@ export function Pane({
       style={getStyle(isTransformed, index)}
       className={`transition duration-700 ease-[cubic-bezier(0.42, 0, 0.58, 1)]  ${
         isActive ? " h-screen overflow-auto" : "overflow-hidden h-screen"
-      }  ${className ?? ""}  md:min-w-[96em] p-4`}
+      }  ${className ?? ""}  min-w-[90vw]  p-4`}
       {...props}
     >
       <div className="flex flex-row ">{children}</div>
