@@ -39,7 +39,7 @@ const agencies: Agency[] = [
     id: "roscosmos",
     name: "001",
     title: "A New Perspective on a Decades-old Mystery",
-    bgColor: "bg-[#6381BE]",
+    bgColor: "bg-[#4773CD]",
     textColor: "text-white",
     accordionClass: "accordion-02",
   },
@@ -134,9 +134,9 @@ export default function SpaceAgencies() {
                 <p className={`text-5xl md:px-0 px-3  ${agency.textColor} `}>{agency.title}</p>
               </div>
             </div>
-            <div
-              className="2xl:mr-80 font-martina text-white font-normal text-xl  leading-tight py-40
-text-lgtext-white  "
+            <article
+              className=" font-martina prose lg-prose-xl text-white font-normal text-xl leading-tight py-40
+text-lg   "
             >
               <p className="p-3">
                 Scale. In science, it’s a word that often connotes size, and usually a massive size. And it’s often
@@ -160,24 +160,24 @@ text-lgtext-white  "
                 breakthroughs that may someday transform medicine. We invite you to join us on this journey and learn
                 more about our work here.
               </p>
-            </div>
+            </article>
           </div>
         )
       case "roscosmos":
         return (
-          <div className="min-h-screen  md:mx-40 bg-[#6381BE] bg-text-lg leading-tight pt-6 flex flex-col ">
+          <div className="min-h-screen  md:mx-40 bg-[#4773CD] bg-text-lg leading-tight pt-6 flex flex-col ">
             <div className=" w-full h-auto my-12">
-              <div
-                className="flex flex-col justify-items-start
-"
-              >
-                <p className={`text-sm ${agency.textColor}`}>{agency.name}</p>
-
-                <p className={`text-5xl md:px-0 px-3 ${agency.textColor} `}>{agency.title}</p>
-              </div>
+                    <Image
+                src="/story-1.png"
+                alt="Scale"
+                width={1920}
+                height={640}
+                className="object-cover"
+                sizes="100vw"
+                priority/>
             </div>
-            <div
-              className="2xl:mr-80 text-white  font-martina font-normal text-xl  leading-tight py-40
+            <article
+              className="prose lg:prose-xl text-white  font-martina font-normal text-xl  leading-tight 
 "
             >
               <p className="p-3">
@@ -219,7 +219,7 @@ text-lgtext-white  "
                 might delay the onset of the disease or even arrest its progression, offering long-awaited hope for
                 thousands of patients.
               </p>
-            </div>
+            </article>
           </div>
         )
       case "esa":
