@@ -31,7 +31,7 @@ const agencies: Agency[] = [
     id: "esa",
     name: "002",
     title: "Eye of the Needle",
-    bgColor: "bg-[#DE6079]",
+    bgColor: "bg-[#DA2F62]",
     textColor: "text-white",
     accordionClass: "accordion-03",
   },
@@ -99,17 +99,27 @@ export default function SpaceAgencies() {
                   alt="Differently"
                   width={1920}
                   height={640}
-                  className="object-cover"
+                  className="object-cover hidden md:block"
                   sizes="100vw"
                   priority
                 />
+                       <Image
+                  src="/differently-mobile.svg"
+                  alt="Differently"
+                  width={1920}
+                  height={640}
+                  className="object-cover md:hidden block"
+                  sizes="100vw"
+                  priority
+                />
+
               </div>
               <div className="  text-[#344899]">
               <div className="leading-[3em] ">
                 <p className="text-xl leading-[1em] font-bold">Broad Institute</p>
                 <p className="text-xl font-bold">Year in Review 2024</p>
                 <div className="flex flex-col md:flex-row justify-between  text-[#344899]">
-                <div className="font-bold">Scroll to read</div>
+                <div className="font-bold hidden md:block">Scroll to read</div>
        
                 <Link href="/about">  <div className="font-bold"> About this site </div></Link>
               </div>
@@ -123,7 +133,7 @@ export default function SpaceAgencies() {
         )
       case "intro":
         return (
-          <div className="min-h-screen md:mx-40  pt-6 flex flex-col bg-[#292D74] ">
+          <div className="min-h-screen mx-2 lg:mx-40  pt-6 flex flex-col bg-[#292D74] ">
             <div className=" w-full  my-12">
               <div
                 className="sticky top-0 flex flex-col justify-items-start
@@ -135,10 +145,10 @@ export default function SpaceAgencies() {
               </div>
             </div>
             <article
-              className=" font-martina prose lg-prose-xl text-white font-normal text-xl leading-tight py-40
+              className=" font-martina prose  text-white font-normal text-xl leading-6 py-40
 text-lg   "
             >
-              <p className="p-3">
+              <p className="py-3">
                 Scale. In science, it’s a word that often connotes size, and usually a massive size. And it’s often
                 bandied about as genomic and other technologies produce ever-growing reams of data and cutting-edge
                 computational approaches are trained to interpret them. Sequencing centers are churning out hundreds of
@@ -146,7 +156,7 @@ text-lg   "
                 Machine learning is scanning many millions of medical images to find new patterns.
               </p>
 
-              <p className="p-3">
+              <p className="py-3">
                 But at the Broad Institute, scale means something different. It’s more than just size—it’s about taking
                 systematic, unbiased approaches and going where the data leads you. It’s about traversing reams of
                 cellular data and uncovering a lead that could someday help solve a medical mystery. It’s about shifting
@@ -155,7 +165,7 @@ text-lg   "
                 survive, and giving access to the research community so we can get to clinical trials more quickly and
                 more safely for patients.
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 And it’s one of the many ways the Broad community continues to forge its own distinct path to scientific
                 breakthroughs that may someday transform medicine. We invite you to join us on this journey and learn
                 more about our work here.
@@ -165,22 +175,35 @@ text-lg   "
         )
       case "roscosmos":
         return (
-          <div className="min-h-screen  md:mx-40 bg-[#4773CD] bg-text-lg leading-tight pt-6 flex flex-col ">
-            <div className=" w-full h-auto my-12">
+          <div className="min-h-screen items-center mx-2 lg:mx-40 bg-[#4773CD] leading-tight  flex flex-col ">
+            <div className=" w-full h-auto mb-12">
                     <Image
                 src="/story-1.png"
                 alt="Scale"
                 width={1920}
                 height={640}
-                className="object-cover"
+                className="object-cover hidden md:block"
                 sizes="100vw"
                 priority/>
+
+          <Image
+                src="/story-1-mobile.png"
+                alt="Scale"
+                width={1920}
+                height={640}
+                className="object-cover md:hidden block"
+                sizes="100vw"
+                priority/>
+                
+  
             </div>
+
+            <div className="">
             <article
-              className="prose lg:prose-xl text-white  font-martina font-normal text-xl  leading-tight 
+              className="prose  justify-center text-white   lg:mx-40   mx-2 font-martina font-normal text-xl pb-32  leading-6
 "
             >
-              <p className="p-3">
+              <p className="py-3">
                 Thirty years ago, the cause of Huntington’s disease was traced to a mutation in the HTT gene. Yet, the
                 precise mechanism by which this mutation causes brain cells to die remained elusive. The prevailing
                 thought was that the mutation produces a toxic protein that gradually accumulates, ultimately killing
@@ -189,19 +212,19 @@ text-lg   "
                 possibilities.
               </p>
 
-              <p className="p-3">
+              <p className="py-3">
                 The true culprit may lie not in the protein itself but in the gene’s behavior—specifically, the
                 phenomenon of somatic instability, a subtle genetic anomaly first observed in animal models in the late
                 1990s. In Huntington’s patients, a repeating DNA sequence—CAG—expands unpredictably as the disease
                 progresses, and it is this expansion, McCarroll and his team believe, that drives the degeneration of
                 the brain’s motor centers. 
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 Yet for much of the last three decades, the field has largely overlooked this clue, fixated instead on
                 the role of the protein. But new technologies allow researchers to zoom in and discover what is
                 happening to affected brain cells.
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 McCarroll and his team adapted a technology they previously developed known as Drop-seq—which allows
                 them to individually profile many thousands of cells—to track the precise length of these CAG repeats in
                 individual cells, providing a level of granularity previously unavailable. By analyzing over half a
@@ -211,7 +234,7 @@ text-lg   "
                 deteriorate, setting in motion the hallmark symptoms of Huntington’s: involuntary movements, cognitive
                 decline, and loss of motor function.
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 The discovery, published in <span className="font-italic"> Cell</span>, fundamentally alters the way we
                 think about Huntington’s disease. It also explains why decades of drug development have failed to
                 materialize an effective treatment for the disease: they were chasing the wrong target. A more promising
@@ -220,24 +243,37 @@ text-lg   "
                 thousands of patients.
               </p>
             </article>
+            </div>
           </div>
         )
       case "esa":
         return (
-          <div className="min-h-screen  lg:mx-40 text-lg leading-tight pt-6 flex flex-col bg-[#DE6079]">
-            <div className="  h-auto my-12">
-              <div
-                className="flex flex-col justify-items-start
-"
-              >
-                <p className={`text-sm ${agency.textColor}`}>{agency.name}</p>
-
-                <p className={`text-5xl md:px-0 px-3  ${agency.textColor} `}>{agency.title}</p>
-              </div>
+          <div className="min-h-screen items-center lg:mx-40 mx-2 text-lg leading-tight  flex flex-col bg-[#DA2F62]">
+                  <div className=" w-full h-auto mb-12">
+                    <Image
+                src="/story-2.png"
+                alt="Scale"
+                width={1920}
+                height={640}
+                className="object-cover hidden md:block"
+                sizes="100vw"
+                priority/>
+   <Image
+                src="/story-2-mobile.png"
+                alt="Scale"
+                width={1920}
+                height={640}
+                className="object-cover md:hidden block"
+                sizes="100vw"
+                priority/>
+                
+                
+  
             </div>
 
-            <div
-              className="2xl:mr-80  text-white  font-martina font-normal text-xl  leading-tight font-normal leading-tight py-40
+            <div className="">
+            <article
+              className="prose  justify-center text-white  font-martina font-normal text-xl pb-32  leading-6
 "
             >
               <p className="p-3">
@@ -276,47 +312,58 @@ text-lg   "
                 The promise is immense, and the team is working to realize it by optimizing their eCIS systems while
                 also exploring other promising delivery approaches.
               </p>
+              </article>
             </div>
           </div>
         )
       case "nasa":
         return (
-          <div className="min-h-screen  md:mx-40 text-lg leading-tight pt-6 bg-[#CFD7E9]">
-            <div className="  h-auto my-12"></div>
+          <div className="min-h-screen items-center lg:mx-40 mx-2 text-lg leading-tight  flex flex-col bg-[#CED7E9]">
+                      <div className=" w-full h-auto mb-12">
+                    <Image
+                src="/story-3.png"
+                alt="Scale"
+                width={1920}
+                height={640}
+                className="object-cover hidden md:block"
+                sizes="100vw"
+                priority/>
+                  <Image
+                src="/story-3-mobile.png"
+                alt="Scale"
+                width={1920}
+                height={640}
+                className="object-cover md:hidden block"
+                sizes="100vw"
+                priority/>
+                
 
-            <div
-              className="flex flex-col justify-items-start
-"
-            >
-              <p className={`text-sm ${agency.textColor}`}>{agency.name}</p>
-
-              <p className={`text-5xl md:px-0 px-3 ${agency.textColor} `}>{agency.title}</p>
             </div>
-
-            <div
-              className=" 2xl:mr-80 text-[#42518C] font-martina font-normal text-xl  leading-tight py-40
+            <div className="">
+            <article
+              className="prose  justify-center text-[#292D74] font-martina font-normal text-xl pb-32  leading-6
 "
             >
-              <p className="p-3">
+              <p className="py-3">
                 It’s often said that scientists have cured cancer many times … in mice. Beneath the quip lay the belief
                 that laboratory models of cancer were all imperfect, and therefore, scientists shouldn’t agonize over
                 validating a therapeutic hypothesis—they just needed to move quickly to get drugs to cancer patients.
               </p>
 
-              <p className="p-3">
+              <p className="py-3">
                 But there’s a major glitch: most drugs fail in clinical trials. Even amid breakthroughs in cancer
                 treatments, up to 95 percent of experimental oncology drugs still never make it to patients. That’s an
                 astonishing waste of resources—and it unnecessarily exposes cancer patients to sometimes gruelling
                 treatments.
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 With the advent of genomic sequencing, scientists realized that the central problem in finding effective
                 new cancer drugs wasn’t so much that models were imperfect, but that cancer isn’t a single disease.
                 Instead, it’s a collection of molecularly distinct diseases. So taking a single cell line—”immortalized”
                 cells that grow in Petri dishes and are the workhorse of cancer research—and applying it to a range of
                 cancers was a recipe for failure.
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 Thus, Broad cancer researchers and their collaborators (notably those at the Wellcome Sanger Institute
                 in the UK) reasoned they could use the latest genomic and other advanced technologies to create a new
                 resource that captured the molecular diversity of actual human tumors. They also reckoned they could
@@ -326,23 +373,24 @@ text-lg   "
                 down genes) to identify molecular vulnerabilities, or dependencies. And they also subjected the cell
                 lines to thousands of drug treatments to see whether any possible treatments already existed.
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 These collective efforts, many of which were catalyzed by philanthropy, were dubbed the Cancer
                 Dependency Map. Officially launched in 2018, the DepMap, as it’s now called, has profiled 2,000 cell
                 lines (representing more than 34 cancers), conducted ~2 million genome-wide screens.
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 And it’s become a hallmark Broad-led effort: one that not only takes an unbiased, data-driven approach,
                 but rallies together researchers to parse through and ultimately, to actively contribute data. Open to
                 researchers, the DepMap portal, which also includes analytical tools, boasts more than 11,000 users a
                 week from across the world. And it also now includes 19 pharmaceutical companies, who make up the DepMap
                 Consortium, which supports the overall effort.
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 Above all, it’s leading to a real impact on patients, validating identified targets (a key step in
                 persuading drug companies to take them up) and uncovering new ones. So far, seven clinical trials have
                 emerged from the DepMap, with many more expected in the coming years.
               </p>
+              </article>
             </div>
           </div>
         )
@@ -360,9 +408,10 @@ text-lg   "
           <>
             {renderAgencyContent(agencies[4])} {/* Render "jaxa" content */}
             <Accordion type="single" collapsible className="w-full">
-              {agencies.slice(0, 4).map((agency, index) => (
+              {agencies.slice(0, 4).toReversed().map((agency, index) => (
+                
                 <AccordionItem key={agency.id} value={agency.id}>
-                  <AccordionTrigger className={`${agency.bgColor} ${agency.textColor} p-5`}>
+                  <AccordionTrigger className={`${agency.bgColor} ${agency.textColor} py-5 px-3`}>
                     {agency.title}
                   </AccordionTrigger>
                   <AccordionContent className={`${agency.bgColor} ${agency.textColor}`}>
