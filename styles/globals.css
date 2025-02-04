@@ -23,6 +23,20 @@ body {
 }
 
 
+/* Mono font */
+@font-face {
+  font-family: 'Haas Text Mono';
+  src: url('/fonts/Haas Text Mono-55 Roman.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Haas Text Mono';
+  src: url('/fonts/Haas Text Mono-75 Bold.otf') format('opentype');
+  font-weight: bold; 
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

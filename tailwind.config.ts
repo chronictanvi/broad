@@ -12,6 +12,7 @@ const config: Config = {
     fontFamily: {
       sans: ["Neue Haas Grotesk Display", "sans-serif"],
       martina: ['MartinaPlantijn', 'serif'], // 'serif' is a fallback in case the font isn't loaded
+      mono: ['"Haas Text Mono"', 'monospace'],
 
     },
     extend: {

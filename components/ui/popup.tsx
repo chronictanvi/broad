@@ -10,7 +10,7 @@ const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
   if (!showPopup) return null; // Don't render if showPopup is false
 
   return (
-    <Draggable handle=".draggable-handle">
+    <Draggable handle=".draggable-handle" style={{ touchAction: "none" }}>
       <div className="absolute popupstyle popuplayout top-40 left-1/3 text-white 
  bg-white p-6 shadow-lg z-50">
         <button
