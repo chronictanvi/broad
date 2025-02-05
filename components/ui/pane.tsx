@@ -67,7 +67,7 @@ export function Pane({
     >
       <div className="flex-grow">{children}</div>
       {agency && (
-        <div className="sticky top-0 flex flex-col items-center justify-items-start h-full ml-4">
+        <div className="sticky cursor-pointer top-0 flex flex-col items-center justify-items-start h-full ml-4">
           <p className={`text-sm ${agency.textColor} whitespace-nowrap`}>{agency.name}</p>
 
           <p
