@@ -6,9 +6,8 @@ import Popup from "./components/ui/popup"
 import Image from "next/image"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from "next/link"
-
-import Footer from "./components/ui/footer"
-import { Separator } from "@radix-ui/react-context-menu"
+import ByTheNumbers
+ from "./components/ui/byTheNumbers"
 
 interface Agency {
   id: string
@@ -460,11 +459,7 @@ text-lg   "
                 emerged from the DepMap, with many more expected in the coming years.
               </p>
               </article>
-
-    <div className="border-y-3 border-[#292D74] py-6">
-<h2 className="text-[#292D74] font-mono text-2xl text-center font-bold py-6">BY THE NUMBERS</h2>
-
-</div>
+<ByTheNumbers/>
             </div>
           </div>
         )
