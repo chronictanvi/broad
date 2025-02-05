@@ -24,10 +24,6 @@
   gap: 20px;
   flex-shrink: 0;
 
-
-
-  
-
 }
   .popupstyle {
 
@@ -66,12 +62,7 @@
 }
 
 @layer base {
-  html {
-    font-family: "Neue Haas Grotesk Display";
-    font-style: normal;
-    font-weight: 600;
-    src: url(https://use.typekit.net/uql5ydf.css) format("woff2");
-  }
+
 
   :root {
     --background: 0 0% 100%;

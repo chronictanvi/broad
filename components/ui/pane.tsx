@@ -40,7 +40,7 @@ export function Pane({
 
   const { ref: bottomRef, inView } = useInView({
     threshold: 0.5,
-    triggerOnce: true,
+    // triggerOnce: true,
   });
 
   useEffect(() => {

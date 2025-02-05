@@ -3,8 +3,25 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Neue Haas ;
 }
+
+
+/* Display font */
+@font-face {
+  font-family: "NeueHaasDisplay";
+  src: url("/fonts/NeueHaasDisplayRoman.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/fonts/NeueHaasDisplayMedium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
 
 /* Regular font */
 @font-face {

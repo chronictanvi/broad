@@ -93,7 +93,7 @@ export default function SpaceAgencies() {
         return (
           <div className="max-h-screen mx-3 md:mx-10 grow pt-6 flex flex-col bg-white  ">
             <div className="flex-1 ">
-              <div className="  mb-8">
+              <div className="  mb-4">
                 <Image
                   src="/differently.svg"
                   alt="Differently"
