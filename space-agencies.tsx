@@ -6,8 +6,8 @@ import Popup from "./components/ui/popup"
 import Image from "next/image"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from "next/link"
-
-import Footer from "./components/ui/footer"
+import ByTheNumbers
+ from "./components/ui/byTheNumbers"
 
 interface Agency {
   id: string
@@ -234,6 +234,26 @@ text-lg   "
                 deteriorate, setting in motion the hallmark symptoms of Huntington’s: involuntary movements, cognitive
                 decline, and loss of motor function.
               </p>
+              <Image
+                src="/story-1-illu.png"
+                alt="Huntington (HTT) Gene Somatic Instability"
+                width={1920}
+                height={640}
+                className="object-cover hidden md:block"
+                sizes="100vw"
+                priority/>
+
+          <Image
+                src="/story-1-illu-mobile.png"
+                alt="Huntington (HTT) Gene Somatic Instability"
+                width={1920}
+                height={640}
+                className="object-cover md:hidden block"
+                sizes="100vw"
+                priority/>
+                <figcaption className=" font-mono text-white"><h4 className="font-mono text-white">HOW IT WORKS</h4>
+                In Huntington’s patients, a repeating DNA sequence — CAG — expands unpredictably as the disease progresses, and it is this expansion, McCarroll and his team believe, that drives the degeneration of the brain’s motor centers.</figcaption>
+                
               <p className="py-3">
                 The discovery, published in <span className="font-italic"> Cell</span>, fundamentally alters the way we
                 think about Huntington’s disease. It also explains why decades of drug development have failed to
@@ -252,7 +272,7 @@ text-lg   "
                   <div className=" w-full h-auto mb-12">
                     <Image
                 src="/story-2.png"
-                alt="Scale"
+                alt="Eye of the Needle"
                 width={1920}
                 height={640}
                 className="object-cover hidden md:block"
@@ -260,15 +280,13 @@ text-lg   "
                 priority/>
    <Image
                 src="/story-2-mobile.png"
-                alt="Scale"
+                alt="Eye of the Needle"
                 width={1920}
                 height={640}
                 className="object-cover md:hidden block"
                 sizes="100vw"
                 priority/>
-                
-                
-  
+              
             </div>
 
             <div className="">
@@ -276,13 +294,13 @@ text-lg   "
               className="prose  justify-center text-white  font-martina font-normal text-xl pb-32  leading-6
 "
             >
-              <p className="p-3">
+              <p className="py-3">
                 Scientists are developing novel gene- and cell-based therapies for rare diseases, metabolic disorders,
                 cardiovascular conditions, cancers, and more. But these therapies still face a major hurdle: they need
                 to reach the right disease-causing cells in the body.
               </p>
 
-              <p className="p-3">
+              <p className="py-3">
                 Current technologies can deliver gene therapies to some tissues, such as the eye, blood, and liver, but
                 not others, especially crucial locations like the brain, heart, lung, and kidney. As part of an
                 ambitious initiative to build a suite of modular tools that researchers can quickly—and
@@ -290,7 +308,30 @@ text-lg   "
                 researcher Feng Zhang is tackling this bottleneck with a new delivery vehicle that can ferry
                 gene-editing tools to different cell types.
               </p>
-              <p className="p-3">
+
+
+              <Image
+                src="/story-2-illu.png"
+                alt="extra-cellular contractile injection system"
+                width={1920}
+                height={640}
+                className="object-cover hidden md:block"
+                sizes="100vw"
+                priority/>
+
+          <Image
+                src="/story-2-illu-mobile.png"
+                alt="extra-cellular contractile injection system"
+                width={1920}
+                height={640}
+                className="object-cover md:hidden block"
+                sizes="100vw"
+                priority/>
+                <figcaption className=" font-mono text-white"><h4 className="font-mono text-white">HOW IT WORKS</h4>
+                In eCIS, a tiny syringe-like tube injects proteins into host cells. On one end of eCIS are tail fibers that recognize specific receptors on the cell surface and latch on.     </figcaption>           
+
+              
+              <p className="py-3">
                 With the support of a group of philanthropists, he and his team are doing this by plumbing nature’s
                 secrets. In this case, they have refashioned a natural feature of Photorhabdus bacteria called
                 eCIS—extracellular contractile injection system—in which a tiny syringe-like tube injects proteins into
@@ -300,7 +341,7 @@ text-lg   "
                 the Zhang Lab reengineered the tail fibers of an eCIS to bind to human cells—and tricked the syringe
                 into delivering a protein of the lab’s choosing.
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 Thus far, the reengineered eCIS machines have shown their versatility, delivering different types of
                 proteins to human cells. These include base editors, which can make single-letter changes to DNA;
                 proteins that are toxic to cancer cells; and Cas9, a large DNA-cutting enzyme used in CRISPR
@@ -308,7 +349,7 @@ text-lg   "
                 It’s a major step forward for developing future gene therapies to the brain, one of the most challenging
                 parts of the body to target.
               </p>
-              <p className="p-3">
+              <p className="py-3">
                 The promise is immense, and the team is working to realize it by optimizing their eCIS systems while
                 also exploring other promising delivery approaches.
               </p>
@@ -373,6 +414,33 @@ text-lg   "
                 down genes) to identify molecular vulnerabilities, or dependencies. And they also subjected the cell
                 lines to thousands of drug treatments to see whether any possible treatments already existed.
               </p>
+
+
+              <Image
+                src="/story-3-illu.png"
+                alt="Clinical Trials for Experimental Oncology Drugs"
+                width={1920}
+                height={640}
+                className="object-cover hidden md:block"
+                sizes="100vw"
+                priority/>
+
+
+          <Image
+                src="/story-3-illu-mobile.png"
+                alt="Clinical Trials for Experimental Oncology Drugs"
+                width={1920}
+                height={640}
+                className="object-cover md:hidden block"
+                sizes="100vw"
+                priority/>
+                <figcaption className=" text-[#292D74] font-mono"><h4 className="text-[#292D74] font-mono ">EVEN AMID BREAKTHROUGHS</h4>
+                Most drugs fail in clinical trials. Up to 95% of experimental oncology drugs never make it to patients.
+               </figcaption>           
+
+
+
+
               <p className="py-3">
                 These collective efforts, many of which were catalyzed by philanthropy, were dubbed the Cancer
                 Dependency Map. Officially launched in 2018, the DepMap, as it’s now called, has profiled 2,000 cell
@@ -391,6 +459,7 @@ text-lg   "
                 emerged from the DepMap, with many more expected in the coming years.
               </p>
               </article>
+<ByTheNumbers/>
             </div>
           </div>
         )

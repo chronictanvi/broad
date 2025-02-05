@@ -71,10 +71,10 @@ export function Pane({
         <div ref={bottomRef} className="h-[100px]" />
       </div>
       {agency && (
-        <div className="sticky top-0 flex flex-col items-center justify-items-start h-full ml-4">
-          <p className={`text-sm ${agency.textColor} whitespace-nowrap`}>
-            {agency.name}
-          </p>
+
+        <div className="sticky cursor-pointer top-0 flex flex-col items-center justify-items-start h-full ml-4">
+          <p className={`text-sm ${agency.textColor} whitespace-nowrap`}>{agency.name}</p>
+
 
           <p
             className={`flex hidden md:block items-center md:text-2xl text-xl md:font-light font-medium ${agency.textColor} md:mt-4 text-right md:text-vertical md:text-left text-horizontal`}
