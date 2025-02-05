@@ -32,7 +32,7 @@ const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
           <br />
           <br />
           The stories featured here are just a sampling of how the Broad is
-          having an impact and we invite you to learn more on this website.
+          having an impact.
           <br />
           <br />
           —Todd Golub, Director of the Broad Institute
