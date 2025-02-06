@@ -28,7 +28,7 @@ const ByTheNumbers: React.FC = () => {
                 ))}
 
 
-<div  className="flex flex-col mt-12 md:flex-row items-center gap-2 md:gap-[6rem]   py-12 p-5 md:justify-between w-full">
+<div  className="flex flex-col mt-12 md:flex-row items-center gap-2 md:gap-[6rem]   py-12 md:justify-between w-full">
 
 
 <div className="text-center md:text-right md:w-1/2 ">
