@@ -203,6 +203,7 @@ text-lg   "
             </div>
 
             <div className="">
+            <h2 className="py-5 text-[#D3BBDB] font-neueHaas font-semibold">Broad scientists have unlocked new therapeutic possibilities for Huntington’s disease.</h2>
             <article
               className="prose  justify-center text-white   lg:mx-40   mx-2 font-martina font-normal text-xl pb-32  leading-6
 "
@@ -273,6 +274,8 @@ text-lg   "
             </div>
 
             <div className="">
+            <h2 className="py-5 text-white font-neueHaas font-semibold">A promising gene-editing tool inspired by a bacterial syringe.</h2>
+
             <article
               className="prose  justify-center text-white  font-martina font-normal text-xl pb-32  leading-6
 "
@@ -347,7 +350,11 @@ The potential is immense, and the team is working to realize it by optimizing th
                 
 
             </div>
+
+
             <div className="">
+
+              <h2 className="py-5 text-[#344899] font-neueHaas font-semibold">A Broad-led effort to understand the molecular diversity of tumors is leading to new clinical trials.</h2>
             <article
               className="prose  justify-center text-[#344899] font-martina font-normal text-xl pb-32  leading-6
 "

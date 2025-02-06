@@ -35,7 +35,7 @@ const ByTheNumbers: React.FC = () => {
 
        </div>
        <div className="text-center md:text-left md:w-1/2 max-w-[20rem]">
-           <p className="text-2xl font-semibold underline leading-7">DEPMAP IN ACTION: <span className='italic'>WRN</span></p>
+           <p className="text-2xl font-semibold leading-7">DEPMAP IN ACTION: <span className='italic'>WRN</span></p>
        </div>
 
 
@@ -54,7 +54,7 @@ const ByTheNumbers: React.FC = () => {
                             <h1 className="text-[9rem] font-outline-2 text-[#CED7E9] font-neueHaas tracking-[-.04em]">51</h1>
                         </div>
                         <div className="text-center md:text-left md:w-1/2 max-w-[20rem]">
-                            <p className="text-2xl font-semibold leading-7">Using DepMap and Project DRIVE datasets, Broad researchers and their collaborators identified 51 cell lines classified as having MSI<sup>1</sup>.</p>
+                            <p className="text-2xl font-semibold leading-7">Using DepMap and Project DRIVE datasets, Broad researchers and their collaborators identified 51 cell lines classified as having MSI.<sup><a href="#fn1" id="ref1">1</a></sup></p>
                         </div>
 
 
@@ -75,7 +75,13 @@ const ByTheNumbers: React.FC = () => {
 
 
 
+
 </div>
+<hr className='border border-[#344899] my-5'></hr>
+
+<sup id="fn1" className='font-martina text-center'>1. [<span className='italic'> Microsatellite instability</span> (MSI)  
+   Causes runaway mutation when a DNA 
+   Repair system in a cell is broken.]<a href="#ref1" title="Jump back to footnote 1 in the text."> ↩</a></sup>
 
 
             </div>
