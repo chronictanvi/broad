@@ -114,12 +114,12 @@ export default function SpaceAgencies() {
                 />
 
               </div>
-              <div className="  text-[#344899]">
+              <div className=" font-neueHaas text-[#344899]">
               <div className="leading-[3em] ">
-                <p className="text-xl leading-[1em] font-bold">Broad Institute</p>
-                <p className="text-xl font-bold">Year in Review 2024</p>
+                <p className="text-xl leading-[1em] font-semibold">Broad Institute</p>
+                <p className="text-xl font-semibold">Year in Review 2024</p>
                 <div className="flex flex-col md:flex-row justify-between  text-[#344899]">
-                <div className="font-bold hidden md:block">Scroll to read</div>
+                <div className="font-semibold hidden md:block">Scroll to read</div>
        
                 <Link href="/about">  <div className="font-bold"> About this site </div></Link>
               </div>
@@ -139,9 +139,9 @@ export default function SpaceAgencies() {
                 className="sticky top-0 flex flex-col justify-items-start
 "
               >
-                <p className={`text-sm ${agency.textColor}`}>{agency.name}</p>
+                <p className={`text-sm font-neueHaas ${agency.textColor}`}>{agency.name}</p>
 
-                <p className={`text-5xl md:px-0 px-3  ${agency.textColor} `}>{agency.title}</p>
+                <p className={`text-5xl md:px-0 px-3 font-neueHaas ${agency.textColor} `}>{agency.title}</p>
               </div>
             </div>
             <article
@@ -469,7 +469,7 @@ text-lg   "
   }
 
   return (
-    <div className="font-['neue-haas-grotesk-display'] flex flex-col md:flex-row">
+    <div className="font-neueHaas flex flex-col md:flex-row">
       <div className="w-full h-screen absolute md:overflow-hidden">
         <Popup showPopup={showPopup} closePopup={closePopup} />
 

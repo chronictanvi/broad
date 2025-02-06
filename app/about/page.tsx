@@ -6,7 +6,7 @@ export default function About() {
 
       {/* Back to Home Button */}
       <div className="w-full max-w-4xl">
-        <a href="/" className=" font-sans transition hover:underline">
+        <a href="/" className=" font-neueHaas transition hover:underline">
           ← Back to Home
         </a>
       </div>

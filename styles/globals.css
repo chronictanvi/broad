@@ -3,29 +3,38 @@
 @tailwind utilities;
 
 body {
-  font-family: Neue Haas ;
+  font-family: Neue Haas Display;
 }
 
 
 /* Display font */
 @font-face {
-  font-family: "NeueHaasDisplay";
-  src: url("/fonts/NeueHaasDisplayRoman.ttf") format("ttf");
+  font-family: 'Neue Haas Display';
+  src: url('/fonts/NeueHaasGrotDisp-65Medium.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
+
 }
 
 @font-face {
-  font-family: "Neue Haas Display";
-  src: url("/fonts/NeueHaasDisplayMedium.ttf") format("ttf");
-  font-weight: 500;
-  font-style: normal;
+  font-family: 'Neue Haas Display';
+  src: url('/fonts/NeueHaasGrotDisp-66Medium.otf') format('opentype');
+font-weight: 600;
+font-style: normal;
+
 }
 
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('/fonts/NeueHaasGrotDisp-66MediumItalic.otf') format('opentype');
+font-weight: 600;
+font-style: italic;
+
+}
 
 /* Regular font */
 @font-face {
-  font-family: 'MartinaPlantijn';
+  font-family: 'Martina Plantijn';
   src: url('/fonts/MartinaPlantijn-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
@@ -33,7 +42,7 @@ body {
 
 /* Italic font */
 @font-face {
-  font-family: 'MartinaPlantijn';
+  font-family: 'Martina Plantijn';
   src: url('/fonts/MartinaPlantijn-Italic.otf') format('opentype');
   font-weight: normal;
   font-style: italic;

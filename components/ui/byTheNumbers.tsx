@@ -2,7 +2,7 @@ import React from 'react';
 
 const ByTheNumbers: React.FC = () => {
     return (
-        <div className="font-sans text-[#344899]">
+        <div className="font-neueHaas text-[#344899]">
             <div className="border-y-4 border-indigo-400 py-6">
                 <h2 className="font-mono text-2xl text-center font-bold py-6">BY THE NUMBERS</h2>
             </div>
