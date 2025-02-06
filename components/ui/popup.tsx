@@ -8,7 +8,8 @@ interface PopupProps {
   closePopup: () => void;
 }
 
-const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+const isTouchDevice = typeof window !== "undefined" && 
+  ("ontouchstart" in window || navigator.maxTouchPoints > 0);
 
 const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
   if (!showPopup) return null; // Don't render if showPopup is false
