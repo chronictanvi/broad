@@ -333,7 +333,7 @@ text-lg   "
               
               <p className="py-3">
                 With the support of a group of philanthropists, he and his team are doing this by plumbing nature’s
-                secrets. In this case, they have refashioned a natural feature of Photorhabdus bacteria called
+                secrets. In this case, they have refashioned a natural feature of <span className="italic"> Photorhabdus </span> bacteria called
                 eCIS—extracellular contractile injection system—in which a tiny syringe-like tube injects proteins into
                 host cells. On one end of the eCIS are tail fibers that recognize specific receptors on the cell surface
                 and latch on. Though eCISs naturally only target insect and mouse cells, using AlphaFold—an AI program
