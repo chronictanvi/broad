@@ -121,7 +121,7 @@ export default function SpaceAgencies() {
                 <div className="flex flex-col md:flex-row justify-between  text-[#344899]">
                 <div className="font-semibold hidden md:block">Scroll to read</div>
        
-                <Link href="/about">  <div className="font-bold"> About this site </div></Link>
+                <Link href="/about">  <div className="font-bold md:py-0 py-2"> About this site </div></Link>
               </div>
               </div>
               </div>
