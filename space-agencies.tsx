@@ -24,7 +24,7 @@ const agencies: Agency[] = [
     name: "003",
     title: "DepMap and Patient Impact",
     bgColor: "bg-[#CFD7E9]",
-    textColor: "text-[#42518C]",
+    textColor: "text-[#344899]",
     accordionClass: "accordion-04",
   },
   {
@@ -156,8 +156,12 @@ text-lg   "
                 Machine learning is scanning many millions of medical images to find new patterns.
               </p>
 
-              <p className="py-3">
-                But at the Broad Institute, scale means something different. It’s more than just size—it’s about taking
+     <div className=" font-sans font-semibold border rounded-full border-4 p-5">
+                But at the Broad Institute, scale means something different. 
+                </div>
+                
+                <p className="py-3">
+                It’s more than just size—it’s about taking
                 systematic, unbiased approaches and going where the data leads you. It’s about traversing reams of
                 cellular data and uncovering a lead that could someday help solve a medical mystery. It’s about shifting
                 through millions of proteins to build one that could someday be a new gene-editing tool. Or taking
@@ -251,7 +255,7 @@ text-lg   "
                 className="object-cover md:hidden block"
                 sizes="100vw"
                 priority/>
-                <figcaption className=" font-mono text-white"><h4 className="font-mono text-white">HOW IT WORKS</h4>
+                <figcaption className=" font-mono text-sm text-white"><h4 className="font-mono text-white">HOW IT WORKS</h4>
                 In Huntington’s patients, a repeating DNA sequence — CAG — expands unpredictably as the disease progresses, and it is this expansion, McCarroll and his team believe, that drives the degeneration of the brain’s motor centers.</figcaption>
                 
               <p className="py-3">
@@ -327,7 +331,7 @@ text-lg   "
                 className="object-cover md:hidden block"
                 sizes="100vw"
                 priority/>
-                <figcaption className=" font-mono text-white"><h4 className="font-mono text-white">HOW IT WORKS</h4>
+                <figcaption className=" font-mono text-sm text-white"><h4 className="font-mono text-white">HOW IT WORKS</h4>
                 In eCIS, a tiny syringe-like tube injects proteins into host cells. On one end of eCIS are tail fibers that recognize specific receptors on the cell surface and latch on.     </figcaption>           
 
               
@@ -382,7 +386,7 @@ text-lg   "
             </div>
             <div className="">
             <article
-              className="prose  justify-center text-[#292D74] font-martina font-normal text-xl pb-32  leading-6
+              className="prose  justify-center text-[#344899] font-martina font-normal text-xl pb-32  leading-6
 "
             >
               <p className="py-3">
@@ -434,7 +438,7 @@ text-lg   "
                 className="object-cover md:hidden block"
                 sizes="100vw"
                 priority/>
-                <figcaption className=" text-[#292D74] font-mono"><h4 className="text-[#292D74] font-mono ">EVEN AMID BREAKTHROUGHS</h4>
+                <figcaption className=" text-[#344899] text-sm font-mono"><h4 className="text-[#344899] font-mono ">EVEN AMID BREAKTHROUGHS</h4>
                 Most drugs fail in clinical trials. Up to 95% of experimental oncology drugs never make it to patients.
                </figcaption>           
 

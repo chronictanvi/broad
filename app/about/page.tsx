@@ -36,10 +36,10 @@ export default function About() {
             </div>
             
             <h3 className="text-xl font-mono ">DESIGN</h3>
-            <p className="font-martina font-normal ">
+           <a href='https://www.pentagram.com/'> <p className="font-martina font-normal ">
               Pentagram<br />
               Team Giorgia Lupi
-            </p>
+            </p></a>
           </div>
 
           {/* Inspiration */}
