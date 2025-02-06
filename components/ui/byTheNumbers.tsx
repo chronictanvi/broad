@@ -28,7 +28,7 @@ const ByTheNumbers: React.FC = () => {
                 ))}
 
 
-<div  className="flex flex-col mt-12 md:flex-row items-center gap-2 md:gap-[6rem]  md:py-0 py-5 p-5 md:justify-between w-full">
+<div  className="flex flex-col mt-12 md:flex-row items-center gap-2 md:gap-[6rem]   py-12 p-5 md:justify-between w-full">
 
 
 <div className="text-center md:text-right md:w-1/2 ">
@@ -46,12 +46,12 @@ const ByTheNumbers: React.FC = () => {
 
 
 
-                 <div  className="flex flex-col md:flex-row items-center gap-2 md:gap-[6rem] md:py-0 py-5 px-5 md:justify-between w-full">
+                 <div  className="flex flex-col md:flex-row items-center gap-2 md:gap-[6rem]  py-5 px-5 md:justify-between w-full">
 
 
                  <div className="text-center md:text-right md:w-1/2 ">
              
-                            <h1 className="text-[12rem] font-outline-2 text-[#CED7E9] font-neueHaas tracking-[-.04em]">51</h1>
+                            <h1 className="text-[9rem] font-outline-2 text-[#CED7E9] font-neueHaas tracking-[-.04em]">51</h1>
                         </div>
                         <div className="text-center md:text-left md:w-1/2 max-w-[20rem]">
                             <p className="text-2xl font-semibold leading-7">Using DepMap and Project DRIVE datasets, Broad researchers and their collaborators identified 51 cell lines classified as having MSI<sup>1</sup>.</p>
@@ -62,11 +62,11 @@ const ByTheNumbers: React.FC = () => {
 
                  </div>
 
-                 <div  className="flex flex-col md:flex-row items-center gap-2 md:gap-[6rem]  md:py-0 py-5 px-5 md:justify-between w-full">
+                 <div  className="flex flex-col md:flex-row items-center gap-2 md:gap-[6rem]   py-5 px-5 md:justify-between w-full">
 
 
 <div className="text-center md:text-right md:w-1/2 ">
-<h1 className="text-[12rem] font-outline-2 text-[#CED7E9] font-neueHaas tracking-[-.04em]">73</h1>
+<h1 className="text-[9rem] font-outline-2 text-[#CED7E9] font-neueHaas tracking-[-.04em]">73</h1>
        </div>
        <div className="text-center md:text-left md:w-1/2 max-w-[20rem]">
            <p className="text-2xl font-semibold leading-7">Of those cell lines, the teams found that 73% of them were dependent on <span className='italic'>WRN</span>, a particular protein-encoding gene.</p>
