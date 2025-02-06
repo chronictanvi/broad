@@ -116,8 +116,8 @@ export default function SpaceAgencies() {
               </div>
               <div className=" font-neueHaas text-[#344899]">
               <div className="leading-[3em] ">
-                <p className="text-xl leading-[1em] font-semibold">Broad Institute</p>
-                <p className="text-xl font-semibold">Year in Review 2024</p>
+                <h2 className="text-xl leading-[1em] font-semibold">Broad Institute</h2>
+                <h3 className="text-xl font-semibold">Year in Review 2024</h3>
                 <div className="flex flex-col md:flex-row justify-between  text-[#344899]">
                 <div className="font-semibold hidden md:block">Scroll to read</div>
        
@@ -141,12 +141,12 @@ export default function SpaceAgencies() {
               >
                 <p className={`text-sm font-neueHaas ${agency.textColor}`}>{agency.name}</p>
 
-                <p className={`text-5xl md:px-0 px-3 font-neueHaas ${agency.textColor} `}>{agency.title}</p>
+                <h1 className={`text-5xl md:px-0 px-3 font-neueHaas ${agency.textColor} `}>{agency.title}</h1>
               </div>
             </div>
-            <article
+            <article 
               className=" font-martina prose  text-white font-normal text-xl leading-6 py-40
-text-lg   "
+text-lg   " role="main"
             >
               <p className="py-3">
                 Scale. In science, it’s a word that often connotes size, and usually a massive size. And it’s often
@@ -203,8 +203,8 @@ text-lg   "
             </div>
 
             <div className="">
-            <article
-              className="prose justify-center text-white   lg:mx-40   mx-2 font-martina font-normal text-xl pb-32  leading-6
+            <article role="main"
+              className="prose justify-center text-white   lg:mx-40   mx-2 font-martina font-normal text-xl pb-32  leading-6 
 "
             >
                           <h2 className="py-5 text-[#D3BBDB] text-2xl font-neueHaas font-semibold">Broad scientists have unlocked new therapeutic possibilities for Huntington’s disease.</h2>
@@ -276,7 +276,7 @@ text-lg   "
 
             <div className="">
 
-            <article
+            <article role="main"
               className="prose  justify-center text-white  font-martina font-normal text-xl pb-32  leading-6
 "
             >
@@ -356,7 +356,7 @@ The potential is immense, and the team is working to realize it by optimizing th
 
             <div className="">
 
-            <article
+            <article role="main"
               className="prose  justify-center text-[#344899] font-martina font-normal text-xl pb-32  leading-6
 "
             >

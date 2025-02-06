@@ -72,7 +72,7 @@ export function Pane({
       </div>
       {agency && (
 
-        <div className="sticky cursor-pointer top-0 flex flex-col items-center justify-items-start h-full ml-4">
+        <div role="button" className="sticky cursor-pointer top-0 flex flex-col items-center justify-items-start h-full ml-4">
           <p className={`text-sm font-neueHaas font-semibold ${agency.textColor} whitespace-nowrap`}>{agency.name}</p>
 
 
