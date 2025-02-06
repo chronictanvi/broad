@@ -8,9 +8,11 @@ interface PopupProps {
 
 const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
   if (!showPopup) return null; // Don't render if showPopup is false
+const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
   return (
-    <Draggable handle=".draggable-handle" touchAction="none">
+
+    <Draggable handle=".draggable-handle" disabled={isTouchDevice}>
       <div className="draggable-handle absolute popupstyle cursor-grab
  popuplayout w-full md:w-1/3 h-full  md:top-40 md:left-1/3 text-white 
  bg-white p-6 shadow-lg z-50">
