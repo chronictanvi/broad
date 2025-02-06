@@ -203,11 +203,12 @@ text-lg   "
             </div>
 
             <div className="">
-            <h2 className="py-5 text-[#D3BBDB] font-neueHaas font-semibold">Broad scientists have unlocked new therapeutic possibilities for Huntington’s disease.</h2>
             <article
-              className="prose  justify-center text-white   lg:mx-40   mx-2 font-martina font-normal text-xl pb-32  leading-6
+              className="prose justify-center text-white   lg:mx-40   mx-2 font-martina font-normal text-xl pb-32  leading-6
 "
             >
+                          <h2 className="py-5 text-[#D3BBDB] text-2xl font-neueHaas font-semibold">Broad scientists have unlocked new therapeutic possibilities for Huntington’s disease.</h2>
+
               <p className="py-3">
               Thirty years ago, the cause of Huntington’s disease was traced to a mutation in the <span className="italic">HTT</span> gene. Yet, the precise mechanism by which this mutation causes brain cells to die remained elusive. The prevailing thought was that the mutation produces a toxic protein that gradually accumulates, ultimately killing neurons. Research from Steve McCarroll, a Broad investigator, and his team offers a new take—one that not only rewrites the basic biology of the disease but also unlocks new therapeutic possibilities. 
               </p>
@@ -274,12 +275,13 @@ text-lg   "
             </div>
 
             <div className="">
-            <h2 className="py-5 text-white font-neueHaas font-semibold">A promising gene-editing tool inspired by a bacterial syringe.</h2>
 
             <article
               className="prose  justify-center text-white  font-martina font-normal text-xl pb-32  leading-6
 "
             >
+                          <h2 className="py-5 text-white text-2xl font-neueHaas font-semibold">A promising gene-editing tool inspired by a bacterial syringe.</h2>
+
               <p className="py-3">
               Scientists are developing novel gene- and cell-based therapies for rare diseases, metabolic disorders, cardiovascular conditions, cancers, and more. But these therapies still face a major hurdle: they need to reach the right disease-causing cells in the body. 
 
@@ -354,11 +356,12 @@ The potential is immense, and the team is working to realize it by optimizing th
 
             <div className="">
 
-              <h2 className="py-5 text-[#344899] font-neueHaas font-semibold">A Broad-led effort to understand the molecular diversity of tumors is leading to new clinical trials.</h2>
             <article
               className="prose  justify-center text-[#344899] font-martina font-normal text-xl pb-32  leading-6
 "
             >
+                            <h2 className="py-5 text-2xl text-[#344899] font-neueHaas font-semibold">A Broad-led effort to understand the molecular diversity of tumors is leading to new clinical trials.</h2>
+
               <p className="py-3">
               It’s often said that scientists have cured cancer many times… in mice. Beneath the quip lay the belief that laboratory models of cancer were all imperfect, and therefore, scientists shouldn’t agonize over validating a therapeutic hypothesis—they just needed to move quickly to get drugs to cancer patients. 
               </p>
