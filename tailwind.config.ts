@@ -10,8 +10,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Neue Haas Display"],
-      neueHaas: ["Neue Haas Display"],
+      sans: ["Neue Haas Display",'sans-serif'],
+      neueHaas: ["Neue Haas Display",'sans-serif'],
       martina: ["Martina Plantijn", 'serif'], // 'serif' is a fallback in case the font isn't loaded
       mono: ["Haas Text Mono", 'monospace'],
 
