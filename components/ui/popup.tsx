@@ -12,7 +12,7 @@ const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
   return (
     <Draggable handle=".draggable-handle" >
       <div className="draggable-handle absolute popupstyle cursor-grab
- popuplayout w-full md:w-1/4 h-full  md:top-40 md:left-1/3 text-white 
+ popuplayout w-full md:w-1/3 h-full  md:top-40 md:left-1/3 text-white 
  bg-white p-6 shadow-lg z-50">
         <button
           className="absolute top-5 right-8 text-white text-4xl font-bold"
