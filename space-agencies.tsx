@@ -208,35 +208,19 @@ text-lg   "
 "
             >
               <p className="py-3">
-                Thirty years ago, the cause of Huntington’s disease was traced to a mutation in the HTT gene. Yet, the
-                precise mechanism by which this mutation causes brain cells to die remained elusive. The prevailing
-                thought was that the mutation produces a toxic protein that gradually accumulates, ultimately killing
-                neurons. Research from the McCarroll lab in the Stanley Center for Psychiatric Research offers a new
-                take—one that not only rewrites the basic biology of the disease but also unlocks new therapeutic
-                possibilities.
+              Thirty years ago, the cause of Huntington’s disease was traced to a mutation in the <span className="italic">HTT</span> gene. Yet, the precise mechanism by which this mutation causes brain cells to die remained elusive. The prevailing thought was that the mutation produces a toxic protein that gradually accumulates, ultimately killing neurons. Research from Steve McCarroll, a Broad investigator, and his team offers a new take—one that not only rewrites the basic biology of the disease but also unlocks new therapeutic possibilities. 
               </p>
 
               <p className="py-3">
-                The true culprit may lie not in the protein itself but in the gene’s behavior—specifically, the
-                phenomenon of somatic instability, a subtle genetic anomaly first observed in animal models in the late
-                1990s. In Huntington’s patients, a repeating DNA sequence—CAG—expands unpredictably as the disease
-                progresses, and it is this expansion, McCarroll and his team believe, that drives the degeneration of
-                the brain’s motor centers. 
+              The true culprit may lie not in the protein itself but in the gene’s behavior—specifically, the phenomenon of <span className="italic">somatic instability</span>, a subtle genetic anomaly first observed in animal models in the late 1990s. In Huntington’s patients, a repeating DNA sequence—CAG—expands unpredictably as the disease progresses, and it is this expansion, McCarroll and his team believe, that drives the degeneration of the brain’s motor centers. 
               </p>
               <p className="py-3">
-                Yet for much of the last three decades, the field has largely overlooked this clue, fixated instead on
-                the role of the protein. But new technologies allow researchers to zoom in and discover what is
-                happening to affected brain cells.
+              Yet for much of the last three decades, the field has largely overlooked this clue, fixated instead on the role of the protein. But new technologies allow researchers to zoom in and discover what is happening to affected brain cells.
+
               </p>
               <p className="py-3">
-                McCarroll and his team adapted a technology they previously developed known as Drop-seq—which allows
-                them to individually profile many thousands of cells—to track the precise length of these CAG repeats in
-                individual cells, providing a level of granularity previously unavailable. By analyzing over half a
-                million cells from healthy and Huntington’s-affected brains, they discovered that striatal projection
-                neurons—the cells most affected by the disease—were the only striatal cells to show a significant
-                expansion of these repeats. Once the expansion surpasses around 150 repeats, these neurons begin to
-                deteriorate, setting in motion the hallmark symptoms of Huntington’s: involuntary movements, cognitive
-                decline, and loss of motor function.
+              McCarroll and his team specifically used a technology they developed known as Drop-seq—which allows them to individually profile many thousands of cells—to track the precise length of these CAG repeats in individual cells, providing a level of granularity previously unavailable. By analyzing over half a million cells from healthy and Huntington’s-affected brains, they discovered that striatal projection neurons—the cells most affected by the disease—were the only ones to show a significant expansion of these repeats. Once the expansion surpasses around 150 repeats, these neurons begin to deteriorate, setting in motion the hallmark symptoms of Huntington’s: involuntary movements, cognitive decline, and loss of motor function.
+
               </p>
               <Image
                 src="/story-1-illu.png"
@@ -259,12 +243,7 @@ text-lg   "
                 In Huntington’s patients, a repeating DNA sequence — CAG — expands unpredictably as the disease progresses, and it is this expansion, McCarroll and his team believe, that drives the degeneration of the brain’s motor centers.</figcaption>
                 
               <p className="py-3">
-                The discovery, published in <span className="italic"> Cell</span>, fundamentally alters the way we
-                think about Huntington’s disease. It also explains why decades of drug development have failed to
-                materialize an effective treatment for the disease: they were chasing the wrong target. A more promising
-                therapeutic strategy could involve slowing or halting the expansion of the CAG repeats. Such an approach
-                might delay the onset of the disease or even arrest its progression, offering long-awaited hope for
-                thousands of patients.
+                The discovery, published in <span className="italic"> Cell</span>, fundamentally alters the way we think about Huntington’s disease. It also explains why decades of drug development have failed to materialize an effective treatment for the disease: they were chasing the wrong target. A more promising therapeutic strategy could involve slowing or halting the expansion of the CAG repeats. Such an approach might delay the onset of the disease or even arrest its progression, offering long-awaited hope for thousands of patients.  
               </p>
             </article>
             </div>
@@ -299,18 +278,12 @@ text-lg   "
 "
             >
               <p className="py-3">
-                Scientists are developing novel gene- and cell-based therapies for rare diseases, metabolic disorders,
-                cardiovascular conditions, cancers, and more. But these therapies still face a major hurdle: they need
-                to reach the right disease-causing cells in the body.
+              Scientists are developing novel gene- and cell-based therapies for rare diseases, metabolic disorders, cardiovascular conditions, cancers, and more. But these therapies still face a major hurdle: they need to reach the right disease-causing cells in the body. 
+
               </p>
 
               <p className="py-3">
-                Current technologies can deliver gene therapies to some tissues, such as the eye, blood, and liver, but
-                not others, especially crucial locations like the brain, heart, lung, and kidney. As part of an
-                ambitious initiative to build a suite of modular tools that researchers can quickly—and
-                scalably—repurpose to design gene-editing therapies that strike at the root causes of diseases, Broad
-                researcher Feng Zhang is tackling this bottleneck with a new delivery vehicle that can ferry
-                gene-editing tools to different cell types.
+              Current technologies can deliver gene therapies to some tissues, such as the eye, blood, and liver, but not others, especially crucial locations like the brain, heart, lung, and kidney. As part of an ambitious initiative to build a suite of modular tools that researchers can quickly—and scalably—repurpose to design gene-editing therapies that strike at the root causes of diseases, Broad researcher Feng Zhang is tackling this bottleneck with a new delivery vehicle that can ferry gene-editing tools to different cell types.
               </p>
 
 
@@ -336,26 +309,16 @@ text-lg   "
 
               
               <p className="py-3">
-                With the support of a group of philanthropists, he and his team are doing this by plumbing nature’s
-                secrets. In this case, they have refashioned a natural feature of <span className="italic"> Photorhabdus </span> bacteria called
-                eCIS—extracellular contractile injection system—in which a tiny syringe-like tube injects proteins into
-                host cells. On one end of the eCIS are tail fibers that recognize specific receptors on the cell surface
-                and latch on. Though eCISs naturally only target insect and mouse cells, using AlphaFold—an AI program
-                that predicts the shape of proteins and has so far cataloged more than 200 million protein structures,
-                the Zhang Lab reengineered the tail fibers of an eCIS to bind to human cells—and tricked the syringe
-                into delivering a protein of the lab’s choosing.
+              With the support of a group of philanthropists, he and his team are doing this by plumbing nature’s secrets. In this case, they have refashioned a natural feature of <span className="italic"> Photorhabdus </span> bacteria called eCIS—extracellular contractile injection system—in which a tiny syringe-like tube injects proteins into host cells. On one end of the eCIS are tail fibers that recognize specific receptors on the cell surface and latch on. Though eCISs naturally only target insect and mouse cells, using AlphaFold—an AI program that predicts the shape of proteins and has so far catalogued more than 200 million protein structures—the Zhang Lab reengineered the tail fibers of the eCIS to bind to human cells and tricked the syringe into delivering a protein of the lab’s choosing.
               </p>
               <p className="py-3">
-                Thus far, the reengineered eCIS machines have shown their versatility, delivering different types of
-                proteins to human cells. These include base editors, which can make single-letter changes to DNA;
-                proteins that are toxic to cancer cells; and Cas9, a large DNA-cutting enzyme used in CRISPR
-                gene-editing systems. The team even deployed an eCIS to deliver proteins into the brains of live mice.
-                It’s a major step forward for developing future gene therapies to the brain, one of the most challenging
-                parts of the body to target.
+              Thus far, the reengineered eCIS machines have shown their versatility, delivering different types of proteins to human cells. These include base editors, which can make single-letter changes to DNA; proteins that are toxic to cancer cells; and Cas9, a large DNA-cutting enzyme used in CRISPR gene-editing systems. The team even deployed an eCIS to deliver proteins into the brains of live mice. It’s a major step forward for developing future gene therapies to the brain, one of the most challenging parts of the body to target.
+
               </p>
               <p className="py-3">
-                The promise is immense, and the team is working to realize it by optimizing their eCIS systems while
-                also exploring other promising delivery approaches.
+          
+The potential is immense, and the team is working to realize it by optimizing their eCIS systems while also exploring other promising delivery approaches. 
+
               </p>
               </article>
             </div>
@@ -390,33 +353,20 @@ text-lg   "
 "
             >
               <p className="py-3">
-                It’s often said that scientists have cured cancer many times … in mice. Beneath the quip lay the belief
-                that laboratory models of cancer were all imperfect, and therefore, scientists shouldn’t agonize over
-                validating a therapeutic hypothesis—they just needed to move quickly to get drugs to cancer patients.
+              It’s often said that scientists have cured cancer many times… in mice. Beneath the quip lay the belief that laboratory models of cancer were all imperfect, and therefore, scientists shouldn’t agonize over validating a therapeutic hypothesis—they just needed to move quickly to get drugs to cancer patients. 
               </p>
 
               <p className="py-3">
-                But there’s a major glitch: most drugs fail in clinical trials. Even amid breakthroughs in cancer
-                treatments, up to 95 percent of experimental oncology drugs still never make it to patients. That’s an
-                astonishing waste of resources—and it unnecessarily exposes cancer patients to sometimes gruelling
-                treatments.
+              But there’s a major glitch: most drugs fail in clinical trials. Even amid breakthroughs in cancer treatments, up to 95 percent of experimental oncology drugs still never make it to patients. That’s an astonishing waste of resources—and it unnecessarily exposes cancer patients to sometimes grueling treatments.
+
               </p>
               <p className="py-3">
-                With the advent of genomic sequencing, scientists realized that the central problem in finding effective
-                new cancer drugs wasn’t so much that models were imperfect, but that cancer isn’t a single disease.
-                Instead, it’s a collection of molecularly distinct diseases. So taking a single cell line—”immortalized”
-                cells that grow in Petri dishes and are the workhorse of cancer research—and applying it to a range of
-                cancers was a recipe for failure.
+              With the advent of genomic sequencing, scientists realized that the central problem in finding effective new cancer drugs wasn’t so much that models were imperfect, but that 
+cancer isn’t a single disease. Instead, it’s a collection of molecularly distinct diseases. So taking a single cell line— “immortalized” cells that grow in Petri dishes and are the workhorse of cancer research—and applying it to a range of cancers was a recipe for failure.
+
               </p>
               <p className="py-3">
-                Thus, Broad cancer researchers and their collaborators (notably those at the Wellcome Sanger Institute
-                in the UK) reasoned they could use the latest genomic and other advanced technologies to create a new
-                resource that captured the molecular diversity of actual human tumors. They also reckoned they could
-                pinpoint tumors’ weak spots—genetic anomalies found only in cancer cells and necessary for their
-                survival, and thus, perfect drug targets. They began collecting existing cell lines—and generated new
-                ones—profiled them genomically, and then systematically made genetic tweaks (e.g., deleted or dialed
-                down genes) to identify molecular vulnerabilities, or dependencies. And they also subjected the cell
-                lines to thousands of drug treatments to see whether any possible treatments already existed.
+              Thus, Broad cancer researchers and their collaborators (notably those at the Wellcome Sanger Institute in the U.K.) reasoned they could use the latest genomic and other advanced technologies to create a new resource that captured the molecular diversity of actual human tumors. They also reckoned they could pinpoint tumors’ weak spots—genetic anomalies found only in cancer cells and necessary for their survival, and thus, perfect drug targets. They began collecting existing cell lines—and generated new ones—profiled them genomically, and then systematically made genetic tweaks (e.g., deleted or dialed down genes) to identify molecular vulnerabilities, or dependencies. And they also subjected the cell lines to thousands of drug treatments to see whether any possible treatments already existed.
               </p>
 
 
@@ -446,34 +396,31 @@ text-lg   "
 
 
               <p className="py-3">
-                These collective efforts, many of which were catalyzed by philanthropy, were dubbed the Cancer
-                Dependency Map. Officially launched in 2018, the DepMap, as it’s now called, has profiled 2,000 cell
-                lines (representing more than 34 cancers), conducted ~2 million genome-wide screens.
+              These collective efforts, many of which were catalyzed by philanthropy, were dubbed the Cancer Dependency Map. Officially launched in 2018, the DepMap has profiled 2,000 cell lines (representing more than 34 cancers) and conducted around 2 million genome-wide screens. 
+
               </p>
               <p className="py-3">
-                And it’s become a hallmark Broad-led effort: one that not only takes an unbiased, data-driven approach,
-                but rallies together researchers to parse through and ultimately, to actively contribute data. Open to
-                researchers, the DepMap portal, which also includes analytical tools, boasts more than 11,000 users a
-                week from across the world. And it also now includes 19 pharmaceutical companies, who make up the DepMap
-                Consortium, which supports the overall effort.
+              And it’s become a hallmark Broad-led effort: one that not only takes an unbiased, data-driven approach, but rallies together researchers to parse through and ultimately, to actively contribute data. Open to researchers, the DepMap portal, which also includes analytical tools, boasts more than 11,000 users a week from across the world. And it 
+also now includes 19 pharmaceutical companies, who make up the DepMap Consortium, which supports the overall effort.  
               </p>
               <p className="py-3">
-                Above all, it’s leading to a real impact on patients, validating identified targets (a key step in
-                persuading drug companies to take them up) and uncovering new ones. So far, seven clinical trials have
-                emerged from the DepMap, with many more expected in the coming years.
+              Above all, it’s leading to a real impact on patients, validating identified targets (a key step in persuading 
+drug companies to take them up) and uncovering new ones. So far, seven clinical trials have emerged from the DepMap, with many more expected in the coming years.   
+
               </p>
 
 
 
               <p className="py-3">
-              Here’s one example of a new target that emerged from the DepMap: Some cancers have a feature called microsatellite instability (MSI), which causes runaway mutation when a DNA repair system in a cell is broken. About half of cancers with MSI can be treated with drugs called checkpoint inhibitors that unleash the patient’s immune system to kill cancer cells. But Broad and Wellcome Sanger scientists wanted to find ways of targeting the ones that didn’t respond. Using the DepMap approach, they discovered that these cancers also depend on a gene called <span className="italic"> WRN </span>, which encodes a protein that helps cells copy or read DNA by unwinding and unzipping the genome's double helix. 
+              Here’s one example of a new target that emerged from the DepMap: Some cancers have a feature called <span className="italic">microsatellite instability</span> (MSI), which causes runaway mutation when 
+a DNA repair system in a cell is broken. About half of cancers with MSI can be treated with drugs called checkpoint inhibitors that unleash the patient’s immune system to kill cancer cells. But Broad and Wellcome Sanger scientists wanted to find ways of targeting the ones that didn’t respond. Using the DepMap approach, they discovered that these cancers also depend on a gene called <span className="italic">WRN</span>, which encodes a protein that helps cells copy or read DNA by unwinding 
+and unzipping the genome’s double helix. 
               </p>
 
          
 
               <p className="py-3">
-              The scientists uncovered this dependency by looking at two datasets, the DepMap and Project DRIVE (an initiative of the Novartis Institute for Biomedical Research). Both datasets were generated by individually breaking or silencing thousands of genes in cancer cell lines and measuring the resulting effects on cell survival. Among the datasets, the team identified 51 cell lines classified as having MSI. Of those, they then found that 73 percent of them were dependent on <span className="italic">  WRN </span>. Now, TK companies are currently working on drugs to shut down<span className="italic">  WRN </span>, which should have no effect on normal cells. 
-              </p>
+              The scientists uncovered this dependency by looking at two datasets, the DepMap and Project DRIVE (an initiative of the Novartis Institute for Biomedical Research). Both datasets were generated by individually breaking or silencing thousands of genes in cancer cell lines and measuring the resulting effects on cell survival. Among the datasets, the team identified 51 cell lines classified as having MSI. Of those, they then found that 73 percent of them were dependent on <span className="italic">WRN</span>. Now, at least three companies are currently working on drugs to shut down <span className="italic">WRN</span>, which should have no effect on normal cells.               </p>
 
 
 
