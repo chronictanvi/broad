@@ -26,7 +26,7 @@ export default function About() {
           {/* Address & Design */}
           <div className=" md:text-left font-martina">
             <div className='pb-6'>
-              <h3 className="text-xl font-mono ">BROAD INSTITUTE</h3>
+              <h3 className="text-base font-mono ">BROAD INSTITUTE</h3>
               <address className=" font-normal not-italic
  font-martina ">
                 Merkin Building<br />
@@ -35,7 +35,7 @@ export default function About() {
               </address>
             </div>
             
-            <h3 className="text-xl font-mono ">DESIGN</h3>
+            <h3 className="text-base font-mono ">DESIGN</h3>
            <a href='https://www.pentagram.com/'> <p className="font-martina font-normal ">
               Pentagram<br />
               Team Giorgia Lupi
@@ -44,7 +44,7 @@ export default function About() {
 
           {/* Inspiration */}
           <div className="md:text-left">
-            <h3 className="text-xl  font-mono ">INSPIRATION</h3>
+            <h3 className="text-base font-mono ">INSPIRATION</h3>
             <p className="font-martina font-normal ">
               The design of this booklet was inspired by the structure of the microfluidic system used in Drop-Seq, 
               a technology developed at the Broad that enables scientists to capture the gene expression of thousands 
