@@ -183,7 +183,7 @@ text-lg   " role="main"
             <div className=" w-full h-auto mb-12">
                     <Image
                 src="/story-1.png"
-                alt="Scale"
+                alt="A New Perspective on a Decades-old Mystery"
                 width={1920}
                 height={640}
                 className="object-cover hidden md:block"
@@ -192,7 +192,7 @@ text-lg   " role="main"
 
           <Image
                 src="/story-1-mobile.png"
-                alt="Scale"
+                alt="A New Perspective on a Decades-old Mystery"
                 width={1920}
                 height={640}
                 className="object-cover md:hidden block"
@@ -335,7 +335,7 @@ The potential is immense, and the team is working to realize it by optimizing th
                       <div className=" w-full h-auto mb-12">
                     <Image
                 src="/story-3.png"
-                alt="Scale"
+                alt="DepMap and Patient Impact"
                 width={1920}
                 height={640}
                 className="object-cover hidden md:block"
@@ -343,7 +343,7 @@ The potential is immense, and the team is working to realize it by optimizing th
                 priority/>
                   <Image
                 src="/story-3-mobile.png"
-                alt="Scale"
+                alt="DepMap and Patient Impact"
                 width={1920}
                 height={640}
                 className="object-cover md:hidden block"
