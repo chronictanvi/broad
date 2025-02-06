@@ -7,7 +7,7 @@ const ByTheNumbers: React.FC = () => {
                 <h2 className="font-mono text-2xl text-center font-bold py-6">BY THE NUMBERS</h2>
             </div>
 
-            <div className="pt-10">
+            <div className="py-10">
                 {[
                     { number: '2018', text: 'Catalyzed by philanthropy, DepMap was officially launched in 2018.' },
                     { number: '2,000', text: 'In the years since, the DepMap has profiled 2,000 cell lines' },
@@ -16,7 +16,7 @@ const ByTheNumbers: React.FC = () => {
                     { number: '11,000', text: 'Today, DepMap’s online portal has more than 11,000 weekly global users' },
                     { number: '19', text: '...and includes 19 pharmaceutical companies, who make up the DepMap Consortium' },
                 ].map((item, index) => (
-                    <div key={index} className="flex flex-col md:flex-row items-center gap-[6rem] p-5 md:justify-between w-full">
+                    <div key={index} className="flex flex-col md:flex-row items-center gap-2 px-2 md:px-0 md:gap-[6rem] p-5 md:justify-between w-full">
                         <div className="text-center md:text-right md:w-1/2 ">
                             <h1 className="text-9xl font-neueHaas tracking-[-.04em]">{item.number}</h1>
                         </div>
@@ -24,7 +24,60 @@ const ByTheNumbers: React.FC = () => {
                             <p className="text-2xl font-semibold leading-7">{item.text}</p>
                         </div>
                     </div>
+                    
                 ))}
+
+
+<div  className="flex flex-col mt-12 md:flex-row items-center gap-2 md:gap-[6rem]  md:py-0 py-5 p-5 md:justify-between w-full">
+
+
+<div className="text-center md:text-right md:w-1/2 ">
+
+       </div>
+       <div className="text-center md:text-left md:w-1/2 max-w-[20rem]">
+           <p className="text-2xl font-semibold underline leading-7">DEPMAP IN ACTION: <span className='italic'>WRN</span></p>
+       </div>
+
+
+
+
+</div>
+
+
+
+
+                 <div  className="flex flex-col md:flex-row items-center gap-2 md:gap-[6rem] md:py-0 py-5 px-5 md:justify-between w-full">
+
+
+                 <div className="text-center md:text-right md:w-1/2 ">
+             
+                            <h1 className="text-[12rem] font-outline-2 text-[#CED7E9] font-neueHaas tracking-[-.04em]">51</h1>
+                        </div>
+                        <div className="text-center md:text-left md:w-1/2 max-w-[20rem]">
+                            <p className="text-2xl font-semibold leading-7">Using DepMap and Project DRIVE datasets, Broad researchers and their collaborators identified 51 cell lines classified as having MSI<sup>1</sup>.</p>
+                        </div>
+
+
+
+
+                 </div>
+
+                 <div  className="flex flex-col md:flex-row items-center gap-2 md:gap-[6rem]  md:py-0 py-5 px-5 md:justify-between w-full">
+
+
+<div className="text-center md:text-right md:w-1/2 ">
+<h1 className="text-[12rem] font-outline-2 text-[#CED7E9] font-neueHaas tracking-[-.04em]">73</h1>
+       </div>
+       <div className="text-center md:text-left md:w-1/2 max-w-[20rem]">
+           <p className="text-2xl font-semibold leading-7">Of those cell lines, the teams found that 73% of them were dependent on <span className='italic'>WRN</span>, a particular protein-encoding gene.</p>
+       </div>
+
+
+
+
+</div>
+
+
             </div>
         </div>
     );

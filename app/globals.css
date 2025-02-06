@@ -12,6 +12,13 @@
     writing-mode: horizontal-tb;
   }
 
+  .font-outline-2 {
+    -webkit-text-stroke: 2px #344899;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px #344899;
+  }
+
 
 .popuplayout{
   display: flex;
