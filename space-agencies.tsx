@@ -54,7 +54,7 @@ const agencies: Agency[] = [
   {
     id: "jaxa",
     name: "",
-    title: "Broad Institute Year in Review 2024",
+    title: "",
     bgColor: "bg-white",
     textColor: "text-[#344899]",
     accordionClass: "accordion-00",
@@ -117,7 +117,7 @@ export default function SpaceAgencies() {
               <div className=" font-neueHaas text-[#344899]">
               <div className="leading-[3em] ">
                 <h2 className="text-xl leading-[1em] font-semibold">Broad Institute</h2>
-                <h3 className="text-xl font-semibold">Year in Review 2024</h3>
+                {/* <h3 className="text-xl font-semibold">Year in Review 2024</h3> */}
                 <div className="flex flex-col md:flex-row justify-between  text-[#344899]">
                 <div className="font-semibold hidden md:block">Scroll to read</div>
        
@@ -163,7 +163,7 @@ text-lg   " role="main"
                 <p className="py-3">
                 It’s more than just size—it’s about taking
                 systematic, unbiased approaches and going where the data leads you. It’s about traversing reams of
-                cellular data and uncovering a lead that could someday help solve a medical mystery. It’s about shifting
+                cellular data and uncovering a lead that could someday help solve a medical mystery. It’s about sifting
                 through millions of proteins to build one that could someday be a new gene-editing tool. Or taking
                 everything we know about the genetic changes cancer cells undergo, figuring out which ones they need to
                 survive, and giving access to the research community so we can get to clinical trials more quickly and
@@ -222,7 +222,10 @@ text-lg   " role="main"
               </p>
               <p className="py-3">
               McCarroll and his team specifically used a technology they developed known as Drop-seq—which allows them to individually profile many thousands of cells—to track the precise length of these CAG repeats in individual cells, providing a level of granularity previously unavailable. By analyzing over half a million cells from healthy and Huntington’s-affected brains, they discovered that striatal projection neurons—the cells most affected by the disease—were the only ones to show a significant expansion of these repeats. Once the expansion surpasses around 150 repeats, these neurons begin to deteriorate, setting in motion the hallmark symptoms of Huntington’s: involuntary movements, cognitive decline, and loss of motor function.
-
+             
+              <p className="py-3">
+                The discovery, published in <span className="italic"> Cell</span>, fundamentally alters the way we think about Huntington’s disease. It also explains why decades of drug development have failed to materialize an effective treatment for the disease: they were chasing the wrong target. A more promising therapeutic strategy could involve slowing or halting the expansion of the CAG repeats. Such an approach might delay the onset of the disease or even arrest its progression, offering long-awaited hope for thousands of patients.  
+              </p>
               </p>
               <Image
                 src="/story-1-illu.png"
@@ -235,7 +238,7 @@ text-lg   " role="main"
 
           <Image
                 src="/story-1-illu-mobile.png"
-                alt="Huntington (HTT) Gene Somatic Instability"
+                alt="Huntingtin (HTT) Gene Somatic Instability"
                 width={1920}
                 height={640}
                 className="object-cover md:hidden block"
@@ -244,9 +247,7 @@ text-lg   " role="main"
                 <figcaption className=" font-mono text-sm text-white"><h4 className="font-mono text-white">HOW IT WORKS</h4>
                 In Huntington’s patients, a repeating DNA sequence — CAG — expands unpredictably as the disease progresses, and it is this expansion, McCarroll and his team believe, that drives the degeneration of the brain’s motor centers.</figcaption>
                 
-              <p className="py-3">
-                The discovery, published in <span className="italic"> Cell</span>, fundamentally alters the way we think about Huntington’s disease. It also explains why decades of drug development have failed to materialize an effective treatment for the disease: they were chasing the wrong target. A more promising therapeutic strategy could involve slowing or halting the expansion of the CAG repeats. Such an approach might delay the onset of the disease or even arrest its progression, offering long-awaited hope for thousands of patients.  
-              </p>
+           
             </article>
             </div>
           </div>
@@ -423,14 +424,14 @@ drug companies to take them up) and uncovering new ones. So far, seven clinical 
 
               <p className="py-3">
               Here’s one example of a new target that emerged from the DepMap: Some cancers have a feature called <span className="italic">microsatellite instability</span> (MSI), which causes runaway mutation when 
-a DNA repair system in a cell is broken. About half of cancers with MSI can be treated with drugs called checkpoint inhibitors that unleash the patient’s immune system to kill cancer cells. But Broad and Wellcome Sanger scientists wanted to find ways of targeting the ones that didn’t respond. Using the DepMap approach, they discovered that these cancers also depend on a gene called <span className="italic">WRN</span>, which encodes a protein that helps cells copy or read DNA by unwinding 
+a DNA repair system in a cell is broken. About half of cancers with MSI can be treated with drugs called checkpoint inhibitors that unleash the patient’s immune system to kill cancer cells. But Broad and Wellcome Sanger scientists wanted to find ways of targeting the ones that didn’t respond. Using the DepMap approach, they discovered that these cancers also depend on a gene called <span className="italic">WRN,</span> which encodes a protein that helps cells copy or read DNA by unwinding 
 and unzipping the genome’s double helix. 
               </p>
 
          
 
               <p className="py-3">
-              The scientists uncovered this dependency by looking at two datasets, the DepMap and Project DRIVE (an initiative of the Novartis Institute for Biomedical Research). Both datasets were generated by individually breaking or silencing thousands of genes in cancer cell lines and measuring the resulting effects on cell survival. Among the datasets, the team identified 51 cell lines classified as having MSI. Of those, they then found that 73 percent of them were dependent on <span className="italic">WRN</span>. Now, at least three companies are currently working on drugs to shut down <span className="italic">WRN</span>, which should have no effect on normal cells.               </p>
+              The scientists uncovered this dependency by looking at two datasets, the DepMap and Project DRIVE (an initiative of the Novartis Institute for Biomedical Research). Both datasets were generated by individually breaking or silencing thousands of genes in cancer cell lines and measuring the resulting effects on cell survival. Among the datasets, the team identified 51 cell lines classified as having MSI. Of those, they then found that 73 percent of them were dependent on <span className="italic">WRN.</span> Now, at least three companies are currently working on drugs to shut down <span className="italic">WRN,</span> which should have no effect on normal cells.               </p>
 
 
 

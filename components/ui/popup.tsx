@@ -32,7 +32,7 @@ const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
         </button>
         <div className=" text-xl font-neueHaas mt-10 font-semibold ">
           Last year marked the Broad Institute’s 20th anniversary. As we enter
-          2025, Broad scientists are shaping the future of science and medicine
+          our next decade, Broad scientists are shaping the future of science and medicine
           by inventing new tools, advancing discoveries, forging new communities,
           tackling tough questions, and leading the larger scientific community
           in understanding disease to transform human health.
