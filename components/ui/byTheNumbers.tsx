@@ -79,7 +79,7 @@ const ByTheNumbers: React.FC = () => {
 </div>
 <hr className='border border-[#344899] my-5'></hr>
 
-<sup id="fn1" className='font-martina text-center'>1. [<span className='italic'> Microsatellite instability</span> (MSI)  
+<sup id="fn1" className='font-mono text-center'>1. [<span className='italic'> Microsatellite instability</span> (MSI)  
    Causes runaway mutation when a DNA 
    Repair system in a cell is broken.]<a href="#ref1" title="Jump back to footnote 1 in the text."> ↩</a></sup>
 

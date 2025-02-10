@@ -91,7 +91,7 @@ export default function SpaceAgencies() {
     switch (agency.id) {
       case "jaxa":
         return (
-          <div className="max-h-screen mx-3 md:mx-10 grow pt-6 flex flex-col bg-white  ">
+          <div className="max-h-screen mx-2 md:mx-10 grow pt-6 flex flex-col bg-white  ">
             <div className="flex-1 ">
               <div className="  mb-4">
                 <Image
@@ -114,14 +114,14 @@ export default function SpaceAgencies() {
                 />
 
               </div>
-              <div className=" font-neueHaas text-[#344899]">
-              <div className="leading-[3em] ">
-                <h2 className="text-xl leading-[1em] font-semibold">Broad Institute</h2>
+              <div className="font-neueHaas mx-1 text-[#344899]">
+              <div className="leading-[2em] ">
+                <h2 className="text-xl  font-semibold">Broad Institute</h2>
                 {/* <h3 className="text-xl font-semibold">Year in Review 2024</h3> */}
                 <div className="flex flex-col md:flex-row justify-between  text-[#344899]">
                 <div className="font-semibold hidden md:block">Scroll to read</div>
        
-                <Link href="/about">  <div className="font-bold md:py-0 py-2"> About this site </div></Link>
+                <Link href="/about">  <div className="font-bold md:py-0 py-2 hover:underline"> About this site </div></Link>
               </div>
               </div>
               </div>
