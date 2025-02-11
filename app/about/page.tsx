@@ -19,7 +19,9 @@ export default function About() {
           
           {/* Logo */}
           <div className="">
+            <a href="https://www.broadinstitute.org/">
             <Image src="/logo.png" alt="Broad Institute Logo" width={200} height={58.75} />
+            </a>
           </div>
 
           {/* Address & Design */}
