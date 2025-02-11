@@ -2,6 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Display font */
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/fonts/NeueHaasGrotDisp-65Medium.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/fonts/NeueHaasGrotDisp-66Medium.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/fonts/NeueHaasGrotDisp-66MediumItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Regular font */
+@font-face {
+  font-family: "Martina Plantijn";
+  src: url("/fonts/MartinaPlantijn-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Italic font */
+@font-face {
+  font-family: "Martina Plantijn";
+  src: url("/fonts/MartinaPlantijn-Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Mono font */
+@font-face {
+  font-family: "Haas Text Mono";
+  src: url("/fonts/Haas Text Mono-55 Roman.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Haas Text Mono";
+  src: url("/fonts/Haas Text Mono-75 Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
 @layer utilities {
   .text-vertical {
     writing-mode: vertical-rl;
@@ -19,21 +70,28 @@
     -webkit-text-stroke: 4px #344899;
   }
 
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 
-.popuplayout{
-  display: flex;
-  padding: 30px;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  flex-shrink: 0;
-
-}
+  .popuplayout {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
   .popupstyle {
-    background: rgba(0, 71, 255, 0.70);
+    background: rgba(0, 71, 255, 0.7);
     box-shadow: 2px 20px 47px 15px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(10px);
-
   }
   .accordion {
     position: absolute;
@@ -65,8 +123,6 @@
 }
 
 @layer base {
-
-
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
