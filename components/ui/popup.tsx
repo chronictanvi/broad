@@ -22,7 +22,7 @@ const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
  popuplayout w-full md:w-1/3 h-full  md:top-40 md:left-1/3 text-white 
  bg-white p-6 shadow-lg z-50">
         <button
-         className="absolute top-5 right-8 text-white text-4xl font-bold pointer-events-auto"
+         className="absolute top-5 right-8 text-white text-4xl font-medium pointer-events-auto"
          onClick={(e) => {
            e.stopPropagation();
            closePopup();
@@ -30,7 +30,7 @@ const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
         >
           ×
         </button>
-        <div className=" text-xl font-neueHaas mt-10 font-semibold ">
+        <div className=" text-xl font-neueHaas mt-10 font-medium ">
           Last year marked the Broad Institute’s 20th anniversary. As we enter
           our next decade, Broad scientists are shaping the future of science and medicine
           by inventing new tools, advancing discoveries, forging new communities,

@@ -5,21 +5,28 @@
 /* Display font */
 @font-face {
   font-family: "Neue Haas Display";
-  src: url("/fonts/NeueHaasGrotDisp-65Medium.otf") format("opentype");
+  src: url("/fonts/NeueHaasGrotDisp-55Roman.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Neue Haas Display";
-  src: url("/fonts/NeueHaasGrotDisp-66Medium.otf") format("opentype");
+  src: url("/fonts/NeueHaasDisplayRomanItalic.ttf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Neue Haas Display";
+  src: url("/fonts/NeueHaasGrotDisp-65Medium.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Neue Haas Display";
-  src: url("/fonts/NeueHaasGrotDisp-66MediumItalic.otf") format("opentype");
+  src: url("/fonts/NeueHaasGrotDisp-65MediumItalic.otf") format("opentype");
   font-weight: 600;
   font-style: italic;
 }
