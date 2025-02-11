@@ -10,11 +10,10 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Neue Haas Display",'sans-serif'],
-      neueHaas: ["Neue Haas Display",'sans-serif'],
-      martina: ["Martina Plantijn", 'serif'], // 'serif' is a fallback in case the font isn't loaded
-      mono: ["Haas Text Mono", 'monospace'],
-
+      sans: ["Neue Haas Display", "sans-serif"],
+      neueHaas: ["Neue Haas Display", "sans-serif"],
+      martina: ["Martina Plantijn", "serif"], // 'serif' is a fallback in case the font isn't loaded
+      mono: ["Haas Text Mono", "monospace"],
     },
     extend: {
       colors: {
@@ -96,10 +95,11 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      transitionDuration: {
+        "800": "800ms",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate"),    require('@tailwindcss/typography'),
-  ],
-  
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };
 export default config;

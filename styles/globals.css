@@ -6,63 +6,6 @@ body {
   font-family: Neue Haas Display;
 }
 
-
-/* Display font */
-@font-face {
-  font-family: 'Neue Haas Display';
-  src: url('/fonts/NeueHaasGrotDisp-65Medium.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'Neue Haas Display';
-  src: url('/fonts/NeueHaasGrotDisp-66Medium.otf') format('opentype');
-font-weight: 600;
-font-style: normal;
-
-}
-
-@font-face {
-  font-family: 'Neue Haas Display';
-  src: url('/fonts/NeueHaasGrotDisp-66MediumItalic.otf') format('opentype');
-font-weight: 600;
-font-style: italic;
-
-}
-
-/* Regular font */
-@font-face {
-  font-family: 'Martina Plantijn';
-  src: url('/fonts/MartinaPlantijn-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Italic font */
-@font-face {
-  font-family: 'Martina Plantijn';
-  src: url('/fonts/MartinaPlantijn-Italic.otf') format('opentype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-
-/* Mono font */
-@font-face {
-  font-family: 'Haas Text Mono';
-  src: url('/fonts/Haas Text Mono-55 Roman.otf') format('opentype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Haas Text Mono';
-  src: url('/fonts/Haas Text Mono-75 Bold.otf') format('opentype');
-  font-weight: bold; 
-}
-
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
