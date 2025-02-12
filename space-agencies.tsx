@@ -101,15 +101,15 @@ export default function SpaceAgencies() {
     switch (agency.id) {
       case "jaxa":
         return (
-          <div className="max-h-screen mx-2 md:mx-10 grow pt-6 flex flex-col bg-white  ">
-            <div className="flex-1 ">
-              <div className="  mb-4">
+          <div className="mx-4 flex max-h-screen grow flex-col items-center bg-white pt-6 md:mx-10">
+            <div className="flex-1">
+              <div className="mb-4">
                 <Image
                   src="/differently.svg"
                   alt="Broad Does Things Differently"
                   width={1920}
                   height={640}
-                  className="object-cover hidden md:block"
+                  className="hidden object-cover md:block"
                   sizes="100vw"
                   priority
                 />
@@ -118,23 +118,23 @@ export default function SpaceAgencies() {
                   alt="Broad Does Things Differently"
                   width={1920}
                   height={640}
-                  className="object-cover md:hidden block"
+                  className="block object-cover md:hidden"
                   sizes="100vw"
                   priority
                 />
               </div>
-              <div className="font-neueHaas mx-1 text-[#344899]">
-                <div className="leading-[2em] ">
-                  <h2 className="text-xl  font-semibold">Broad Institute</h2>
+              <div className="mx-1 font-neueHaas text-[#344899]">
+                <div className="leading-[2em]">
+                  <h2 className="text-xl font-semibold">Broad Institute</h2>
                   {/* <h3 className="text-xl font-medium">Year in Review 2024</h3> */}
-                  <div className="flex flex-col md:flex-row justify-between  text-[#344899]">
-                    <div className="font-semibold hidden md:block">
+                  <div className="flex flex-col justify-between text-[#344899] md:flex-row">
+                    <div className="hidden font-semibold md:block">
                       Scroll to read
                     </div>
 
                     <Link href="/about">
                       {" "}
-                      <div className="font-semibold md:py-0 py-2 hover:underline">
+                      <div className="py-2 font-semibold hover:underline md:py-0">
                         {" "}
                         About this site{" "}
                       </div>
@@ -147,24 +147,23 @@ export default function SpaceAgencies() {
         );
       case "intro":
         return (
-          <div className="min-h-screen mx-2 lg:mx-40  pt-6 flex flex-col bg-[#292D74] ">
-         <div className=" w-full h-auto mb-12">
+          <div className="mx-4 flex min-h-screen flex-col items-center bg-[#292D74] pt-6 lg:mx-40">
+            <div className="mb-12 h-auto w-full">
               <Image
                 src="/story-0.svg"
                 alt="Scale"
                 width={1920}
                 height={640}
-                className="object-cover hidden md:block"
+                className="hidden object-cover md:block"
                 sizes="100vw"
                 priority
               />
-
               <Image
                 src="/story-0-mobile.svg"
                 alt="Scale"
                 width={1920}
                 height={640}
-                className="object-cover md:hidden block"
+                className="block object-cover md:hidden"
                 sizes="100vw"
                 priority
               />
@@ -173,57 +172,56 @@ export default function SpaceAgencies() {
             <div className="">
               <article
                 role="main"
-                className="prose justify-center text-white   lg:mx-40   mx-2 font-martina font-normal text-xl pb-32  leading-6 
-"
+                className="prose justify-center pb-32 font-martina text-xl font-normal leading-6 text-white"
               >
-          
-              <p className="py-3">
-                Scale. In science, it’s a word that often connotes size, and
-                usually a massive size. And it’s often bandied about as genomic
-                and other technologies produce ever-growing reams of data and
-                cutting-edge computational approaches are trained to interpret
-                them. Sequencing centers are churning out hundreds of thousands
-                of genomes a day. Laboratories are now able to profile millions
-                of cells in an experiment. Machine learning is scanning many
-                millions of medical images to find new patterns.
-              </p>
+                <p className="py-3">
+                  Scale. In science, it’s a word that often connotes size, and
+                  usually a massive size. And it’s often bandied about as
+                  genomic and other technologies produce ever-growing reams of
+                  data and cutting-edge computational approaches are trained to
+                  interpret them. Sequencing centers are churning out hundreds
+                  of thousands of genomes a day. Laboratories are now able to
+                  profile millions of cells in an experiment. Machine learning
+                  is scanning many millions of medical images to find new
+                  patterns.
+                </p>
 
-              <div className=" font-sans font-medium border rounded-full border-4 p-5">
-                But at the Broad Institute, scale means something different.
-              </div>
+                <div className="rounded-full border border-4 p-5 font-sans font-medium">
+                  But at the Broad Institute, scale means something different.
+                </div>
 
-              <p className="py-3">
-                It’s more than just size—it’s about taking systematic, unbiased
-                approaches and going where the data leads you. It’s about
-                traversing reams of cellular data and uncovering a lead that
-                could someday help solve a medical mystery. It’s about sifting
-                through millions of proteins to build one that could someday be
-                a new gene-editing tool. Or taking everything we know about the
-                genetic changes cancer cells undergo, figuring out which ones
-                they need to survive, and giving access to the research
-                community so we can get to clinical trials more quickly and more
-                safely for patients.
-              </p>
-              <p className="py-3">
-                And it’s one of the many ways the Broad community continues to
-                forge its own distinct path to scientific breakthroughs that may
-                someday transform medicine. We invite you to join us on this
-                journey and learn more about our work here.
-              </p>
-            </article>
-          </div>
+                <p className="py-3">
+                  It’s more than just size—it’s about taking systematic,
+                  unbiased approaches and going where the data leads you. It’s
+                  about traversing reams of cellular data and uncovering a lead
+                  that could someday help solve a medical mystery. It’s about
+                  sifting through millions of proteins to build one that could
+                  someday be a new gene-editing tool. Or taking everything we
+                  know about the genetic changes cancer cells undergo, figuring
+                  out which ones they need to survive, and giving access to the
+                  research community so we can get to clinical trials more
+                  quickly and more safely for patients.
+                </p>
+                <p className="py-3">
+                  And it’s one of the many ways the Broad community continues to
+                  forge its own distinct path to scientific breakthroughs that
+                  may someday transform medicine. We invite you to join us on
+                  this journey and learn more about our work here.
+                </p>
+              </article>
+            </div>
           </div>
         );
       case "roscosmos":
         return (
-          <div className="min-h-screen items-center mx-2 lg:mx-40 bg-[#4773CD] leading-tight  flex flex-col ">
-            <div className=" w-full h-auto mb-12">
+          <div className="mx-4 flex min-h-screen flex-col items-center bg-[#4773CD] pt-6 leading-tight lg:mx-40">
+            <div className="mb-12 h-auto w-full">
               <Image
                 src="/story-1.svg"
                 alt="A New Perspective on a Decades-old Mystery"
                 width={1920}
                 height={640}
-                className="object-cover hidden md:block"
+                className="hidden object-cover md:block"
                 sizes="100vw"
                 priority
               />
@@ -233,7 +231,7 @@ export default function SpaceAgencies() {
                 alt="A New Perspective on a Decades-old Mystery"
                 width={1920}
                 height={640}
-                className="object-cover md:hidden block"
+                className="block object-cover md:hidden"
                 sizes="100vw"
                 priority
               />
@@ -242,10 +240,9 @@ export default function SpaceAgencies() {
             <div className="">
               <article
                 role="main"
-                className="prose justify-center text-white   lg:mx-40   mx-2 font-martina font-normal text-xl pb-32  leading-6 
-"
+                className="prose justify-center pb-32 font-martina text-xl font-normal leading-6 text-white"
               >
-                <h2 className="py-5 text-[#D3BBDB] text-2xl font-neueHaas font-medium">
+                <h2 className="py-5 font-neueHaas text-2xl font-medium text-[#D3BBDB]">
                   Broad scientists have unlocked new therapeutic possibilities
                   for Huntington’s disease.
                 </h2>
@@ -291,26 +288,26 @@ export default function SpaceAgencies() {
                   surpasses around 150 repeats, these neurons begin to
                   deteriorate, setting in motion the hallmark symptoms of
                   Huntington’s: involuntary movements, cognitive decline, and
-                  loss of motor function.    </p>
-                  <p className="py-3">
-                    The discovery, published in{" "}
-                    <span className="italic"> Cell</span>, fundamentally alters
-                    the way we think about Huntington’s disease. It also
-                    explains why decades of drug development have failed to
-                    materialize an effective treatment for the disease: they
-                    were chasing the wrong target. A more promising therapeutic
-                    strategy could involve slowing or halting the expansion of
-                    the CAG repeats. Such an approach might delay the onset of
-                    the disease or even arrest its progression, offering
-                    long-awaited hope for thousands of patients.
-              
+                  loss of motor function.{" "}
+                </p>
+                <p className="py-3">
+                  The discovery, published in{" "}
+                  <span className="italic"> Cell</span>, fundamentally alters
+                  the way we think about Huntington’s disease. It also explains
+                  why decades of drug development have failed to materialize an
+                  effective treatment for the disease: they were chasing the
+                  wrong target. A more promising therapeutic strategy could
+                  involve slowing or halting the expansion of the CAG repeats.
+                  Such an approach might delay the onset of the disease or even
+                  arrest its progression, offering long-awaited hope for
+                  thousands of patients.
                 </p>
                 <Image
                   src="/story-1-illu.svg"
                   alt="Huntington (HTT) Gene Somatic Instability"
                   width={1920}
                   height={640}
-                  className="object-cover hidden md:block"
+                  className="hidden object-cover md:block"
                   sizes="100vw"
                   priority
                 />
@@ -320,11 +317,11 @@ export default function SpaceAgencies() {
                   alt="Huntingtin (HTT) Gene Somatic Instability"
                   width={1920}
                   height={640}
-                  className="object-cover md:hidden block"
+                  className="block object-cover md:hidden"
                   sizes="100vw"
                   priority
                 />
-                <figcaption className=" font-mono text-sm text-white">
+                <figcaption className="font-mono text-sm text-white">
                   <h4 className="font-mono text-white">HOW IT WORKS</h4>
                   In Huntington’s patients, a repeating DNA sequence — CAG —
                   expands unpredictably as the disease progresses, and it is
@@ -332,59 +329,61 @@ export default function SpaceAgencies() {
                   the degeneration of the brain’s motor centers.
                 </figcaption>
 
-
-
-<div className="py-20">
-
-</div>
-                <div id="reading-list" className=" border-t-2 border-white">
-  <h4 className="font-mono pt-32 text-sm text-white">FURTHER READING</h4>
-  <div className="mt-4 space-y-2">
-    {[
-      {
-        href: "https://www.broadinstitute.org/news/study-finds-surprising-way-genetic-mutation-causes-huntingtons-disease-transforming",
-        text: "Study finds surprising way that genetic mutation causes Huntington’s disease, transforming understanding of the disorder",
-      },
-      {
-        href: "https://www.youtube.com/watch?v=hd8Uukrocps",
-        text: "A new understanding of Huntington's disease",
-      },
-      {
-        href: "https://www.pbs.org/newshour/health/research-is-unraveling-the-mystery-of-what-causes-huntingtons-disease-a-devastating-brain-disorder",
-        text: "Research is unraveling the mystery of what causes Huntington’s disease, a devastating brain disorder",
-      },
-      {
-        href: "https://www.nature.com/articles/d41586-025-00119-x",
-        text: "Revealed: Why the fatal Huntington’s gene takes so long to cause harm",
-      },
-      {
-        href: "https://www.broadinstitute.org/news/new-gene-delivery-vehicle-shows-promise-human-brain-gene-therapy",
-        text: "New gene delivery vehicle shows promise for human brain gene therapy",
-      },
-    ].map(({ href, text }, index) => (
-      <p key={index} className="not-prose py-1">
-        <a href={href}          className="text-white decoration-1 underline underline-offset-2 hover:underline hover:decoration-dotted hover:decoration-2
-" target="_blank" rel="noopener noreferrer">
-          {text}
-        </a>
-      </p>
-    ))}
-  </div>
-</div>
+                <div className="py-20"></div>
+                <div id="reading-list" className="border-t-2 border-white">
+                  <h4 className="pt-32 font-mono text-sm text-white">
+                    FURTHER READING
+                  </h4>
+                  <div className="mt-4 space-y-2">
+                    {[
+                      {
+                        href: "https://www.broadinstitute.org/news/study-finds-surprising-way-genetic-mutation-causes-huntingtons-disease-transforming",
+                        text: "Study finds surprising way that genetic mutation causes Huntington’s disease, transforming understanding of the disorder",
+                      },
+                      {
+                        href: "https://www.youtube.com/watch?v=hd8Uukrocps",
+                        text: "A new understanding of Huntington's disease",
+                      },
+                      {
+                        href: "https://www.pbs.org/newshour/health/research-is-unraveling-the-mystery-of-what-causes-huntingtons-disease-a-devastating-brain-disorder",
+                        text: "Research is unraveling the mystery of what causes Huntington’s disease, a devastating brain disorder",
+                      },
+                      {
+                        href: "https://www.nature.com/articles/d41586-025-00119-x",
+                        text: "Revealed: Why the fatal Huntington’s gene takes so long to cause harm",
+                      },
+                      {
+                        href: "https://www.broadinstitute.org/news/new-gene-delivery-vehicle-shows-promise-human-brain-gene-therapy",
+                        text: "New gene delivery vehicle shows promise for human brain gene therapy",
+                      },
+                    ].map(({ href, text }, index) => (
+                      <p key={index} className="not-prose py-1">
+                        <a
+                          href={href}
+                          className="text-white underline decoration-1 underline-offset-2 hover:underline hover:decoration-dotted hover:decoration-2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {text}
+                        </a>
+                      </p>
+                    ))}
+                  </div>
+                </div>
               </article>
             </div>
           </div>
         );
       case "esa":
         return (
-          <div className="min-h-screen items-center lg:mx-40 mx-2 text-lg leading-tight  flex flex-col bg-[#DA2F62]">
-            <div className=" w-full h-auto mb-12">
+          <div className="mx-4 flex min-h-screen flex-col items-center bg-[#DA2F62] pt-6 text-lg leading-tight lg:mx-40">
+            <div className="mb-12 h-auto w-full">
               <Image
                 src="/story-2.svg"
                 alt="Eye of the Needle"
                 width={1920}
                 height={640}
-                className="object-cover hidden md:block"
+                className="hidden object-cover md:block"
                 sizes="100vw"
                 priority
               />
@@ -393,7 +392,7 @@ export default function SpaceAgencies() {
                 alt="Eye of the Needle"
                 width={1920}
                 height={640}
-                className="object-cover md:hidden block"
+                className="block object-cover md:hidden"
                 sizes="100vw"
                 priority
               />
@@ -402,10 +401,9 @@ export default function SpaceAgencies() {
             <div className="">
               <article
                 role="main"
-                className="prose  justify-center text-white  font-martina font-normal text-xl pb-32  leading-6
-"
+                className="prose justify-center pb-32 font-martina text-xl font-normal leading-6 text-white"
               >
-                <h2 className="py-5 text-white text-2xl font-neueHaas font-medium">
+                <h2 className="py-5 font-neueHaas text-2xl font-medium text-white">
                   A promising gene-editing tool inspired by a bacterial syringe.
                 </h2>
 
@@ -434,7 +432,7 @@ export default function SpaceAgencies() {
                   alt="extra-cellular contractile injection system"
                   width={1920}
                   height={640}
-                  className="object-cover hidden md:block"
+                  className="hidden object-cover md:block"
                   sizes="100vw"
                   priority
                 />
@@ -444,11 +442,11 @@ export default function SpaceAgencies() {
                   alt="extra-cellular contractile injection system"
                   width={1920}
                   height={640}
-                  className="object-cover md:hidden block"
+                  className="block object-cover md:hidden"
                   sizes="100vw"
                   priority
                 />
-                <figcaption className=" font-mono text-sm text-white">
+                <figcaption className="font-mono text-sm text-white">
                   <h4 className="font-mono text-white">HOW IT WORKS</h4>
                   In eCIS, a tiny syringe-like tube injects proteins into host
                   cells. On one end of eCIS are tail fibers that recognize
@@ -489,65 +487,61 @@ export default function SpaceAgencies() {
                   promising delivery approaches.
                 </p>
 
-                <div className="py-20">
-
-</div>
-                <div id="reading-list" className=" border-t-2 border-white">
-  <h4 className="font-mono pt-40 text-sm text-white">FURTHER READING</h4>
-  <div className="mt-4 space-y-2">
-
-
-    {[
-      {
-        href: "https://www.nature.com/articles/s41568-024-00763-x",
-        text: "The present and future of the Cancer Dependency Map",
-      },
-      {
-        href: "https://www.broadinstitute.org/news/qa-new-approaches-are-needed-find-better-cancer-drug-targets",
-        text: "Q&A: New approaches are needed to find better cancer drug targets",
-      },
-      {
-        href: "https://www.broadinstitute.org/news/broad-dana-farber-st-jude-join-together-drive-progress-against-pediatric-cancer",
-        text: "Broad, Dana-Farber, St. Jude join together to drive progress against pediatric cancer",
-      },
-      {
-        href: "https://www.youtube.com/watch?v=IoRvY4zleKk",
-        text: "Tumor Immunotherapy Discovery Engine (TIDE)",
-      },
-      {
-        href: "https://www.broadinstitute.org/news/cancer-dependency-map-consortium-accelerates-research-tumor-vulnerabilities",
-        text: "Cancer Dependency Map Consortium accelerates research into tumor vulnerabilities",
-      },
-    ].map(({ href, text }, index) => (
-      <p key={index} className="not-prose py-1">
-        <a
-          href={href}
-          className="text-white decoration-1 underline underline-offset-2 hover:underline hover:decoration-dotted hover:decoration-2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {text}
-        </a>
-      </p>
-    ))}
-  </div>
-</div>
-
-
+                <div className="py-20"></div>
+                <div id="reading-list" className="border-t-2 border-white">
+                  <h4 className="pt-40 font-mono text-sm text-white">
+                    FURTHER READING
+                  </h4>
+                  <div className="mt-4 space-y-2">
+                    {[
+                      {
+                        href: "https://www.nature.com/articles/s41568-024-00763-x",
+                        text: "The present and future of the Cancer Dependency Map",
+                      },
+                      {
+                        href: "https://www.broadinstitute.org/news/qa-new-approaches-are-needed-find-better-cancer-drug-targets",
+                        text: "Q&A: New approaches are needed to find better cancer drug targets",
+                      },
+                      {
+                        href: "https://www.broadinstitute.org/news/broad-dana-farber-st-jude-join-together-drive-progress-against-pediatric-cancer",
+                        text: "Broad, Dana-Farber, St. Jude join together to drive progress against pediatric cancer",
+                      },
+                      {
+                        href: "https://www.youtube.com/watch?v=IoRvY4zleKk",
+                        text: "Tumor Immunotherapy Discovery Engine (TIDE)",
+                      },
+                      {
+                        href: "https://www.broadinstitute.org/news/cancer-dependency-map-consortium-accelerates-research-tumor-vulnerabilities",
+                        text: "Cancer Dependency Map Consortium accelerates research into tumor vulnerabilities",
+                      },
+                    ].map(({ href, text }, index) => (
+                      <p key={index} className="not-prose py-1">
+                        <a
+                          href={href}
+                          className="text-white underline decoration-1 underline-offset-2 hover:underline hover:decoration-dotted hover:decoration-2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {text}
+                        </a>
+                      </p>
+                    ))}
+                  </div>
+                </div>
               </article>
             </div>
           </div>
         );
       case "nasa":
         return (
-          <div className="min-h-screen items-center lg:mx-40 mx-2 text-lg leading-tight  flex flex-col bg-[#CED7E9]">
-            <div className=" w-full h-auto mb-12">
+          <div className="mx-4 flex min-h-screen flex-col items-center bg-[#CED7E9] pt-6 text-lg leading-tight lg:mx-40">
+            <div className="mb-12 h-auto w-full">
               <Image
                 src="/story-3.svg"
                 alt="DepMap and Patient Impact"
                 width={1920}
                 height={640}
-                className="object-cover hidden md:block"
+                className="hidden object-cover md:block"
                 sizes="100vw"
                 priority
               />
@@ -556,7 +550,7 @@ export default function SpaceAgencies() {
                 alt="DepMap and Patient Impact"
                 width={1920}
                 height={640}
-                className="object-cover md:hidden block"
+                className="block object-cover md:hidden"
                 sizes="100vw"
                 priority
               />
@@ -565,10 +559,9 @@ export default function SpaceAgencies() {
             <div className="">
               <article
                 role="main"
-                className="prose  justify-center text-[#344899] font-martina font-normal text-xl pb-32  leading-6
-"
+                className="prose justify-center pb-32 font-martina text-xl font-normal leading-6 text-[#344899]"
               >
-                <h2 className="py-5 text-2xl text-[#344899] font-neueHaas font-medium">
+                <h2 className="py-5 font-neueHaas text-2xl font-medium text-[#344899]">
                   A Broad-led effort to understand the molecular diversity of
                   tumors is leading to new clinical trials.
                 </h2>
@@ -622,7 +615,7 @@ export default function SpaceAgencies() {
                   alt="Clinical Trials for Experimental Oncology Drugs"
                   width={1920}
                   height={640}
-                  className="object-cover hidden md:block"
+                  className="hidden object-cover md:block"
                   sizes="100vw"
                   priority
                 />
@@ -632,12 +625,12 @@ export default function SpaceAgencies() {
                   alt="Clinical Trials for Experimental Oncology Drugs"
                   width={1920}
                   height={640}
-                  className="object-cover md:hidden block"
+                  className="block object-cover md:hidden"
                   sizes="100vw"
                   priority
                 />
-                <figcaption className=" text-[#344899] text-sm font-mono">
-                  <h4 className="text-[#344899] font-mono ">
+                <figcaption className="font-mono text-sm text-[#344899]">
+                  <h4 className="font-mono text-[#344899]">
                     EVEN AMID BREAKTHROUGHS
                   </h4>
                   Most drugs fail in clinical trials. Up to 95% of experimental
@@ -699,50 +692,49 @@ export default function SpaceAgencies() {
                   <span className="italic">WRN,</span> which should have no
                   effect on normal cells.{" "}
                 </p>
-           
-              <ByTheNumbers />
-              <div id="reading-list" className="py-24">
-  <h4 className="font-bold not-prose font-mono text-sm">FURTHER READING</h4>
 
-  <div className="mt-4 space-y-2">
-    {[
-      {
-        href: "https://www.nature.com/articles/s41568-024-00763-x",
-        text: "The present and future of the Cancer Dependency Map",
-      },
-      {
-        href: "https://www.broadinstitute.org/news/qa-new-approaches-are-needed-find-better-cancer-drug-targets",
-        text: "Q&A: New approaches are needed to find better cancer drug targets",
-      },
-      {
-        href: "https://www.broadinstitute.org/news/broad-dana-farber-st-jude-join-together-drive-progress-against-pediatric-cancer",
-        text: "Broad, Dana-Farber, St. Jude join together to drive progress against pediatric cancer",
-      },
-      {
-        href: "https://www.youtube.com/watch?v=IoRvY4zleKk",
-        text: "Tumor Immunotherapy Discovery Engine (TIDE)",
-      },
-      {
-        href: "https://www.broadinstitute.org/news/cancer-dependency-map-consortium-accelerates-research-tumor-vulnerabilities",
-        text: "Cancer Dependency Map Consortium accelerates research into tumor vulnerabilities",
-      },
-    ].map(({ href, text }, index) => (
-      <p key={index} className="not-prose py-1">
-        <a
-          href={href}
-          className="text-[#344899] decoration-1 underline underline-offset-2 hover:underline hover:decoration-dotted hover:decoration-2
-"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {text}
-        </a>
-      </p>
-    ))}
-  </div>
-</div>
+                <ByTheNumbers />
+                <div id="reading-list" className="py-24">
+                  <h4 className="not-prose font-mono text-sm font-bold">
+                    FURTHER READING
+                  </h4>
 
-
+                  <div className="mt-4 space-y-2">
+                    {[
+                      {
+                        href: "https://www.nature.com/articles/s41568-024-00763-x",
+                        text: "The present and future of the Cancer Dependency Map",
+                      },
+                      {
+                        href: "https://www.broadinstitute.org/news/qa-new-approaches-are-needed-find-better-cancer-drug-targets",
+                        text: "Q&A: New approaches are needed to find better cancer drug targets",
+                      },
+                      {
+                        href: "https://www.broadinstitute.org/news/broad-dana-farber-st-jude-join-together-drive-progress-against-pediatric-cancer",
+                        text: "Broad, Dana-Farber, St. Jude join together to drive progress against pediatric cancer",
+                      },
+                      {
+                        href: "https://www.youtube.com/watch?v=IoRvY4zleKk",
+                        text: "Tumor Immunotherapy Discovery Engine (TIDE)",
+                      },
+                      {
+                        href: "https://www.broadinstitute.org/news/cancer-dependency-map-consortium-accelerates-research-tumor-vulnerabilities",
+                        text: "Cancer Dependency Map Consortium accelerates research into tumor vulnerabilities",
+                      },
+                    ].map(({ href, text }, index) => (
+                      <p key={index} className="not-prose py-1">
+                        <a
+                          href={href}
+                          className="text-[#344899] underline decoration-1 underline-offset-2 hover:underline hover:decoration-dotted hover:decoration-2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {text}
+                        </a>
+                      </p>
+                    ))}
+                  </div>
+                </div>
               </article>
             </div>
           </div>
@@ -753,21 +745,21 @@ export default function SpaceAgencies() {
   };
 
   return (
-    <div className="font-neueHaas flex flex-col md:flex-row">
-      <div className="w-full h-screen absolute md:overflow-hidden">
+    <div className="flex flex-col font-neueHaas md:flex-row">
+      <div className="absolute h-screen w-full md:overflow-hidden">
         <Popup showPopup={showPopup} closePopup={closePopup} />
 
         {isMobile ? (
           <>
             {renderAgencyContent(agencies[4])} {/* Render "jaxa" content */}
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="multiple" className="w-full">
               {agencies
                 .slice(0, 4)
                 .toReversed()
-                .map((agency, index) => (
+                .map((agency) => (
                   <AccordionItem key={agency.id} value={agency.id}>
                     <AccordionTrigger
-                      className={`${agency.bgColor} ${agency.textColor} py-5 px-3`}
+                      className={`${agency.bgColor} ${agency.textColor} px-4 py-5`}
                     >
                       {agency.title}
                     </AccordionTrigger>

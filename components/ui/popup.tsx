@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Draggable from "react-draggable";
 
 interface PopupProps {
@@ -8,34 +8,41 @@ interface PopupProps {
   closePopup: () => void;
 }
 
-const isTouchDevice = typeof window !== "undefined" && 
+const isTouchDevice =
+  typeof window !== "undefined" &&
   ("ontouchstart" in window || navigator.maxTouchPoints > 0);
 
 const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
   if (!showPopup) return null; // Don't render if showPopup is false
 
+  const nodeRef = useRef(null);
 
   return (
-
-    <Draggable handle=".draggable-handle" disabled={isTouchDevice}>
-      <div className="draggable-handle absolute popupstyle cursor-grab
- popuplayout w-full md:w-1/3 h-full  md:top-40 md:left-1/3 text-white 
- bg-white p-6 shadow-lg z-50">
+    <Draggable
+      nodeRef={nodeRef}
+      handle=".draggable-handle"
+      disabled={isTouchDevice}
+    >
+      <div
+        ref={nodeRef}
+        className="draggable-handle popupstyle popuplayout absolute z-50 h-full w-full cursor-grab bg-white p-6 text-white shadow-lg md:left-1/3 md:top-40 md:w-1/3"
+      >
         <button
-         className="absolute top-5 right-8 text-white text-4xl font-medium pointer-events-auto"
-         onClick={(e) => {
-           e.stopPropagation();
-           closePopup();
-         }}
+          className="pointer-events-auto absolute right-8 top-5 text-4xl font-medium text-white"
+          onClick={(e) => {
+            e.stopPropagation();
+            closePopup();
+          }}
         >
           ×
         </button>
-        <div className=" text-xl font-semibold font-neueHaas mt-10 ">
+        <div className="mt-10 font-neueHaas text-xl font-semibold">
           Last year marked the Broad Institute’s 20th anniversary. As we enter
-          our next decade, Broad scientists are shaping the future of science and medicine
-          by inventing new tools, advancing discoveries, forging new communities,
-          tackling tough questions, and leading the larger scientific community
-          in understanding disease to transform human health.
+          our next decade, Broad scientists are shaping the future of science
+          and medicine by inventing new tools, advancing discoveries, forging
+          new communities, tackling tough questions, and leading the larger
+          scientific community in understanding disease to transform human
+          health.
           <br />
           <br />
           We’re doing this with the “Broad approach”— courageous, collaborative,
