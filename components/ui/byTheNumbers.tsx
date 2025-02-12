@@ -2,7 +2,7 @@ import React from 'react';
 
 const ByTheNumbers: React.FC = () => {
     return (
-        <div className="font-neueHaas text-[#344899]">
+        <div className="font-neueHaas not-prose text-[#344899]">
             <div className="border-y-2 border-[#344899] py-6">
                 <h2 className="font-mono text-xl not-prose text-center font-bold ">BY THE NUMBERS</h2>
             </div>
@@ -65,7 +65,7 @@ const ByTheNumbers: React.FC = () => {
                  <div  className="flex flex-col md:flex-row items-center gap-2 md:gap-[6rem]   py-5 md:justify-between w-full">
 
 
-<div className="text-center md:text-right md:w-1/2 ">
+<div className="text-center not-prose md:text-right md:w-1/2 ">
 <h1 className="text-[9rem] font-outline-2 text-[#CED7E9] font-neueHaas tracking-[-.04em]">73</h1>
        </div>
        <div className="text-center md:text-left md:w-1/2 max-w-[20rem]">
@@ -77,7 +77,7 @@ const ByTheNumbers: React.FC = () => {
 
 
 </div>
-<hr className='border border-[#344899] my-5'></hr>
+<hr className='border border-[#344899] my-32'></hr>
 
 <sup id="fn1" className='font-mono text-sm text-center'>1. [<span className='italic'> Microsatellite instability</span> (MSI)  
    Causes runaway mutation when a DNA 
