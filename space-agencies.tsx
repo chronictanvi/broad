@@ -334,45 +334,43 @@ export default function SpaceAgencies() {
 
 
 
+<div className="py-20">
 
-
-                <div  id="reading-list" className="py-24">
-                <div className="border-t-2 border-white py-24">
-
-                <h4 className=" font-mono text-sm text-white"> FURTHER READING </h4>
-
-
-                <div>
-  <p > 
-    <a  className="text-white decoration-1" href="https://www.broadinstitute.org/news/study-finds-surprising-way-genetic-mutation-causes-huntingtons-disease-transforming" target="_blank"> 
-    Study finds surprising way that genetic mutation causes Huntington’s disease, transforming understanding of the disorder
-</a> </p>
-
-<p> <a  className="text-white decoration-1" href="https://www.youtube.com/watch?v=hd8Uukrocps">A new understanding of Huntington's disease
-</a> </p>
-
-<p> 
-  <a  className="text-white decoration-1" href="https://www.pbs.org/newshour/health/research-is-unravepng-the-mystery-of-what-causes-huntingtons-disease-a-devastating-brain-disorder">
-    Research is unravepng the mystery of what causes Huntington’s disease, a devastating brain disorder
-  </a> 
-</p>
-<p> 
-  <a  className="text-white" href="https://www.nature.com/articles/d41586-025-00119-x">
-    Revealed: Why the fatal Huntington’s gene takes so long to cause harm
-  </a> 
-</p>
-<p> 
-  <a  className="text-white" href="https://www.broadinstitute.org/news/new-gene-depvery-vehicle-shows-promise-human-brain-gene-therapy">
-    New gene depvery vehicle shows promise for human brain gene therapy
-  </a> 
-</p>
 </div>
-
-                  </div>
-                  </div>
-
-
-
+                <div id="reading-list" className=" border-t-2 border-white">
+  <h4 className="font-mono pt-32 text-sm text-white">FURTHER READING</h4>
+  <div className="mt-4 space-y-2">
+    {[
+      {
+        href: "https://www.broadinstitute.org/news/study-finds-surprising-way-genetic-mutation-causes-huntingtons-disease-transforming",
+        text: "Study finds surprising way that genetic mutation causes Huntington’s disease, transforming understanding of the disorder",
+      },
+      {
+        href: "https://www.youtube.com/watch?v=hd8Uukrocps",
+        text: "A new understanding of Huntington's disease",
+      },
+      {
+        href: "https://www.pbs.org/newshour/health/research-is-unraveling-the-mystery-of-what-causes-huntingtons-disease-a-devastating-brain-disorder",
+        text: "Research is unraveling the mystery of what causes Huntington’s disease, a devastating brain disorder",
+      },
+      {
+        href: "https://www.nature.com/articles/d41586-025-00119-x",
+        text: "Revealed: Why the fatal Huntington’s gene takes so long to cause harm",
+      },
+      {
+        href: "https://www.broadinstitute.org/news/new-gene-delivery-vehicle-shows-promise-human-brain-gene-therapy",
+        text: "New gene delivery vehicle shows promise for human brain gene therapy",
+      },
+    ].map(({ href, text }, index) => (
+      <p key={index} className="not-prose py-1">
+        <a href={href}          className="text-white decoration-1 underline underline-offset-8 hover:underline hover:decoration-dotted hover:decoration-2
+" target="_blank" rel="noopener noreferrer">
+          {text}
+        </a>
+      </p>
+    ))}
+  </div>
+</div>
               </article>
             </div>
           </div>
@@ -485,50 +483,55 @@ export default function SpaceAgencies() {
                   brain, one of the most challenging parts of the body to
                   target.
                 </p>
-                <p className="py-3">
+                <p className="pt-3">
                   The potential is immense, and the team is working to realize
                   it by optimizing their eCIS systems while also exploring other
                   promising delivery approaches.
                 </p>
 
-
-                <div  id="reading-list" className="py-24">
-                <div className="border-t-2 border-white py-24">
-
-                <h4 className=" font-mono text-sm text-white"> FURTHER READING </h4>
-
-
-                <div>
-                <p> 
-  <a className="text-white decoration-1" href="https://www.broadinstitute.org/news/scientists-engineer-crispr-enzymes-evade-immune-system">
-    Scientists engineer CRISPR enzymes that evade the immune system
-  </a> 
-</p>
-<p> 
-  <a className="text-white decoration-1" href="https://www.broadinstitute.org/news/feng-zhang-awarded-national-medal-technology-and-innovation">
-    Feng Zhang awarded the National Medal of Technology and Innovation
-  </a> 
-</p>
-<p> 
-  <a className="text-white decoration-1" href="https://www.wired.com/story/the-age-of-crispr-medicine-is-here/">
-    The Age of CRISPR Medicine Is Here
-  </a> 
-</p>
-<p> 
-  <a className="text-white decoration-1" href="https://www.youtube.com/watch?v=CyREJpgeRo4">
-    Broad Discovery Series: From genome editing to programmable medicine
-  </a> 
-</p>
-<p> 
-  <a className="text-white decoration-1" href="https://www.broadinstitute.org/news/bacterial-injection-system-delivers-proteins-mice-and-human-cells">
-    Bacterial injection system delivers proteins in mice and human cells
-  </a> 
-</p>
+                <div className="py-20">
 
 </div>
+                <div id="reading-list" className=" border-t-2 border-white">
+  <h4 className="font-mono pt-40 text-sm text-white">FURTHER READING</h4>
+  <div className="mt-4 space-y-2">
 
-                  </div>
-                  </div>
+
+    {[
+      {
+        href: "https://www.nature.com/articles/s41568-024-00763-x",
+        text: "The present and future of the Cancer Dependency Map",
+      },
+      {
+        href: "https://www.broadinstitute.org/news/qa-new-approaches-are-needed-find-better-cancer-drug-targets",
+        text: "Q&A: New approaches are needed to find better cancer drug targets",
+      },
+      {
+        href: "https://www.broadinstitute.org/news/broad-dana-farber-st-jude-join-together-drive-progress-against-pediatric-cancer",
+        text: "Broad, Dana-Farber, St. Jude join together to drive progress against pediatric cancer",
+      },
+      {
+        href: "https://www.youtube.com/watch?v=IoRvY4zleKk",
+        text: "Tumor Immunotherapy Discovery Engine (TIDE)",
+      },
+      {
+        href: "https://www.broadinstitute.org/news/cancer-dependency-map-consortium-accelerates-research-tumor-vulnerabilities",
+        text: "Cancer Dependency Map Consortium accelerates research into tumor vulnerabilities",
+      },
+    ].map(({ href, text }, index) => (
+      <p key={index} className="not-prose py-1">
+        <a
+          href={href}
+          className="text-white decoration-1 underline underline-offset-8 hover:underline hover:decoration-dotted hover:decoration-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {text}
+        </a>
+      </p>
+    ))}
+  </div>
+</div>
 
 
               </article>
@@ -698,43 +701,47 @@ export default function SpaceAgencies() {
                 </p>
            
               <ByTheNumbers />
-              <div  id="reading-list" className="py-24">
-                <div >
+              <div id="reading-list" className="py-24">
+  <h4 className="font-bold not-prose font-mono text-sm">FURTHER READING</h4>
 
-                <h4 className="   font-bold not-prose font-mono text-sm "> FURTHER READING </h4>
-
-
-                <div>
-                <p> 
-  <a className="text-[#344899] decoration-1" href="https://www.nature.com/articles/s41568-024-00763-x">
-    The present and future of the Cancer Dependency Map
-  </a> 
-</p>
-<p> 
-  <a className="text-[#344899] decoration-1" href="https://www.broadinstitute.org/news/qa-new-approaches-are-needed-find-better-cancer-drug-targets">
-    Q&A: New approaches are needed to find better cancer drug targets
-  </a> 
-</p>
-<p> 
-  <a className="text-[#344899] decoration-1" href="https://www.broadinstitute.org/news/broad-dana-farber-st-jude-join-together-drive-progress-against-pediatric-cancer">
-    Broad, Dana-Farber, St. Jude join together to drive progress against pediatric cancer
-  </a> 
-</p>
-<p> 
-  <a className="text-[#344899] decoration-1" href="https://www.youtube.com/watch?v=IoRvY4zleKk">
-    Tumor Immunotherapy Discovery Engine (TIDE)
-  </a> 
-</p>
-<p> 
-  <a className="text-[#344899] decoration-1" href="https://www.broadinstitute.org/news/cancer-dependency-map-consortium-accelerates-research-tumor-vulnerabilities">
-    Cancer Dependency Map Consortium accelerates research into tumor vulnerabilities
-  </a> 
-</p>
-
+  <div className="mt-4 space-y-2">
+    {[
+      {
+        href: "https://www.nature.com/articles/s41568-024-00763-x",
+        text: "The present and future of the Cancer Dependency Map",
+      },
+      {
+        href: "https://www.broadinstitute.org/news/qa-new-approaches-are-needed-find-better-cancer-drug-targets",
+        text: "Q&A: New approaches are needed to find better cancer drug targets",
+      },
+      {
+        href: "https://www.broadinstitute.org/news/broad-dana-farber-st-jude-join-together-drive-progress-against-pediatric-cancer",
+        text: "Broad, Dana-Farber, St. Jude join together to drive progress against pediatric cancer",
+      },
+      {
+        href: "https://www.youtube.com/watch?v=IoRvY4zleKk",
+        text: "Tumor Immunotherapy Discovery Engine (TIDE)",
+      },
+      {
+        href: "https://www.broadinstitute.org/news/cancer-dependency-map-consortium-accelerates-research-tumor-vulnerabilities",
+        text: "Cancer Dependency Map Consortium accelerates research into tumor vulnerabilities",
+      },
+    ].map(({ href, text }, index) => (
+      <p key={index} className="not-prose py-1">
+        <a
+          href={href}
+          className="text-[#344899] decoration-1 underline underline-offset-8 hover:underline hover:decoration-dotted hover:decoration-2
+"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {text}
+        </a>
+      </p>
+    ))}
+  </div>
 </div>
 
-                  </div>
-                  </div>
 
               </article>
             </div>
