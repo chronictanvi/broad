@@ -125,16 +125,16 @@ export default function SpaceAgencies() {
               </div>
               <div className="font-neueHaas mx-1 text-[#344899]">
                 <div className="leading-[2em] ">
-                  <h2 className="text-xl  font-semibold">Broad Institute</h2>
-                  {/* <h3 className="text-xl font-semibold">Year in Review 2024</h3> */}
+                  <h2 className="text-xl  font-medium">Broad Institute</h2>
+                  {/* <h3 className="text-xl font-medium">Year in Review 2024</h3> */}
                   <div className="flex flex-col md:flex-row justify-between  text-[#344899]">
-                    <div className="font-semibold hidden md:block">
+                    <div className="font-medium hidden md:block">
                       Scroll to read
                     </div>
 
                     <Link href="/about">
                       {" "}
-                      <div className="font-bold md:py-0 py-2 hover:underline">
+                      <div className="font-medium md:py-0 py-2 hover:underline">
                         {" "}
                         About this site{" "}
                       </div>
@@ -180,7 +180,7 @@ text-lg   "
                 millions of medical images to find new patterns.
               </p>
 
-              <div className=" font-sans font-semibold border rounded-full border-4 p-5">
+              <div className=" font-sans font-medium border rounded-full border-4 p-5">
                 But at the Broad Institute, scale means something different.
               </div>
 
@@ -210,7 +210,7 @@ text-lg   "
           <div className="min-h-screen items-center mx-2 lg:mx-40 bg-[#4773CD] leading-tight  flex flex-col ">
             <div className=" w-full h-auto mb-12">
               <Image
-                src="/story-1.png"
+                src="/story-1.svg"
                 alt="A New Perspective on a Decades-old Mystery"
                 width={1920}
                 height={640}
@@ -220,7 +220,7 @@ text-lg   "
               />
 
               <Image
-                src="/story-1-mobile.png"
+                src="/story-1-mobile.svg"
                 alt="A New Perspective on a Decades-old Mystery"
                 width={1920}
                 height={640}
@@ -236,7 +236,7 @@ text-lg   "
                 className="prose justify-center text-white   lg:mx-40   mx-2 font-martina font-normal text-xl pb-32  leading-6 
 "
               >
-                <h2 className="py-5 text-[#D3BBDB] text-2xl font-neueHaas font-semibold">
+                <h2 className="py-5 text-[#D3BBDB] text-2xl font-neueHaas font-medium">
                   Broad scientists have unlocked new therapeutic possibilities
                   for Huntington’s disease.
                 </h2>
@@ -297,7 +297,7 @@ text-lg   "
                   </p>
                 </p>
                 <Image
-                  src="/story-1-illu.png"
+                  src="/story-1-illu.svg"
                   alt="Huntington (HTT) Gene Somatic Instability"
                   width={1920}
                   height={640}
@@ -307,7 +307,7 @@ text-lg   "
                 />
 
                 <Image
-                  src="/story-1-illu-mobile.png"
+                  src="/story-1-illu-mobile.svg"
                   alt="Huntingtin (HTT) Gene Somatic Instability"
                   width={1920}
                   height={640}
@@ -331,7 +331,7 @@ text-lg   "
           <div className="min-h-screen items-center lg:mx-40 mx-2 text-lg leading-tight  flex flex-col bg-[#DA2F62]">
             <div className=" w-full h-auto mb-12">
               <Image
-                src="/story-2.png"
+                src="/story-2.svg"
                 alt="Eye of the Needle"
                 width={1920}
                 height={640}
@@ -340,7 +340,7 @@ text-lg   "
                 priority
               />
               <Image
-                src="/story-2-mobile.png"
+                src="/story-2-mobile.svg"
                 alt="Eye of the Needle"
                 width={1920}
                 height={640}
@@ -356,7 +356,7 @@ text-lg   "
                 className="prose  justify-center text-white  font-martina font-normal text-xl pb-32  leading-6
 "
               >
-                <h2 className="py-5 text-white text-2xl font-neueHaas font-semibold">
+                <h2 className="py-5 text-white text-2xl font-neueHaas font-medium">
                   A promising gene-editing tool inspired by a bacterial syringe.
                 </h2>
 
@@ -381,7 +381,7 @@ text-lg   "
                 </p>
 
                 <Image
-                  src="/story-2-illu.png"
+                  src="/story-2-illu.svg"
                   alt="extra-cellular contractile injection system"
                   width={1920}
                   height={640}
@@ -391,7 +391,7 @@ text-lg   "
                 />
 
                 <Image
-                  src="/story-2-illu-mobile.png"
+                  src="/story-2-illu-mobile.svg"
                   alt="extra-cellular contractile injection system"
                   width={1920}
                   height={640}
@@ -448,7 +448,7 @@ text-lg   "
           <div className="min-h-screen items-center lg:mx-40 mx-2 text-lg leading-tight  flex flex-col bg-[#CED7E9]">
             <div className=" w-full h-auto mb-12">
               <Image
-                src="/story-3.png"
+                src="/story-3.svg"
                 alt="DepMap and Patient Impact"
                 width={1920}
                 height={640}
@@ -457,7 +457,7 @@ text-lg   "
                 priority
               />
               <Image
-                src="/story-3-mobile.png"
+                src="/story-3-mobile.svg"
                 alt="DepMap and Patient Impact"
                 width={1920}
                 height={640}
@@ -473,7 +473,7 @@ text-lg   "
                 className="prose  justify-center text-[#344899] font-martina font-normal text-xl pb-32  leading-6
 "
               >
-                <h2 className="py-5 text-2xl text-[#344899] font-neueHaas font-semibold">
+                <h2 className="py-5 text-2xl text-[#344899] font-neueHaas font-medium">
                   A Broad-led effort to understand the molecular diversity of
                   tumors is leading to new clinical trials.
                 </h2>
@@ -523,7 +523,7 @@ text-lg   "
                 </p>
 
                 <Image
-                  src="/story-3-illu.png"
+                  src="/story-3-illu.svg"
                   alt="Clinical Trials for Experimental Oncology Drugs"
                   width={1920}
                   height={640}
@@ -533,7 +533,7 @@ text-lg   "
                 />
 
                 <Image
-                  src="/story-3-illu-mobile.png"
+                  src="/story-3-illu-mobile.svg"
                   alt="Clinical Trials for Experimental Oncology Drugs"
                   width={1920}
                   height={640}
