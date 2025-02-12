@@ -101,46 +101,42 @@ export default function SpaceAgencies() {
     switch (agency.id) {
       case "jaxa":
         return (
-          <div className="mx-4 flex max-h-screen grow flex-col items-center bg-white pt-6 md:mx-10">
-            <div className="flex-1">
-              <div className="mb-4">
-                <Image
-                  src="/differently.svg"
-                  alt="Broad Does Things Differently"
-                  width={1920}
-                  height={640}
-                  className="hidden object-cover md:block"
-                  sizes="100vw"
-                  priority
-                />
-                <Image
-                  src="/differently-mobile.svg"
-                  alt="Broad Does Things Differently"
-                  width={1920}
-                  height={640}
-                  className="block object-cover md:hidden"
-                  sizes="100vw"
-                  priority
-                />
-              </div>
-              <div className="mx-1 font-neueHaas text-[#344899]">
-                <div className="leading-[2em]">
-                  <h2 className="text-xl font-semibold">Broad Institute</h2>
-                  {/* <h3 className="text-xl font-medium">Year in Review 2024</h3> */}
-                  <div className="flex flex-col justify-between text-[#344899] md:flex-row">
-                    <div className="hidden font-semibold md:block">
-                      Scroll to read
-                    </div>
+          <div className="mx-4 flex max-h-screen grow flex-col items-center bg-white pt-6 md:mx-10 md:h-full">
+            <div className="relative mb-8 hidden h-full w-full md:block">
+              <Image
+                src="/differently.svg"
+                alt="Broad Does Things Differently"
+                fill
+                className="object-contain"
+                sizes="100vw"
+                priority
+              />
+            </div>
+            <Image
+              src="/differently-mobile.svg"
+              alt="Broad Does Things Differently"
+              width={1920}
+              height={640}
+              className="mb-4 block object-cover md:hidden"
+              sizes="100vw"
+              priority
+            />
+            <div className="w-full font-neueHaas leading-[2em] text-[#344899]">
+              <h2 className="text-xl font-semibold">Broad Institute</h2>
+              {/* <h3 className="text-xl font-medium">Year in Review 2024</h3> */}
 
-                    <Link href="/about">
-                      {" "}
-                      <div className="py-2 font-semibold hover:underline md:py-0">
-                        {" "}
-                        About this site{" "}
-                      </div>
-                    </Link>
-                  </div>
+              <div className="flex w-full flex-col justify-between text-[#344899] md:flex-row">
+                <div className="hidden font-semibold md:block">
+                  Scroll to read
                 </div>
+
+                <Link href="/about">
+                  {" "}
+                  <div className="py-2 font-semibold hover:underline md:py-0">
+                    {" "}
+                    About this site{" "}
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
