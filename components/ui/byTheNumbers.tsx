@@ -77,7 +77,7 @@ const ByTheNumbers: React.FC = () => {
 
 
 </div>
-<hr className='border border-[#344899] my-32'></hr>
+<hr className='border border-[#344899] mb-5 mt-40'></hr>
 
 <sup id="fn1" className='font-mono text-sm text-center'>1. [<span className='italic'> Microsatellite instability</span> (MSI)  
    Causes runaway mutation when a DNA 
