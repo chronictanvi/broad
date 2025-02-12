@@ -106,7 +106,7 @@ export default function SpaceAgencies() {
               <div className="  mb-4">
                 <Image
                   src="/differently.svg"
-                  alt="Differently"
+                  alt="Broad Does Things Differently"
                   width={1920}
                   height={640}
                   className="object-cover hidden md:block"
@@ -115,7 +115,7 @@ export default function SpaceAgencies() {
                 />
                 <Image
                   src="/differently-mobile.svg"
-                  alt="Differently"
+                  alt="Broad Does Things Differently"
                   width={1920}
                   height={640}
                   className="object-cover md:hidden block"
@@ -148,27 +148,35 @@ export default function SpaceAgencies() {
       case "intro":
         return (
           <div className="min-h-screen mx-2 lg:mx-40  pt-6 flex flex-col bg-[#292D74] ">
-            <div className=" w-full  my-12">
-              <div
-                className="sticky top-0 flex flex-col justify-items-start
+         <div className=" w-full h-auto mb-12">
+              <Image
+                src="/story-0.svg"
+                alt="Scale"
+                width={1920}
+                height={640}
+                className="object-cover hidden md:block"
+                sizes="100vw"
+                priority
+              />
+
+              <Image
+                src="/story-0-mobile.svg"
+                alt="Scale"
+                width={1920}
+                height={640}
+                className="object-cover md:hidden block"
+                sizes="100vw"
+                priority
+              />
+            </div>
+
+            <div className="">
+              <article
+                role="main"
+                className="prose justify-center text-white   lg:mx-40   mx-2 font-martina font-normal text-xl pb-32  leading-6 
 "
               >
-                <p className={`text-sm font-neueHaas ${agency.textColor}`}>
-                  {agency.name}
-                </p>
-
-                <h1
-                  className={`text-5xl md:px-0 px-3 font-neueHaas ${agency.textColor} `}
-                >
-                  {agency.title}
-                </h1>
-              </div>
-            </div>
-            <article
-              className=" font-martina prose  text-white font-normal text-xl leading-6 py-40
-text-lg   "
-              role="main"
-            >
+          
               <p className="py-3">
                 Scale. In science, it’s a word that often connotes size, and
                 usually a massive size. And it’s often bandied about as genomic
@@ -203,6 +211,7 @@ text-lg   "
                 journey and learn more about our work here.
               </p>
             </article>
+          </div>
           </div>
         );
       case "roscosmos":
