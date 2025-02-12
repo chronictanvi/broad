@@ -4,7 +4,7 @@ const ByTheNumbers: React.FC = () => {
     return (
         <div className="font-neueHaas text-[#344899]">
             <div className="border-y-2 border-[#344899] py-6">
-                <h2 className="font-mono text-xl text-center font-bold py-2">BY THE NUMBERS</h2>
+                <h2 className="font-mono text-xl not-prose text-center font-bold ">BY THE NUMBERS</h2>
             </div>
 
             <div className="py-10">
@@ -18,10 +18,10 @@ const ByTheNumbers: React.FC = () => {
                 ].map((item, index) => (
                     <div key={index} className="flex flex-col md:flex-row items-center gap-2 px-2 md:px-0 md:gap-[6rem] p-5 md:justify-between w-full">
                         <div className="text-center md:text-right md:w-1/2 ">
-                            <h1 className="text-9xl font-neueHaas tracking-[-.04em]">{item.number}</h1>
+                            <h1 className="text-9xl not-prose font-neueHaas tracking-[-.04em]">{item.number}</h1>
                         </div>
                         <div className="text-center md:text-left md:w-1/2 max-w-[20rem]">
-                            <p className="text-2xl font-medium leading-7">{item.text}</p>
+                            <p className="text-2xl  not-prose  font-medium leading-7">{item.text}</p>
                         </div>
                     </div>
                     
@@ -54,7 +54,7 @@ const ByTheNumbers: React.FC = () => {
                             <h1 className="text-[9rem] font-outline-2 text-[#CED7E9] font-neueHaas tracking-[-.04em]">51</h1>
                         </div>
                         <div className="text-center md:text-left md:w-1/2 max-w-[20rem]">
-                            <p className="text-2xl font-medium leading-7">Using DepMap and Project DRIVE datasets, Broad researchers and their collaborators identified 51 cell lines classified as having MSI.<sup><a href="#fn1" id="ref1">1</a></sup></p>
+                            <p className="text-2xl font-medium leading-7">Using DepMap and Project DRIVE datasets, Broad researchers and their collaborators identified 51 cell lines classified as having MSI.<sup><a className=" text-[#344899]" href="#fn1" id="ref1">1</a></sup></p>
                         </div>
 
 
@@ -81,7 +81,7 @@ const ByTheNumbers: React.FC = () => {
 
 <sup id="fn1" className='font-mono text-sm text-center'>1. [<span className='italic'> Microsatellite instability</span> (MSI)  
    Causes runaway mutation when a DNA 
-   Repair system in a cell is broken.]<a href="#ref1" title="Jump back to footnote 1 in the text."> ↩</a></sup>
+   Repair system in a cell is broken.]<a className="text-[#344899]" href="#ref1"title="Jump back to footnote 1 in the text.">↩</a></sup>
 
 
             </div>

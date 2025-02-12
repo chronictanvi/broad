@@ -282,7 +282,7 @@ text-lg   "
                   surpasses around 150 repeats, these neurons begin to
                   deteriorate, setting in motion the hallmark symptoms of
                   Huntington’s: involuntary movements, cognitive decline, and
-                  loss of motor function.
+                  loss of motor function.    </p>
                   <p className="py-3">
                     The discovery, published in{" "}
                     <span className="italic"> Cell</span>, fundamentally alters
@@ -294,7 +294,7 @@ text-lg   "
                     the CAG repeats. Such an approach might delay the onset of
                     the disease or even arrest its progression, offering
                     long-awaited hope for thousands of patients.
-                  </p>
+              
                 </p>
                 <Image
                   src="/story-1-illu.svg"
@@ -322,6 +322,48 @@ text-lg   "
                   this expansion, McCarroll and his team believe, that drives
                   the degeneration of the brain’s motor centers.
                 </figcaption>
+
+
+
+
+
+                <div  id="reading-list" className="py-24">
+                <div className="border-t-2 border-white py-24">
+
+                <h4 className=" font-mono text-sm text-white"> FURTHER READING </h4>
+
+
+                <div>
+  <p > 
+    <a  className="text-white decoration-1" href="https://www.broadinstitute.org/news/study-finds-surprising-way-genetic-mutation-causes-huntingtons-disease-transforming" target="_blank"> 
+    Study finds surprising way that genetic mutation causes Huntington’s disease, transforming understanding of the disorder
+</a> </p>
+
+<p> <a  className="text-white decoration-1" href="https://www.youtube.com/watch?v=hd8Uukrocps">A new understanding of Huntington's disease
+</a> </p>
+
+<p> 
+  <a  className="text-white decoration-1" href="https://www.pbs.org/newshour/health/research-is-unravepng-the-mystery-of-what-causes-huntingtons-disease-a-devastating-brain-disorder">
+    Research is unravepng the mystery of what causes Huntington’s disease, a devastating brain disorder
+  </a> 
+</p>
+<p> 
+  <a  className="text-white" href="https://www.nature.com/articles/d41586-025-00119-x">
+    Revealed: Why the fatal Huntington’s gene takes so long to cause harm
+  </a> 
+</p>
+<p> 
+  <a  className="text-white" href="https://www.broadinstitute.org/news/new-gene-depvery-vehicle-shows-promise-human-brain-gene-therapy">
+    New gene depvery vehicle shows promise for human brain gene therapy
+  </a> 
+</p>
+</div>
+
+                  </div>
+                  </div>
+
+
+
               </article>
             </div>
           </div>
@@ -439,6 +481,47 @@ text-lg   "
                   it by optimizing their eCIS systems while also exploring other
                   promising delivery approaches.
                 </p>
+
+
+                <div  id="reading-list" className="py-24">
+                <div className="border-t-2 border-white py-24">
+
+                <h4 className=" font-mono text-sm text-white"> FURTHER READING </h4>
+
+
+                <div>
+                <p> 
+  <a className="text-white decoration-1" href="https://www.broadinstitute.org/news/scientists-engineer-crispr-enzymes-evade-immune-system">
+    Scientists engineer CRISPR enzymes that evade the immune system
+  </a> 
+</p>
+<p> 
+  <a className="text-white decoration-1" href="https://www.broadinstitute.org/news/feng-zhang-awarded-national-medal-technology-and-innovation">
+    Feng Zhang awarded the National Medal of Technology and Innovation
+  </a> 
+</p>
+<p> 
+  <a className="text-white decoration-1" href="https://www.wired.com/story/the-age-of-crispr-medicine-is-here/">
+    The Age of CRISPR Medicine Is Here
+  </a> 
+</p>
+<p> 
+  <a className="text-white decoration-1" href="https://www.youtube.com/watch?v=CyREJpgeRo4">
+    Broad Discovery Series: From genome editing to programmable medicine
+  </a> 
+</p>
+<p> 
+  <a className="text-white decoration-1" href="https://www.broadinstitute.org/news/bacterial-injection-system-delivers-proteins-mice-and-human-cells">
+    Bacterial injection system delivers proteins in mice and human cells
+  </a> 
+</p>
+
+</div>
+
+                  </div>
+                  </div>
+
+
               </article>
             </div>
           </div>
@@ -604,8 +687,47 @@ text-lg   "
                   <span className="italic">WRN,</span> which should have no
                   effect on normal cells.{" "}
                 </p>
-              </article>
+           
               <ByTheNumbers />
+              <div  id="reading-list" className="py-24">
+                <div >
+
+                <h4 className="   font-bold not-prose font-mono text-sm "> FURTHER READING </h4>
+
+
+                <div>
+                <p> 
+  <a className="text-[#344899] decoration-1" href="https://www.nature.com/articles/s41568-024-00763-x">
+    The present and future of the Cancer Dependency Map
+  </a> 
+</p>
+<p> 
+  <a className="text-[#344899] decoration-1" href="https://www.broadinstitute.org/news/qa-new-approaches-are-needed-find-better-cancer-drug-targets">
+    Q&A: New approaches are needed to find better cancer drug targets
+  </a> 
+</p>
+<p> 
+  <a className="text-[#344899] decoration-1" href="https://www.broadinstitute.org/news/broad-dana-farber-st-jude-join-together-drive-progress-against-pediatric-cancer">
+    Broad, Dana-Farber, St. Jude join together to drive progress against pediatric cancer
+  </a> 
+</p>
+<p> 
+  <a className="text-[#344899] decoration-1" href="https://www.youtube.com/watch?v=IoRvY4zleKk">
+    Tumor Immunotherapy Discovery Engine (TIDE)
+  </a> 
+</p>
+<p> 
+  <a className="text-[#344899] decoration-1" href="https://www.broadinstitute.org/news/cancer-dependency-map-consortium-accelerates-research-tumor-vulnerabilities">
+    Cancer Dependency Map Consortium accelerates research into tumor vulnerabilities
+  </a> 
+</p>
+
+</div>
+
+                  </div>
+                  </div>
+
+              </article>
             </div>
           </div>
         );
