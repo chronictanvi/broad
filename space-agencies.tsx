@@ -125,16 +125,16 @@ export default function SpaceAgencies() {
               </div>
               <div className="font-neueHaas mx-1 text-[#344899]">
                 <div className="leading-[2em] ">
-                  <h2 className="text-xl  font-medium">Broad Institute</h2>
+                  <h2 className="text-xl  font-semibold">Broad Institute</h2>
                   {/* <h3 className="text-xl font-medium">Year in Review 2024</h3> */}
                   <div className="flex flex-col md:flex-row justify-between  text-[#344899]">
-                    <div className="font-medium hidden md:block">
+                    <div className="font-semibold hidden md:block">
                       Scroll to read
                     </div>
 
                     <Link href="/about">
                       {" "}
-                      <div className="font-medium md:py-0 py-2 hover:underline">
+                      <div className="font-semibold md:py-0 py-2 hover:underline">
                         {" "}
                         About this site{" "}
                       </div>
