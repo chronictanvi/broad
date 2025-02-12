@@ -363,7 +363,7 @@ export default function SpaceAgencies() {
       },
     ].map(({ href, text }, index) => (
       <p key={index} className="not-prose py-1">
-        <a href={href}          className="text-white decoration-1 underline underline-offset-8 hover:underline hover:decoration-dotted hover:decoration-2
+        <a href={href}          className="text-white decoration-1 underline underline-offset-2 hover:underline hover:decoration-dotted hover:decoration-2
 " target="_blank" rel="noopener noreferrer">
           {text}
         </a>
@@ -522,7 +522,7 @@ export default function SpaceAgencies() {
       <p key={index} className="not-prose py-1">
         <a
           href={href}
-          className="text-white decoration-1 underline underline-offset-8 hover:underline hover:decoration-dotted hover:decoration-2"
+          className="text-white decoration-1 underline underline-offset-2 hover:underline hover:decoration-dotted hover:decoration-2"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -730,7 +730,7 @@ export default function SpaceAgencies() {
       <p key={index} className="not-prose py-1">
         <a
           href={href}
-          className="text-[#344899] decoration-1 underline underline-offset-8 hover:underline hover:decoration-dotted hover:decoration-2
+          className="text-[#344899] decoration-1 underline underline-offset-2 hover:underline hover:decoration-dotted hover:decoration-2
 "
           target="_blank"
           rel="noopener noreferrer"
