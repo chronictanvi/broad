@@ -735,7 +735,7 @@ export default function SpaceAgencies() {
       <Popup showPopup={showPopup} closePopup={closePopup} />
 
       <div className="block flex min-h-screen flex-col md:hidden">
-        <div style={{ height: `calc(100vh - ${64 * 4}px)` }}>
+        <div style={{ minHeight: `calc(100vh - ${64 * 4}px)` }}>
           {renderAgencyContent(agencies[4])} {/* Render "jaxa" content */}
         </div>
         <Accordion type="multiple" className="w-full">
