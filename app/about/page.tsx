@@ -1,118 +1,104 @@
-import Image from 'next/image'
+import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-black">
-    <div className=" p-4 p-5 text-white">
-
-
-
-      <div className="flex md:flex-row flex-col gap-4 justify-center" >
-
-
-<div>
-      {/* Back to Home Button */}
-      <div className="w-full h-24 max-w-4xl">
-        <a href="/" className=" font-neueHaas transition hover:underline">
-          ← Back to Home
-        </a>
-      </div>
-
-        <div className=" flex-grow h-auto relative ">
-          <Image
-            src="FooterCurve.svg"
-            alt="Background image"
-    width={1920}
-    height={1080}
-            objectFit="fill"
-            className="hidden lg:block"
-          />
-         
-        </div>
-        </div>
-
-        <div className="text-white  ">
-
-         <div className="flex flex-col md:flex-row items-stretch">
-
-   {/* Site title mobile */}
-
-   <div className=" 
- text-xl font-neueHaas font-medium text-white md:hidden block py-5
-">
-  <p>
-   
-About this site
-    </p>
- </div>
-
-
-          {/* Col 2*/}
-          <div className=" md:mx-12 xl:mr-40">
-
-
-
-  {/* Inspiration */}
-  <div className="md:text-left">
- 
-            <h3 className="text-sm font-mono ">INSPIRATION</h3>
-            <p className="font-martina prose text-white font-normal ">
-              The design of this booklet was inspired by the structure of the microfluidic system used in Drop-Seq, 
-              a technology developed at the Broad that enables scientists to capture the gene expression of thousands 
-              of cells at the same time. This technology has paved the way for new insights into health and disease.
-            </p>
+    <div className="relative flex min-h-screen flex-col justify-between bg-black px-5 pb-5 pt-10 text-white">
+      <div className="flex flex-col justify-center gap-4 pr-16 lg:flex-row">
+        <div className="hidden basis-2/3 lg:block">
+          <div className="relative -ml-6 h-auto flex-grow">
+            <Image
+              src="FooterCurve.svg"
+              alt=""
+              width={1920}
+              height={1080}
+              objectFit="fill"
+            />
           </div>
+        </div>
 
+        <div className="mb-5 md:mx-12 lg:hidden">
+          <div className="relative -ml-2 h-auto max-w-[350px] flex-grow">
+            <Image
+              src="logo.png"
+              alt=""
+              width={1920}
+              height={1080}
+              objectFit="fill"
+            />
+          </div>
+        </div>
 
+        <div className="basis-1/3 text-white">
+          <div className="flex flex-col items-stretch md:flex-row">
+            {/* Site title mobile */}
 
-          <br></br>
-       {/* Address & Design */}
-          <div className=" md:text-left font-martina">
-            <div className='pb-6'>
-              <h3 className="text-sm font-mono ">BROAD INSTITUTE</h3>
-              <address className=" font-normal not-italic
- font-martina ">
-                Merkin Building<br />
-                5 Main St.<br />
-                Cambridge, MA 02142
-              </address>
+            {/* Col 2*/}
+            <div className="md:mx-12 xl:mr-40">
+              <div className="flex flex-col gap-6 md:text-left">
+                {/* Inspiration */}
+                <div>
+                  <h3 className="mb-2 font-mono text-sm font-bold">
+                    INSPIRATION
+                  </h3>
+                  <p className="prose font-martina text-base font-normal leading-tight text-white">
+                    The design of this booklet was inspired by the structure of
+                    the microfluidic system used in Drop-Seq, a technology
+                    developed at the Broad that enables scientists to capture
+                    the gene expression of thousands of cells at the same time.
+                    This technology has paved the way for new insights into
+                    health and disease.
+                  </p>
+                </div>
+
+                {/* Design */}
+                <div>
+                  <h3 className="mb-2 font-mono text-sm font-semibold">
+                    DESIGN
+                  </h3>
+                  <a href="https://www.pentagram.com/">
+                    {" "}
+                    <p className="font-martina text-base font-normal leading-tight">
+                      Pentagram
+                      <br />
+                      Team Giorgia Lupi
+                    </p>
+                  </a>
+                </div>
+
+                {/* Address */}
+                <div>
+                  <h3 className="mb-2 font-mono text-sm font-semibold">
+                    BROAD INSTITUTE
+                  </h3>
+                  <address className="font-martina text-base font-normal not-italic leading-tight">
+                    Merkin Building
+                    <br />
+                    5 Main St.
+                    <br />
+                    Cambridge, MA 02142
+                  </address>
+                </div>
+              </div>
             </div>
-            
-            <h3 className="text-sm font-mono ">DESIGN</h3>
-           <a href='https://www.pentagram.com/'> <p className="font-martina font-normal ">
-              Pentagram<br />
-              Team Giorgia Lupi
-            </p></a>
           </div>
-
-        
-    
-          </div>
+        </div>
+      </div>
 
       {/* Site title */}
+      <div className="text-vertical absolute right-0 top-0 block px-4 py-10 text-left text-right font-neueHaas text-2xl font-semibold text-white">
+        <p>About this site</p>
+      </div>
 
-      <div className=" 
- md:text-2xl text-xl font-neueHaas font-medium text-white md:mt-4 text-right md:text-vertical md:text-left hidden md:block
-">
-  <p>
-   
-About this site
-    </p>
- </div>
- </div>
-
-
-<div>
-
-
-  
-</div>
-
-        </div>
+      {/* Back to Home Button */}
+      <div className="pt-10">
+        <Link
+          href="/"
+          className="font-neueHaas text-2xl font-semibold text-white underline-offset-4 transition hover:underline"
+        >
+          Close
+        </Link>
       </div>
     </div>
-  </div>
-  
-  )
+  );
 }
-

@@ -95,29 +95,29 @@ export function Pane({
     <div
       ref={paneRef}
       style={getStyle(isTransformed, index)}
-      className={`hide-scrollbar transition duration-800 ease-[cubic-bezier(0.42, 0, 0.58, 1)] ${
-        isActive ? "h-screen overflow-auto" : "overflow-hidden h-screen"
-      } ${className ?? ""} p-4 flex`}
+      className={`hide-scrollbar ease-[cubic-bezier(0.42, 0, 0.58, 1)] transition duration-800 ${
+        isActive ? "h-screen overflow-auto" : "h-screen overflow-hidden"
+      } ${className ?? ""} flex p-4`}
       onClick={onClick}
       {...props}
     >
       <div className="flex-grow">
         {children}
-        {index !== 4 && <div className="h-[100px]" />}
+        <div className="h-[100px]" />
       </div>
       {agency && (
         <div
           role="button"
-          className="sticky cursor-pointer top-0 right-0 flex flex-col items-center justify-items-start h-full ml-4"
+          className="sticky right-0 top-0 ml-4 flex h-full cursor-pointer flex-col items-center justify-items-start"
         >
           <p
-            className={`text-sm font-neueHaas font-semibold ${agency.textColor} whitespace-nowrap`}
+            className={`font-neueHaas text-sm font-semibold ${agency.textColor} whitespace-nowrap`}
           >
             {agency.name}
           </p>
 
           <p
-            className={`flex hidden md:block items-center md:text-2xl text-xl font-neueHaas font-semibold ${agency.textColor} md:mt-4 text-right md:text-vertical md:text-left text-horizontal`}
+            className={`flex hidden items-center font-neueHaas text-xl font-semibold md:block md:text-2xl ${agency.textColor} md:text-vertical text-horizontal text-right md:mt-4 md:text-left`}
           >
             {agency.title}
           </p>
