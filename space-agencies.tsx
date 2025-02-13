@@ -95,7 +95,7 @@ export default function SpaceAgencies() {
                 src="/differently.svg"
                 alt="Broad Does Things Differently"
                 fill
-                className="object-contain"
+                className="object-contain object-left"
                 sizes="100vw"
                 priority
               />
