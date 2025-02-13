@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Pane } from "./components/ui/pane";
 import Popup from "./components/ui/popup";
 import Image from "next/image";
@@ -84,6 +84,13 @@ export default function SpaceAgencies() {
   const closePopup = () => {
     setShowPopup(false); // Close the popup when the button is clicked
   };
+
+  useEffect(() => {
+    document.body.style.overflow = showPopup ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showPopup]);
 
   const renderAgencyContent = (agency: Agency) => {
     switch (agency.id) {

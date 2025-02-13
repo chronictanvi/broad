@@ -42,7 +42,7 @@ const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
           </div>
         </Draggable>
       </div>
-      <div className="fixed left-0 top-0 block h-screen w-screen md:hidden">
+      <div className="fixed bottom-0 left-0 top-0 block w-screen md:hidden">
         <PopupContent closePopup={closePopup} />
       </div>
     </>
