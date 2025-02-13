@@ -362,8 +362,8 @@ export default function SpaceAgencies() {
         );
       case "esa":
         return (
-          <div className="mx-4 flex items-start min-h-screen flex-col  bg-[#DA2F62] pt-6 text-lg leading-tight lg:mx-40">
-            <div className="mb-12 h-auto  w-full">
+          <div className="mx-4 flex min-h-screen flex-col items-start bg-[#DA2F62] pt-6 text-lg leading-tight lg:mx-40">
+            <div className="mb-12 h-auto w-full">
               <Image
                 src="/story-2.svg"
                 alt="Eye of the Needle"
@@ -734,8 +734,13 @@ export default function SpaceAgencies() {
     <div className="flex min-h-screen w-full flex-col font-neueHaas md:overflow-hidden">
       <Popup showPopup={showPopup} closePopup={closePopup} />
 
-      <div className="block flex min-h-screen flex-col md:hidden">
-        <div className="flex" style={{ minHeight: `calc(100vh - ${64 * 4}px)` }}>
+      <div
+        className={`block flex min-h-screen flex-col md:hidden ${showPopup && "h-screen overflow-hidden"}`}
+      >
+        <div
+          className="flex shrink-0"
+          style={{ minHeight: `calc(100vh - ${64 * 4}px)` }}
+        >
           {renderAgencyContent(agencies[4])} {/* Render "jaxa" content */}
         </div>
         <Accordion type="multiple" className="w-full">
