@@ -7,6 +7,7 @@ export default function About() {
       <div className="flex flex-col justify-center gap-4 pr-16 lg:flex-row">
         <div className="hidden basis-2/3 lg:block">
           <div className="relative -ml-6 h-auto flex-grow">
+            <a href="https://www.broadinstitute.org/" target="_blank"> 
             <Image
               src="FooterCurve.svg"
               alt=""
@@ -14,11 +15,13 @@ export default function About() {
               height={1080}
               objectFit="fill"
             />
+            </a>
           </div>
         </div>
 
         <div className="mb-5 md:mx-12 lg:hidden">
           <div className="relative -ml-2 h-auto max-w-[350px] flex-grow">
+          <a href="https://www.broadinstitute.org/" target="_blank"> 
             <Image
               src="logo.png"
               alt=""
@@ -26,6 +29,7 @@ export default function About() {
               height={1080}
               objectFit="fill"
             />
+                  </a>
           </div>
         </div>
 
