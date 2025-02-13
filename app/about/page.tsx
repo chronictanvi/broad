@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -91,12 +92,12 @@ export default function About() {
 
       {/* Back to Home Button */}
       <div className="pt-10">
-        <a
+        <Link
           href="/"
           className="font-neueHaas text-2xl font-semibold text-white underline-offset-4 transition hover:underline"
         >
           Close
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Pane } from "./components/ui/pane";
 import Popup from "./components/ui/popup";
 import Image from "next/image";
@@ -68,18 +68,6 @@ const agencies: Agency[] = [
 export default function SpaceAgencies() {
   const [activeAgencyIndex, setActiveAgencyIndex] = useState(4);
   const [showPopup, setShowPopup] = useState(true); // State for showing the popup
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handleScrollToTop = () => {
     if (activeAgencyIndex < agencies.length - 1) {
@@ -101,7 +89,7 @@ export default function SpaceAgencies() {
     switch (agency.id) {
       case "jaxa":
         return (
-          <div className="mx-4 flex max-h-screen grow flex-col items-center bg-white pt-6 md:mx-10 md:h-full">
+          <div className="mx-4 flex max-h-screen flex-col items-center bg-white pt-6 md:mx-10 md:h-full">
             <div className="relative mb-8 hidden h-full w-full md:block">
               <Image
                 src="/differently.svg"
@@ -112,15 +100,17 @@ export default function SpaceAgencies() {
                 priority
               />
             </div>
-            <Image
-              src="/differently-mobile.svg"
-              alt="Broad Does Things Differently"
-              width={1920}
-              height={640}
-              className="mb-4 block object-cover md:hidden"
-              sizes="100vw"
-              priority
-            />
+            <div className="block flex-grow md:hidden">
+              <Image
+                src="/differently-mobile.svg"
+                alt="Broad Does Things Differently"
+                width={1920}
+                height={640}
+                className="mb-4 object-cover"
+                sizes="100vw"
+                priority
+              />
+            </div>
             <div className="w-full font-neueHaas leading-[2em] text-[#344899]">
               <h2 className="text-xl font-semibold">Broad Institute</h2>
               {/* <h3 className="text-xl font-medium">Year in Review 2024</h3> */}
@@ -741,57 +731,54 @@ export default function SpaceAgencies() {
   };
 
   return (
-    <div className="flex flex-col font-neueHaas md:flex-row">
-      <div className="absolute h-screen w-full md:overflow-hidden">
-        <Popup showPopup={showPopup} closePopup={closePopup} />
+    <div className="flex min-h-screen w-full flex-col font-neueHaas md:overflow-hidden">
+      <Popup showPopup={showPopup} closePopup={closePopup} />
 
-        {isMobile ? (
-          <>
-            {renderAgencyContent(agencies[4])} {/* Render "jaxa" content */}
-            <Accordion type="multiple" className="w-full">
-              {agencies
-                .slice(0, 4)
-                .toReversed()
-                .map((agency) => (
-                  <AccordionItem key={agency.id} value={agency.id}>
-                    <AccordionTrigger
-                      className={`${agency.bgColor} ${agency.textColor} px-4 py-5`}
-                    >
-                      {agency.title}
-                    </AccordionTrigger>
-                    <AccordionContent
-                      className={`${agency.bgColor} ${agency.textColor}`}
-                    >
-                      {renderAgencyContent(agency)}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-            </Accordion>
-          </>
-        ) : (
-          <>
-            {!isMobile &&
-              agencies.map((agency, index) => (
-                <Pane
-                  index={index}
-                  key={agency.id}
-                  className={`${agency.bgColor} accordion`}
-                  isTransformed={index > activeAgencyIndex}
-                  isActive={activeAgencyIndex === index}
-                  onClick={() => setActiveAgencyIndex(index)}
-                  onScrollToTop={handleScrollToTop}
-                  onScrollToBottom={handleScrollToBottom}
-                  agency={{
-                    name: agency.name,
-                    title: agency.title,
-                    textColor: agency.textColor,
-                  }}
+      <div className="block flex min-h-screen flex-col md:hidden">
+        <div style={{ height: `calc(100vh - ${64 * 4}px)` }}>
+          {renderAgencyContent(agencies[4])} {/* Render "jaxa" content */}
+        </div>
+        <Accordion type="multiple" className="w-full">
+          {agencies
+            .slice(0, 4)
+            .toReversed()
+            .map((agency) => (
+              <AccordionItem key={agency.id} value={agency.id}>
+                <AccordionTrigger
+                  className={`${agency.bgColor} ${agency.textColor} px-4 py-5`}
+                >
+                  {agency.title}
+                </AccordionTrigger>
+                <AccordionContent
+                  className={`${agency.bgColor} ${agency.textColor}`}
                 >
                   {renderAgencyContent(agency)}
-                </Pane>
-              ))}
-          </>
-        )}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+        </Accordion>
+      </div>
+
+      <div className="hidden md:block">
+        {agencies.map((agency, index) => (
+          <Pane
+            index={index}
+            key={agency.id}
+            className={`${agency.bgColor} accordion`}
+            isTransformed={index > activeAgencyIndex}
+            isActive={activeAgencyIndex === index}
+            onClick={() => setActiveAgencyIndex(index)}
+            onScrollToTop={handleScrollToTop}
+            onScrollToBottom={handleScrollToBottom}
+            agency={{
+              name: agency.name,
+              title: agency.title,
+              textColor: agency.textColor,
+            }}
+          >
+            {renderAgencyContent(agency)}
+          </Pane>
+        ))}
       </div>
     </div>
   );

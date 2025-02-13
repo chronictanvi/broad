@@ -18,45 +18,75 @@ const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
   const nodeRef = useRef(null);
 
   return (
-    <Draggable
-      nodeRef={nodeRef}
-      handle=".draggable-handle"
-      disabled={isTouchDevice}
-    >
-      <div
-        ref={nodeRef}
-        className="draggable-handle popupstyle popuplayout absolute z-50 h-full w-full cursor-grab bg-white p-6 text-white shadow-lg md:left-1/3 md:top-40 md:w-1/3"
-      >
+    <>
+      <div className="hidden md:block">
+        <Draggable
+          nodeRef={nodeRef}
+          handle=".draggable-handle"
+          disabled={isTouchDevice}
+        >
+          <div
+            ref={nodeRef}
+            className="draggable-handle relative z-50 cursor-grab shadow-lg md:left-1/3 md:top-40 md:w-1/3"
+          >
+            <PopupContent closePopup={closePopup} />
+            <button
+              className="pointer-events-auto absolute right-8 top-5 text-4xl font-medium text-white"
+              onClick={(e) => {
+                e.stopPropagation();
+                closePopup();
+              }}
+            >
+              ×
+            </button>
+          </div>
+        </Draggable>
+      </div>
+      <div className="fixed left-0 top-0 block h-screen w-screen md:hidden">
+        <PopupContent closePopup={closePopup} />
+      </div>
+    </>
+  );
+};
+
+const PopupContent = ({ closePopup }: { closePopup: () => void }) => {
+  return (
+    <div className="popupstyle popuplayout h-full w-full overflow-y-scroll p-6 text-white md:overflow-y-auto">
+      <div className="flex h-full w-full flex-col items-start justify-between">
+        <div>
+          <div className={`font-neueHaas text-xl font-semibold md:mt-10`}>
+            Last year marked the Broad Institute’s 20th anniversary. As we enter
+            our next decade, Broad scientists are shaping the future of science
+            and medicine by inventing new tools, advancing discoveries, forging
+            new communities, tackling tough questions, and leading the larger
+            scientific community in understanding disease to transform human
+            health.
+            <br />
+            <br />
+            We’re doing this with the “Broad approach”— courageous,
+            collaborative, creative, data-driven, and at-scale.
+            <br />
+            <br />
+            The stories featured here are just a sampling of how the Broad is
+            having an impact.
+            <br />
+            <br />
+            —Todd Golub,
+            <br />
+            Director of the Broad Institute
+          </div>
+        </div>
         <button
-          className="pointer-events-auto absolute right-8 top-5 text-4xl font-medium text-white"
           onClick={(e) => {
             e.stopPropagation();
             closePopup();
           }}
+          className="block text-2xl font-semibold underline underline-offset-4 md:hidden"
         >
-          ×
+          Enter Site
         </button>
-        <div className="mt-10 font-neueHaas text-xl font-semibold">
-          Last year marked the Broad Institute’s 20th anniversary. As we enter
-          our next decade, Broad scientists are shaping the future of science
-          and medicine by inventing new tools, advancing discoveries, forging
-          new communities, tackling tough questions, and leading the larger
-          scientific community in understanding disease to transform human
-          health.
-          <br />
-          <br />
-          We’re doing this with the “Broad approach”— courageous, collaborative,
-          creative, data-driven, and at-scale.
-          <br />
-          <br />
-          The stories featured here are just a sampling of how the Broad is
-          having an impact.
-          <br />
-          <br />
-          —Todd Golub, Director of the Broad Institute
-        </div>
       </div>
-    </Draggable>
+    </div>
   );
 };
 
