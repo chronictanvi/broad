@@ -51,10 +51,12 @@ const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
 
 const PopupContent = ({ closePopup }: { closePopup: () => void }) => {
   return (
-    <div className="popupstyle popuplayout h-full w-full overflow-y-scroll p-6 text-white md:overflow-y-auto">
-      <div className="flex h-full w-full flex-col items-start justify-between">
+    <div className="popupstyle h-full w-full text-white">
+      <div className="flex h-full w-full flex-col items-start justify-between overflow-y-scroll p-[30px] md:overflow-y-auto">
         <div>
-          <div className={`font-neueHaas text-xl font-semibold md:mt-10`}>
+          <div
+            className={`mb-8 font-neueHaas text-xl font-semibold md:mb-0 md:mt-10`}
+          >
             Last year marked the Broad Institute’s 20th anniversary. As we enter
             our next decade, Broad scientists are shaping the future of science
             and medicine by inventing new tools, advancing discoveries, forging
