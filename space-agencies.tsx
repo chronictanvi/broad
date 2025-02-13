@@ -89,7 +89,7 @@ export default function SpaceAgencies() {
     switch (agency.id) {
       case "jaxa":
         return (
-          <div className="mx-4 flex max-h-screen flex-col items-center bg-white pt-6 md:mx-10 md:h-full">
+          <div className="mx-4 flex max-h-screen flex-col bg-white pt-6 md:mx-10 md:h-full">
             <div className="relative mb-8 hidden h-full w-full md:block">
               <Image
                 src="/differently.svg"
@@ -100,7 +100,7 @@ export default function SpaceAgencies() {
                 priority
               />
             </div>
-            <div className="block flex-grow md:hidden">
+            <div className="block md:hidden">
               <Image
                 src="/differently-mobile.svg"
                 alt="Broad Does Things Differently"
@@ -140,7 +140,7 @@ export default function SpaceAgencies() {
                 alt="Scale"
                 width={1920}
                 height={640}
-                className="hidden object-cover md:block"
+                className="relative mb-8 hidden h-full w-full md:block"
                 sizes="100vw"
                 priority
               />
@@ -362,8 +362,8 @@ export default function SpaceAgencies() {
         );
       case "esa":
         return (
-          <div className="mx-4 flex min-h-screen flex-col items-center bg-[#DA2F62] pt-6 text-lg leading-tight lg:mx-40">
-            <div className="mb-12 h-auto w-full">
+          <div className="mx-4 flex items-start min-h-screen flex-col  bg-[#DA2F62] pt-6 text-lg leading-tight lg:mx-40">
+            <div className="mb-12 h-auto  w-full">
               <Image
                 src="/story-2.svg"
                 alt="Eye of the Needle"
@@ -481,24 +481,24 @@ export default function SpaceAgencies() {
                   <div className="mt-4 space-y-2">
                     {[
                       {
-                        href: "https://www.nature.com/articles/s41568-024-00763-x",
-                        text: "The present and future of the Cancer Dependency Map",
+                        href: "https://www.broadinstitute.org/news/scientists-engineer-crispr-enzymes-evade-immune-system",
+                        text: "Scientists engineer CRISPR enzymes that evade the immune system",
                       },
                       {
-                        href: "https://www.broadinstitute.org/news/qa-new-approaches-are-needed-find-better-cancer-drug-targets",
-                        text: "Q&A: New approaches are needed to find better cancer drug targets",
+                        href: "https://www.broadinstitute.org/news/feng-zhang-awarded-national-medal-technology-and-innovation",
+                        text: "Feng Zhang awarded the National Medal of Technology and Innovation",
                       },
                       {
-                        href: "https://www.broadinstitute.org/news/broad-dana-farber-st-jude-join-together-drive-progress-against-pediatric-cancer",
-                        text: "Broad, Dana-Farber, St. Jude join together to drive progress against pediatric cancer",
+                        href: "https://www.wired.com/story/the-age-of-crispr-medicine-is-here/",
+                        text: "The Age of Crispr Medicine Is Here",
                       },
                       {
-                        href: "https://www.youtube.com/watch?v=IoRvY4zleKk",
-                        text: "Tumor Immunotherapy Discovery Engine (TIDE)",
+                        href: "https://www.youtube.com/watch?v=CyREJpgeRo4",
+                        text: "Broad Discovery Series: From genome editing to programmable medicine",
                       },
                       {
-                        href: "https://www.broadinstitute.org/news/cancer-dependency-map-consortium-accelerates-research-tumor-vulnerabilities",
-                        text: "Cancer Dependency Map Consortium accelerates research into tumor vulnerabilities",
+                        href: "https://www.broadinstitute.org/news/bacterial-injection-system-delivers-proteins-mice-and-human-cells",
+                        text: "Bacterial injection system delivers proteins in mice and human cells",
                       },
                     ].map(({ href, text }, index) => (
                       <p key={index} className="not-prose py-1">
