@@ -111,7 +111,7 @@ export function Pane({
           className="sticky right-0 top-0 ml-4 flex h-full cursor-pointer flex-col items-center justify-items-start"
         >
           <p
-            className={`font-neueHaas text-sm font-semibold ${agency.textColor} whitespace-nowrap`}
+            className={`font-neueHaas text-sm font-semibold ${agency.textColor} whitespace-pre`}
           >
             {agency.name}
           </p>

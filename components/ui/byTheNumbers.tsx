@@ -3,8 +3,8 @@ import React from "react";
 const ByTheNumbers: React.FC = () => {
   return (
     <div className="not-prose font-neueHaas text-[#344899]">
-      <div className="border-y-2 border-[#344899] py-6">
-        <h2 className="not-prose text-center font-mono text-xl font-bold">
+      <div className="border-b-2 border-[#344899] py-6">
+        <h2 className="not-prose text-center font-mono text-xl font-semibold">
           BY THE NUMBERS
         </h2>
       </div>

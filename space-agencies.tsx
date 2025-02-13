@@ -235,7 +235,7 @@ export default function SpaceAgencies() {
                 role="main"
                 className="prose justify-center pb-32 font-martina text-xl font-normal leading-6 text-white"
               >
-                <h2 className="py-5 font-neueHaas text-2xl font-medium text-[#D3BBDB]">
+                <h2 className="py-5 font-neueHaas text-2xl font-semibold text-[#D3BBDB]">
                   Broad scientists have unlocked new therapeutic possibilities
                   for Huntington’s disease.
                 </h2>
@@ -396,7 +396,7 @@ export default function SpaceAgencies() {
                 role="main"
                 className="prose justify-center pb-32 font-martina text-xl font-normal leading-6 text-white"
               >
-                <h2 className="py-5 font-neueHaas text-2xl font-medium text-white">
+                <h2 className="py-5 font-neueHaas text-2xl font-semibold text-white">
                   A promising gene-editing tool inspired by a bacterial syringe.
                 </h2>
 
@@ -554,7 +554,7 @@ export default function SpaceAgencies() {
                 role="main"
                 className="prose justify-center pb-32 font-martina text-xl font-normal leading-6 text-[#344899]"
               >
-                <h2 className="py-5 font-neueHaas text-2xl font-medium text-[#344899]">
+                <h2 className="py-5 font-neueHaas text-2xl font-semibold text-[#344899]">
                   A Broad-led effort to understand the molecular diversity of
                   tumors is leading to new clinical trials.
                 </h2>
