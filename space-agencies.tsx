@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Pane } from "./components/ui/pane";
 import Popup from "./components/ui/popup";
 import Image from "next/image";
@@ -10,8 +10,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Link from "next/link";
 import ByTheNumbers from "./components/ui/byTheNumbers";
+import About from "@/components/About";
 
 interface Agency {
   id: string;
@@ -68,6 +68,7 @@ const agencies: Agency[] = [
 export default function SpaceAgencies() {
   const [activeAgencyIndex, setActiveAgencyIndex] = useState(4);
   const [showPopup, setShowPopup] = useState(true); // State for showing the popup
+  const [showAbout, setShowAbout] = useState(false);
 
   const handleScrollToTop = () => {
     if (activeAgencyIndex < agencies.length - 1) {
@@ -85,12 +86,16 @@ export default function SpaceAgencies() {
     setShowPopup(false); // Close the popup when the button is clicked
   };
 
+  const closeAbout = () => {
+    setShowAbout(false);
+  };
+
   useEffect(() => {
-    document.body.style.overflow = showPopup ? "hidden" : "auto";
+    document.body.style.overflow = showPopup || showAbout ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [showPopup]);
+  }, [showPopup, showAbout]);
 
   const renderAgencyContent = (agency: Agency) => {
     switch (agency.id) {
@@ -122,18 +127,18 @@ export default function SpaceAgencies() {
               <h2 className="text-xl font-semibold">Broad Institute</h2>
               {/* <h3 className="text-xl font-medium">Year in Review 2024</h3> */}
 
-              <div className="flex w-full flex-col justify-between text-[#344899] md:flex-row">
+              <div className="flex w-full flex-col items-start text-[#344899] md:flex-row md:justify-between">
                 <div className="hidden font-semibold md:block">
                   Scroll to read
                 </div>
 
-                <Link href="/about">
+                <button onClick={() => setShowAbout(true)}>
                   {" "}
                   <div className="py-2 font-semibold hover:underline md:py-0">
                     {" "}
                     About this site{" "}
                   </div>
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -738,60 +743,63 @@ export default function SpaceAgencies() {
   };
 
   return (
-    <div className="flex min-h-screen w-full flex-col font-neueHaas md:overflow-hidden">
-      <Popup showPopup={showPopup} closePopup={closePopup} />
+    <>
+      <About open={showAbout} close={closeAbout} />
+      <div className="flex min-h-screen w-full flex-col font-neueHaas md:overflow-hidden">
+        <Popup showPopup={showPopup} closePopup={closePopup} />
 
-      <div
-        className={`block flex min-h-screen flex-col md:hidden ${showPopup && "h-screen overflow-hidden"}`}
-      >
         <div
-          className="flex shrink-0"
-          style={{ minHeight: `calc(100vh - ${64 * 4}px)` }}
+          className={`block flex min-h-screen flex-col md:hidden ${showPopup && "h-screen overflow-hidden"}`}
         >
-          {renderAgencyContent(agencies[4])} {/* Render "jaxa" content */}
-        </div>
-        <Accordion type="multiple" className="w-full">
-          {agencies
-            .slice(0, 4)
-            .toReversed()
-            .map((agency) => (
-              <AccordionItem key={agency.id} value={agency.id}>
-                <AccordionTrigger
-                  className={`${agency.bgColor} ${agency.textColor} px-4 py-5`}
-                >
-                  {agency.title}
-                </AccordionTrigger>
-                <AccordionContent
-                  className={`${agency.bgColor} ${agency.textColor}`}
-                >
-                  {renderAgencyContent(agency)}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-        </Accordion>
-      </div>
-
-      <div className="hidden md:block">
-        {agencies.map((agency, index) => (
-          <Pane
-            index={index}
-            key={agency.id}
-            className={`${agency.bgColor} accordion`}
-            isTransformed={index > activeAgencyIndex}
-            isActive={activeAgencyIndex === index}
-            onClick={() => setActiveAgencyIndex(index)}
-            onScrollToTop={handleScrollToTop}
-            onScrollToBottom={handleScrollToBottom}
-            agency={{
-              name: agency.name,
-              title: agency.title,
-              textColor: agency.textColor,
-            }}
+          <div
+            className="flex shrink-0"
+            style={{ minHeight: `calc(100vh - ${64 * 4}px)` }}
           >
-            {renderAgencyContent(agency)}
-          </Pane>
-        ))}
+            {renderAgencyContent(agencies[4])} {/* Render "jaxa" content */}
+          </div>
+          <Accordion type="multiple" className="w-full">
+            {agencies
+              .slice(0, 4)
+              .toReversed()
+              .map((agency) => (
+                <AccordionItem key={agency.id} value={agency.id}>
+                  <AccordionTrigger
+                    className={`${agency.bgColor} ${agency.textColor} px-4 py-5`}
+                  >
+                    {agency.title}
+                  </AccordionTrigger>
+                  <AccordionContent
+                    className={`${agency.bgColor} ${agency.textColor}`}
+                  >
+                    {renderAgencyContent(agency)}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+          </Accordion>
+        </div>
+
+        <div className="hidden md:block">
+          {agencies.map((agency, index) => (
+            <Pane
+              index={index}
+              key={agency.id}
+              className={`${agency.bgColor} accordion`}
+              isTransformed={index > activeAgencyIndex}
+              isActive={activeAgencyIndex === index}
+              onClick={() => setActiveAgencyIndex(index)}
+              onScrollToTop={handleScrollToTop}
+              onScrollToBottom={handleScrollToBottom}
+              agency={{
+                name: agency.name,
+                title: agency.title,
+                textColor: agency.textColor,
+              }}
+            >
+              {renderAgencyContent(agency)}
+            </Pane>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
