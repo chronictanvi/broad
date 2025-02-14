@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Pane } from "./components/ui/pane";
 import Popup from "./components/ui/popup";
 import Image from "next/image";
@@ -69,6 +69,8 @@ export default function SpaceAgencies() {
   const [activeAgencyIndex, setActiveAgencyIndex] = useState(4);
   const [showPopup, setShowPopup] = useState(true); // State for showing the popup
   const [showAbout, setShowAbout] = useState(false);
+  const accordionValues = useRef<Array<string>>([]);
+  const timeout = useRef<Timeout | undefined>();
 
   const handleScrollToTop = () => {
     if (activeAgencyIndex < agencies.length - 1) {
@@ -97,11 +99,32 @@ export default function SpaceAgencies() {
     };
   }, [showPopup, showAbout]);
 
+  const handleAccordionChange = (value: Array<string>) => {
+    const newValue = value.filter(
+      (x) => !accordionValues.current.includes(x),
+    )[0];
+    accordionValues.current = value;
+    if (!newValue) return;
+
+    const element = document.getElementById(newValue);
+
+    if (element) {
+      if (timeout.current) {
+        window.clearTimeout(timeout.current);
+      }
+
+      timeout.current = setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+        timeout.current = undefined;
+      }, 100);
+    }
+  };
+
   const renderAgencyContent = (agency: Agency) => {
     switch (agency.id) {
       case "jaxa":
         return (
-          <div className="mx-4 flex max-h-screen flex-grow flex-col justify-between bg-white pt-6 md:mx-10 md:h-full">
+          <div className="mx-4 flex flex-grow flex-col justify-between bg-white pt-6 md:mx-10 md:h-full">
             <div className="relative mb-8 hidden h-full w-full md:block">
               <Image
                 src="/differently.svg"
@@ -757,7 +780,11 @@ export default function SpaceAgencies() {
           >
             {renderAgencyContent(agencies[4])} {/* Render "jaxa" content */}
           </div>
-          <Accordion type="multiple" className="w-full">
+          <Accordion
+            type="multiple"
+            className="w-full"
+            onValueChange={handleAccordionChange}
+          >
             {agencies
               .slice(0, 4)
               .toReversed()
@@ -769,6 +796,7 @@ export default function SpaceAgencies() {
                     {agency.title}
                   </AccordionTrigger>
                   <AccordionContent
+                    id={agency.id}
                     className={`${agency.bgColor} ${agency.textColor}`}
                   >
                     {renderAgencyContent(agency)}
