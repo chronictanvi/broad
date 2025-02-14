@@ -773,6 +773,9 @@ export default function SpaceAgencies() {
 
         <div
           className={`block flex min-h-screen flex-col md:hidden ${showPopup && "h-screen overflow-hidden"}`}
+          style={{
+            paddingBottom: "env(safe-area-inset-bottom)",
+          }}
         >
           <div
             className="flex shrink-0"
