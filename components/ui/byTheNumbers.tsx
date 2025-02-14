@@ -3,9 +3,9 @@ import React from "react";
 const ByTheNumbers: React.FC = () => {
   return (
     <div className="not-prose font-neueHaas text-[#344899]">
-      <div className="border-b-2 border-[#344899] py-6">
-        <h2 className="not-prose text-center font-mono text-xl font-semibold">
-          BY THE NUMBERS
+      <div className="border-b-2 border-[#344899] pt-6 pb-3">
+        <h2 className="not-prose text-center md:text-left font-sans text-xl font-semibold">
+          By The Numbers
         </h2>
       </div>
 
