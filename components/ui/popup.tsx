@@ -27,18 +27,22 @@ const Popup: React.FC<PopupProps> = ({ showPopup, closePopup }) => {
         >
           <div
             ref={nodeRef}
-            className="draggable-handle relative z-50 cursor-grab shadow-lg md:left-1/3 md:top-40 md:w-1/3"
+            className="draggable-handle relative z-50 flex cursor-grab flex-col shadow-lg md:left-1/3 md:top-40 md:w-1/2 lg:w-1/3"
           >
-            <PopupContent closePopup={closePopup} />
-            <button
-              className="pointer-events-auto absolute right-8 top-5 text-4xl font-medium text-white"
-              onClick={(e) => {
-                e.stopPropagation();
-                closePopup();
-              }}
-            >
-              ×
-            </button>
+            <div>
+              <PopupContent closePopup={closePopup} />
+            </div>
+            <div>
+              <button
+                className="pointer-events-auto absolute right-8 top-5 text-4xl font-medium text-white"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  closePopup();
+                }}
+              >
+                ×
+              </button>
+            </div>
           </div>
         </Draggable>
       </div>
@@ -55,7 +59,7 @@ const PopupContent = ({ closePopup }: { closePopup: () => void }) => {
       <div className="flex h-full w-full flex-col items-start justify-between overflow-y-scroll p-[30px] md:overflow-y-auto">
         <div>
           <div
-            className={`mb-8 font-neueHaas text-xl font-semibold md:mb-0 md:mt-10`}
+            className={`= mx-6 mb-8 mt-12 pb-12 font-neueHaas text-xl font-semibold md:mb-0`}
           >
             Last year marked the Broad Institute’s 20th anniversary. As we enter
             our next decade, Broad scientists are shaping the future of science
