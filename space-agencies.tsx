@@ -577,7 +577,7 @@ export default function SpaceAgencies() {
               />
             </div>
 
-            <div className="">
+            <div className="w-full">
               <article
                 role="main"
                 className="prose justify-center pb-32 font-martina text-xl font-normal leading-6 text-[#344899]"
@@ -794,7 +794,7 @@ export default function SpaceAgencies() {
               .map((agency) => (
                 <AccordionItem key={agency.id} value={agency.id}>
                   <AccordionTrigger
-                    className={`${agency.bgColor} ${agency.textColor} px-4 py-5`}
+                    className={`${agency.bgColor} ${agency.textColor} px-4 py-5 text-left`}
                   >
                     {agency.title}
                   </AccordionTrigger>
